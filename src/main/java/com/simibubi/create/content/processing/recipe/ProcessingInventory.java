@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeInput;
 
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.storage.StorageView;
@@ -20,12 +21,18 @@ import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 import io.github.fabricators_of_create.porting_lib.transfer.ViewOnlyWrappedIterator;
 import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
 
-public class ProcessingInventory extends ItemStackHandlerContainer {
+public class ProcessingInventory extends ItemStackHandlerContainer implements RecipeInput {
 	public float remainingTime;
 	public float recipeDuration;
 	public boolean appliedRecipe;
 	public Consumer<ItemStack> callback;
 	private boolean limit;
+
+	/** fabric: {@link ItemStackHandlerContainer} only implements {@link net.minecraft.world.Container}. */
+	@Override
+	public int size() {
+		return getContainerSize();
+	}
 
 	public ProcessingInventory(Consumer<ItemStack> callback) {
 		super(16);

@@ -91,9 +91,8 @@ import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
-import net.neoforged.neoforge.common.Tags;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import io.github.fabricators_of_create.porting_lib.tags.Tags;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
 public class AllItems {
@@ -200,7 +199,7 @@ public class AllItems {
 
 	public static final ItemEntry<ChromaticCompoundItem> CHROMATIC_COMPOUND =
 		REGISTRATE.item("chromatic_compound", ChromaticCompoundItem::new)
-			.properties(p -> p.rarity(Rarity.UNCOMMON))
+			.properties(p -> p.rarity(Rarity.UNCOMMON).stacksTo(16))
 			.model(AssetLookup.existingItemModel())
 			.color(() -> ChromaticCompoundColor::new)
 			.register();
@@ -215,9 +214,9 @@ public class AllItems {
 			.register();
 
 	public static final ItemEntry<Item>
-		COPPER_NUGGET = taggedIngredient("copper_nugget", commonItemTag("copper_nuggets"), net.neoforged.neoforge.common.Tags.Items.NUGGETS),
-		ZINC_NUGGET = taggedIngredient("zinc_nugget", commonItemTag("zinc_nuggets"), net.neoforged.neoforge.common.Tags.Items.NUGGETS),
-		BRASS_NUGGET = taggedIngredient("brass_nugget", commonItemTag("brass_nuggets"), net.neoforged.neoforge.common.Tags.Items.NUGGETS);
+		COPPER_NUGGET = taggedIngredient("copper_nugget", commonItemTag("copper_nuggets"), Tags.Items.NUGGETS),
+		ZINC_NUGGET = taggedIngredient("zinc_nugget", commonItemTag("zinc_nuggets"), Tags.Items.NUGGETS),
+		BRASS_NUGGET = taggedIngredient("brass_nugget", commonItemTag("brass_nuggets"), Tags.Items.NUGGETS);
 
 	public static final ItemEntry<ExperienceNuggetItem> EXP_NUGGET =
 		REGISTRATE.item("experience_nugget", ExperienceNuggetItem::new)
@@ -262,12 +261,7 @@ public class AllItems {
 
 	public static final ItemEntry<GogglesItem> GOGGLES = REGISTRATE.item("goggles", GogglesItem::new)
 		.properties(p -> p.stacksTo(1))
-		.properties(p -> {
-			if (p instanceof FabricItemSettings fp) {
-				fp.equipmentSlot(GogglesItem::getEquipmentSlot);
-			}
-			return p;
-		})
+		.properties(p -> p.equipmentSlot((entity, stack) -> GogglesItem.getEquipmentSlot(stack)))
 		.onRegister(CreateRegistrate.itemModel(() -> GogglesModel::new))
 		.lang("Engineer's Goggles")
 		.register();
@@ -439,7 +433,7 @@ public class AllItems {
 			.properties(p -> p.durability(100))
 			.transform(CreateRegistrate.customRenderedItem(() -> PotatoCannonItemRenderer::new))
 			.model(AssetLookup.itemModelWithPartials())
-			.tag(net.neoforged.neoforge.common.Tags.Items.ENCHANTABLES)
+			.tag(Tags.Items.ENCHANTABLES)
 			.register();
 
 	public static final ItemEntry<ExtendoGripItem> EXTENDO_GRIP = REGISTRATE.item("extendo_grip", ExtendoGripItem::new)

@@ -37,6 +37,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -53,16 +54,17 @@ import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 
 import com.simibubi.create.infrastructure.fabric.transfer.TransferUtil;
 import io.github.fabricators_of_create.porting_lib.transfer.ViewOnlyWrappedStorageView;
+import com.simibubi.create.foundation.blockEntity.LegacyRecipeWrapper;
 import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerSlot;
+
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MillstoneBlockEntity extends KineticBlockEntity implements SidedStorageBlockEntity {
 
-	public ItemStackHandlerContainer inputInv;
+	public ItemStackHandler inputInv;
 	public ItemStackHandler outputInv;
 	public MillstoneInventoryHandler capability;
 	public int timer;
@@ -70,7 +72,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 
 	public MillstoneBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
-		inputInv = new ItemStackHandlerContainer(1);
+		inputInv = new ItemStackHandler(1);
 		outputInv = new ItemStackHandler(9);
 		capability = new MillstoneInventoryHandler();
 	}
@@ -124,7 +126,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 			.isEmpty())
 			return;
 
-		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		LegacyRecipeWrapper inventoryIn = new LegacyRecipeWrapper(inputInv);
 		if (lastRecipe == null || !lastRecipe.matches(inventoryIn, level)) {
 			Optional<RecipeHolder<MillingRecipe>> recipe = AllRecipeTypes.MILLING.find(inventoryIn, level);
 			if (!recipe.isPresent()) {
@@ -155,7 +157,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 	}
 
 	private void process() {
-		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		LegacyRecipeWrapper inventoryIn = new LegacyRecipeWrapper(inputInv);
 
 		if (lastRecipe == null || !lastRecipe.matches(inventoryIn, level)) {
 			Optional<RecipeHolder<MillingRecipe>> recipe = AllRecipeTypes.MILLING.find(inventoryIn, level);
@@ -165,7 +167,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 		}
 
 		try (Transaction t = Transaction.openOuter()) {
-			ItemStackHandlerSlot slot = inputInv.getSlot(0);
+			SingleSlotStorage<ItemVariant> slot = inputInv.getSlot(0);
 			slot.extract(slot.getResource(), 1, t);
 			lastRecipe.rollResults().forEach(stack -> outputInv.insert(ItemVariant.of(stack), stack.getCount(), t));
 			t.commit();
@@ -219,8 +221,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 	}
 
 	private boolean canProcess(ItemStack stack) {
-		ItemStackHandlerContainer tester = new ItemStackHandlerContainer(1);
-		tester.setStackInSlot(0, stack);
+		SingleRecipeInput tester = new SingleRecipeInput(stack);
 
 		if (lastRecipe != null && lastRecipe.matches(tester, level))
 			return true;
@@ -228,7 +229,7 @@ public class MillstoneBlockEntity extends KineticBlockEntity implements SidedSto
 			.isPresent();
 	}
 
-	private class MillstoneInventoryHandler extends CombinedStorage<ItemVariant, io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandler> {
+	private class MillstoneInventoryHandler extends CombinedStorage<ItemVariant, ItemStackHandler> {
 
 		public MillstoneInventoryHandler() {
 			super(List.of(inputInv, outputInv));

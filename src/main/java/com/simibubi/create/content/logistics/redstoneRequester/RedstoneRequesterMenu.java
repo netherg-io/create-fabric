@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.redstoneRequester;
 
+import com.simibubi.create.infrastructure.fabric.transfer.item.SlottedStackStorage;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,7 +91,7 @@ public class RedstoneRequesterMenu extends GhostItemMenu<RedstoneRequesterBlockE
 	// this is used to prevent InventorySorter from interfering with scrolling on the slots.
 	// we just need a class to use as a marker, see InventorySorterCompat
 	public static class SorterProofSlot extends SlotItemHandler {
-		public SorterProofSlot(SlottedStorage<ItemVariant> itemHandler, int index, int xPosition, int yPosition) {
+		public SorterProofSlot(SlottedStackStorage itemHandler, int index, int xPosition, int yPosition) {
 			super(itemHandler, index, xPosition, yPosition);
 		}
 	}

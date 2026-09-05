@@ -49,9 +49,7 @@ import io.github.fabricators_of_create.porting_lib.util.MinecartAndRailUtil;
  * coupled trains
  */
 public class MinecartController implements INBTSerializable<CompoundTag> {
-	public static final MinecartController EMPTY = new MinecartController.Empty();
-
-	public static final IAttachmentSerializer<CompoundTag, MinecartController> SERIALIZER = Type.SERIALIZER;
+	public static final MinecartController EMPTY = new MinecartController(null);
 
 	private boolean needsEntryRefresh;
 	private WeakReference<AbstractMinecart> weakRef;
@@ -76,12 +74,7 @@ public class MinecartController implements INBTSerializable<CompoundTag> {
 	}
 
 	public final boolean isEmpty() {
-		return getType() == Type.EMPTY;
-	}
-
-	@NotNull
-	protected Type getType() {
-		return Type.NORMAL;
+		return this == EMPTY;
 	}
 
 	public void tick() {

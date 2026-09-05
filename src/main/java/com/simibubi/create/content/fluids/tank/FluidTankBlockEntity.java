@@ -83,18 +83,6 @@ public class FluidTankBlockEntity extends SmartBlockEntity implements IHaveGoggl
 //		refreshCapability(); // fabric: lazy init to prevent access too early
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.FluidHandler.BLOCK,
-				AllBlockEntityTypes.FLUID_TANK.get(),
-				(be, context) -> {
-					if (be.fluidCapability == null)
-						be.refreshCapability();
-					return be.fluidCapability;
-				}
-		);
-	}
-
 	protected SmartFluidTank createInventory() {
 		return new SmartFluidTank(getCapacityMultiplier(), this::onFluidStackChanged);
 	}

@@ -76,14 +76,6 @@ public class StockTickerBlockEntity extends StockCheckingBlockEntity implements 
 		hiddenCategoriesByPlayer = new HashMap<>();
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-			Capabilities.ItemHandler.BLOCK,
-			AllBlockEntityTypes.STOCK_TICKER.get(),
-			(be, context) -> be.receivedPayments
-		);
-	}
-
 	public void refreshClientStockSnapshot() {
 		ticksSinceLastUpdate = 0;
 		CatnipServices.NETWORK.sendToServer(new LogisticalStockRequestPacket(worldPosition));

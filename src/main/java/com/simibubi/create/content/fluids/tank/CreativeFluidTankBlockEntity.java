@@ -31,18 +31,6 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 		super(type, pos, state);
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.FluidHandler.BLOCK,
-				AllBlockEntityTypes.CREATIVE_FLUID_TANK.get(),
-				(be, context) -> {
-					if (be.fluidCapability == null)
-						be.refreshCapability();
-					return be.fluidCapability;
-				}
-		);
-	}
-
 	@Override
 	protected SmartFluidTank createInventory() {
 		return new CreativeSmartFluidTank(getCapacityMultiplier(), this::onFluidStackChanged);

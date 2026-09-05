@@ -54,11 +54,13 @@ import net.minecraft.world.phys.Vec3;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
-import io.github.fabricators_of_create.porting_lib.enchant.CustomEnchantingBehaviorItem;
+import net.fabricmc.fabric.api.item.v1.EnchantingContext;
+import net.fabricmc.fabric.api.util.TriState;
+
 import io.github.fabricators_of_create.porting_lib.item.EntitySwingListenerItem;
 import io.github.fabricators_of_create.porting_lib.item.ReequipAnimationItem;
 
-public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem, CustomEnchantingBehaviorItem {
+public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem {
 
 	public PotatoCannonItem(Properties properties) {
 		super(properties);
@@ -188,8 +190,8 @@ public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmP
 			return;
 
 		HolderLookup<Enchantment> lookup = registries.lookupOrThrow(Registries.ENCHANTMENT);
-		int power = stack.getEnchantmentLevel(lookup.getOrThrow(Enchantments.POWER));
-		int punch = stack.getEnchantmentLevel(lookup.getOrThrow(Enchantments.PUNCH));
+		int power = EnchantmentHelper.getItemEnchantmentLevel(lookup.getOrThrow(Enchantments.POWER), stack);
+		int punch = EnchantmentHelper.getItemEnchantmentLevel(lookup.getOrThrow(Enchantments.PUNCH), stack);
 		final float additionalDamageMult = 1 + power * .2f;
 		final float additionalKnockback = punch * .5f;
 
@@ -246,19 +248,16 @@ public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmP
 		return 15;
 	}
 
-	@Override
-	public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
-		if (enchantment.is(Enchantments.POWER))
-			return true;
-		if (enchantment.is(Enchantments.PUNCH))
-			return true;
-		if (enchantment.is(Enchantments.FLAME))
-			return true;
-		if (enchantment.is(Enchantments.LOOTING))
-			return true;
-		if (enchantment.is(AllEnchantments.POTATO_RECOVERY))
-			return true;
-		return super.supportsEnchantment(stack, enchantment);
+	/** Fabric: registered on {@code EnchantmentEvents.ALLOW_ENCHANTING} instead of NeoForge's item hook. */
+	public static TriState alsoAcceptsBowEnchantments(Holder<Enchantment> enchantment, ItemStack target,
+		EnchantingContext context) {
+		if (!(target.getItem() instanceof PotatoCannonItem))
+			return TriState.DEFAULT;
+		if (enchantment.is(Enchantments.POWER) || enchantment.is(Enchantments.PUNCH)
+			|| enchantment.is(Enchantments.FLAME) || enchantment.is(Enchantments.LOOTING)
+			|| enchantment.is(AllEnchantments.POTATO_RECOVERY))
+			return TriState.TRUE;
+		return TriState.DEFAULT;
 	}
 
 	@Override
@@ -281,7 +280,7 @@ public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmP
 	}
 
 	@Override
-	public boolean onEntitySwing(ItemStack stack, LivingEntity entity, InteractionHand hand) {
+	public boolean onEntitySwing(ItemStack stack, LivingEntity entity) {
 		return false;
 	}
 

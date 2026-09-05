@@ -13,6 +13,8 @@ import java.util.stream.Stream;
 
 import javax.annotation.Nullable;
 
+import com.simibubi.create.foundation.fabric.CustomDataHolder;
+
 import org.jetbrains.annotations.NotNull;
 
 import net.minecraft.core.BlockPos;
@@ -118,7 +120,7 @@ public class CreateTestFunction {
 			helper.andThen(gameTestHelper -> {
 				// give structure block test info
 				StructureBlockEntity be = gameTestHelper.getBlockEntity(BlockPos.ZERO);
-				be.getCustomData().putString("CreateTestFunction", fullName);
+				CustomDataHolder.of(be).putString("CreateTestFunction", fullName);
 			}).accept(CreateGameTestHelper.of(consumer));
 		};
 	}

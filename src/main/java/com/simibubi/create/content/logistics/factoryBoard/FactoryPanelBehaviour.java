@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.factoryBoard;
 
+import com.simibubi.create.foundation.fabric.MenuUtil;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -602,7 +604,7 @@ public class FactoryPanelBehaviour extends FilteringBehaviour implements MenuPro
 			// Open screen for setting an item through JEI
 			if (heldItem.isEmpty()) {
 				if (!isClientSide && player instanceof ServerPlayer sp)
-					sp.openMenu(this, buf -> FactoryPanelPosition.STREAM_CODEC.encode(buf, getPanelPosition()));
+					MenuUtil.open(sp, this, buf -> FactoryPanelPosition.STREAM_CODEC.encode(buf, getPanelPosition()));
 				return;
 			}
 

@@ -888,7 +888,7 @@ if (printer.isErrored())
 	@Override
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
-		return AABB.INFINITE;
+		return CustomRenderBoundingBoxBlockEntity.INFINITE_EXTENT_AABB;
 	}
 
 	@Override

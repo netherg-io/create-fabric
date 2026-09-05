@@ -1,0 +1,2459 @@
+src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:85: error: cannot find symbol
+public abstract class AbstractContraptionEntity extends Entity implements IEntityWithComplexSpawn {
+                                                                          ^
+  symbol: class IEntityWithComplexSpawn
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:54: error: cannot find symbol
+	public static final IAttachmentSerializer<CompoundTag, MinecartController> SERIALIZER = Type.SERIALIZER;
+	                    ^
+  symbol:   class IAttachmentSerializer
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:83: error: cannot find symbol
+	protected Type getType() {
+	          ^
+  symbol:   class Type
+
+src/main/java/com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.java:86: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/fluids/tank/CreativeFluidTankBlockEntity.java:34: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:9: error: package net.neoforged.neoforge.entity does not exist
+import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+                                    ^
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:60: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/funnel/FunnelBlockEntity.java:51: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlockEntity.java:116: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlockEntity.java:79: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:110: error: cannot find symbol
+	private final EnumMap<Direction, BlockCapabilityCache<IItemHandler, @Nullable Direction>> capCaches = new EnumMap<>(Direction.class);
+	                                 ^
+  symbol:   class BlockCapabilityCache
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:110: error: cannot find symbol
+	private final EnumMap<Direction, BlockCapabilityCache<IItemHandler, @Nullable Direction>> capCaches = new EnumMap<>(Direction.class);
+	                                                      ^
+  symbol:   class IItemHandler
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:540: error: cannot find symbol
+	private @Nullable IItemHandler grabCapability(@NotNull Direction side) {
+	                  ^
+  symbol:   class IItemHandler
+
+src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelBlockEntity.java:128: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:19: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:51: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:65: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:138: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:9: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+                                                    ^
+  symbol:   class ListeningStorageView
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:36: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/trains/schedule/ScheduleItem.java:47: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/trains/observer/TrackObserverBlock.java:18: error: cannot find symbol
+public class TrackObserverBlock extends Block implements IBE<TrackObserverBlockEntity>, IWrenchable, ConnectableRedstoneBlock {
+                                                                                                     ^
+  symbol: class ConnectableRedstoneBlock
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:4: error: cannot find symbol
+import com.simibubi.create.foundation.networking.SimplePacketBase;
+                                                ^
+  symbol:   class SimplePacketBase
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:10: error: cannot find symbol
+public class CarriageDataUpdatePacket extends SimplePacketBase {
+                                              ^
+  symbol: class SimplePacketBase
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:33: error: cannot find symbol
+	public boolean handle(Context context) {
+	                      ^
+  symbol:   class Context
+
+src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:33: error: cannot find symbol
+	public static final StreamCodec<RegistryFriendlyByteBuf, CubeParticleData> STREAM_CODEC = StreamCodec.composite(
+	                    ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:64: error: cannot find symbol
+	public StreamCodec<? super RegistryFriendlyByteBuf, CubeParticleData> getStreamCodec() {
+	       ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:11: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                    ^
+  symbol:   class ReachUtil
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:13: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:42: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:8: error: cannot find symbol
+import com.simibubi.create.foundation.item.render.SimpleCustomRenderer;
+                                                 ^
+  symbol:   class SimpleCustomRenderer
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:42: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:17: error: cannot find symbol
+import net.minecraft.world.level.block.EnchantmentTableBlock;
+                                      ^
+  symbol:   class EnchantmentTableBlock
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:18: error: cannot find symbol
+import net.minecraft.world.level.block.entity.EnchantmentTableBlockEntity;
+                                             ^
+  symbol:   class EnchantmentTableBlockEntity
+
+src/main/java/com/simibubi/create/content/redstone/diodes/ToggleLatchGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                          ^
+src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:19: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+
+src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:20: error: package io.github.fabricators_of_create.porting_lib.models.generators.item does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.item.ItemModelBuilder;
+                                                                         ^
+src/main/java/com/simibubi/create/content/redstone/diodes/ToggleLatchGenerator.java:18: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:44: error: cannot find symbol
+																	  BlockModelProvider prov);
+																	  ^
+  symbol:   class BlockModelProvider
+
+src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:56: error: cannot find symbol
+	protected ExistingModelFile existingModel(BlockModelProvider prov, String name) {
+	                                          ^
+  symbol:   class BlockModelProvider
+
+src/main/java/com/simibubi/create/content/redstone/diodes/PoweredLatchGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                          ^
+src/main/java/com/simibubi/create/content/redstone/diodes/PoweredLatchGenerator.java:18: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/redstone/diodes/BrassDiodeGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                          ^
+src/main/java/com/simibubi/create/content/redstone/diodes/BrassDiodeGenerator.java:18: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:13: error: cannot find symbol
+import com.simibubi.create.foundation.model.BakedModelWrapperWithData;
+                                           ^
+  symbol:   class BakedModelWrapperWithData
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:30: error: package net.neoforged.neoforge.client.model.data does not exist
+import net.neoforged.neoforge.client.model.data.ModelData;
+                                               ^
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:31: error: package net.neoforged.neoforge.client.model.data.ModelData does not exist
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:32: error: package net.neoforged.neoforge.client.model.data does not exist
+import net.neoforged.neoforge.client.model.data.ModelProperty;
+                                               ^
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:34: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:36: error: cannot find symbol
+	private static final ModelProperty<CullData> CULL_PROPERTY = new ModelProperty<>();
+	                     ^
+  symbol:   class ModelProperty
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:92: error: cannot find symbol
+	protected Builder gatherModelData(Builder builder, BlockAndTintGetter world, BlockPos pos, BlockState state,
+	                                  ^
+  symbol:   class Builder
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:93: error: cannot find symbol
+									  ModelData blockEntityData) {
+									  ^
+  symbol:   class ModelData
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:92: error: cannot find symbol
+	protected Builder gatherModelData(Builder builder, BlockAndTintGetter world, BlockPos pos, BlockState state,
+	          ^
+  symbol:   class Builder
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:105: error: cannot find symbol
+											 @NotNull RandomSource rand, @NotNull ModelData extraData, @Nullable RenderType renderType) {
+											                                      ^
+  symbol:   class ModelData
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerInteractionHandler.java:43: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:50: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockKeeperRequestScreen.java:44: error: package me.pepperbell.simplenetworking does not exist
+import me.pepperbell.simplenetworking.SimpleChannel;
+                                     ^
+src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterBlockEntity.java:30: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:164: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:24: error: package net.neoforged.neoforge.capabilities does not exist
+import net.neoforged.neoforge.capabilities.Capabilities;
+                                          ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:25: error: package net.neoforged.neoforge.capabilities does not exist
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:43: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportVisual.java:24: error: package net.minecraftforge.registries does not exist
+import net.minecraftforge.registries.ForgeRegistries;
+                                    ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:85: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportRenderer.java:18: error: package net.minecraftforge.registries does not exist
+import net.minecraftforge.registries.ForgeRegistries;
+                                    ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlock.java:55: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:11: error: package net.neoforged.bus.api does not exist
+import net.neoforged.bus.api.IEventBus;
+                            ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:12: error: package net.neoforged.neoforge.registries does not exist
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:15: error: cannot find symbol
+	private static final DeferredRegister<PackagePortTargetType> REGISTER = DeferredRegister.create(CreateRegistries.PACKAGE_PORT_TARGET_TYPE, Create.ID);
+	                     ^
+  symbol:   class DeferredRegister
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:21: error: cannot find symbol
+	public static void register(IEventBus eventBus) {
+	                            ^
+  symbol:   class IEventBus
+
+src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:51: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.LazyOptional;
+                                                       ^
+  symbol:   class LazyOptional
+
+src/main/java/com/simibubi/create/content/logistics/funnel/FunnelGenerator.java:17: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelBuilder;
+                                                                          ^
+src/main/java/com/simibubi/create/content/logistics/filter/FilterItem.java:49: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/depot/DepotBlockEntity.java:31: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:123: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:15: error: package net.neoforged.neoforge.capabilities does not exist
+import net.neoforged.neoforge.capabilities.Capabilities;
+                                          ^
+src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:16: error: package net.neoforged.neoforge.capabilities does not exist
+
+src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:26: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:53: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.IEntityAdditionalSpawnData;
+                                                         ^
+  symbol:   class IEntityAdditionalSpawnData
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:55: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
+                                                                ^
+  symbol:   class LivingAttackEvent
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:58: error: cannot find symbol
+public class PackageEntity extends LivingEntity implements IEntityWithComplexSpawn {
+                                                           ^
+  symbol: class IEntityWithComplexSpawn
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageRenderer.java:22: error: package net.minecraftforge.registries does not exist
+import net.minecraftforge.registries.ForgeRegistries;
+                                    ^
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardBlockEntity.java:28: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:14: error: package net.neoforged.neoforge.fluids does not exist
+import net.neoforged.neoforge.fluids.FluidStack;
+                                    ^
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:16: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:20: error: cannot find symbol
+import com.simibubi.create.foundation.utility.CreateCodecs;
+                                             ^
+  symbol:   class CreateCodecs
+
+src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:22: error: package net.neoforged.neoforge.fluids does not exist
+import net.neoforged.neoforge.fluids.FluidStack;
+                                    ^
+src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:23: error: package net.neoforged.neoforge.fluids.capability.templates does not exist
+
+src/main/java/com/simibubi/create/content/fluids/spout/SpoutBlockEntity.java:74: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:37: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewing$MixAccessor;
+                                                                                  ^
+  symbol:   class PotionBrewing$MixAccessor
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:38: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewingAccessor;
+                                                                                  ^
+  symbol:   class PotionBrewingAccessor
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:44: error: cannot find symbol
+	private static List<RecipeHolder<MixingRecipe>> RECIPES;
+	                    ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:50: error: cannot find symbol
+	public static List<RecipeHolder<MixingRecipe>> createRecipes(Level level) {
+	                                                             ^
+  symbol:   class Level
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:50: error: cannot find symbol
+	public static List<RecipeHolder<MixingRecipe>> createRecipes(Level level) {
+	                   ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:59: error: cannot find symbol
+	public static Map<Item, List<MixingRecipe>> sortRecipesByItem(Level level) {
+	                                                              ^
+  symbol:   class Level
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:68: error: cannot find symbol
+	private static List<RecipeHolder<MixingRecipe>> createRecipesImpl(Level level) {
+	                                                                  ^
+  symbol:   class Level
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:68: error: cannot find symbol
+	private static List<RecipeHolder<MixingRecipe>> createRecipesImpl(Level level) {
+	                    ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:153: error: cannot find symbol
+	private static RecipeHolder<MixingRecipe> createRecipe(String id, Ingredient ingredient, FluidStack fromFluid, FluidStack toFluid) {
+	               ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:165: error: cannot find symbol
+	private static Map<Item, List<MixingRecipe>> sortRecipesByItem(List<RecipeHolder<MixingRecipe>> all) {
+	                                                                    ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:40: error: cannot find symbol
+	public static FluidStack of(long amount, PotionContents potionContents, BottleType bottleType) {
+	                                         ^
+  symbol:   class PotionContents
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:48: error: cannot find symbol
+	public static FluidStack addPotionToFluidStack(FluidStack fs, PotionContents potionContents) {
+	                                                              ^
+  symbol:   class PotionContents
+
+src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:84: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:56: error: cannot find symbol
+	private final ICapabilityProvider<IFluidHandler> fluidHandlerProvider = ICapabilityProvider.of(() -> fluidHandler);
+	                                  ^
+  symbol:   class IFluidHandler
+
+src/main/java/com/simibubi/create/content/fluids/FluidPropagator.java:24: error: package net.neoforged.neoforge.capabilities does not exist
+import net.neoforged.neoforge.capabilities.Capabilities;
+                                          ^
+src/main/java/com/simibubi/create/content/fluids/FluidPropagator.java:25: error: package net.neoforged.neoforge.fluids.capability does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/elevator/ElevatorContactBlock.java:64: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatBlock.java:40: error: cannot find symbol
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+                                           ^
+  symbol:   class BlockPathTypes
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:30: error: package net.neoforged.neoforge.event.entity does not exist
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+                                          ^
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:31: error: package net.neoforged.neoforge.event.entity does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:32: error: package net.neoforged.neoforge.event.entity.player does not exist
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+                                                 ^
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:33: error: package net.neoforged.neoforge.event.level does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:34: error: package net.neoforged.neoforge.event.tick does not exist
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+                                        ^
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:108: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionPacket.java:9: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                    ^
+  symbol:   class ReachUtil
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionHandler.java:14: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                    ^
+  symbol:   class ReachUtil
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:9: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                    ^
+  symbol:   class ReachUtil
+
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:37: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.IEntityAdditionalSpawnData;
+                                                         ^
+  symbol:   class IEntityAdditionalSpawnData
+
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:40: error: package net.neoforged.neoforge.common.util does not exist
+import net.neoforged.neoforge.common.util.FakePlayer;
+                                         ^
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:41: error: package net.neoforged.neoforge.entity does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:43: error: cannot find symbol
+public class SeatEntity extends Entity implements IEntityWithComplexSpawn {
+                                                  ^
+  symbol: class IEntityWithComplexSpawn
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:10: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+                                                    ^
+  symbol:   class ListeningStorageView
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:36: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/contraptions/actors/harvester/HarvesterMovementBehaviour.java:5: error: cannot find symbol
+import net.neoforged.neoforge.common.SpecialPlantable;
+                                    ^
+  symbol:   class SpecialPlantable
+
+src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:11: error: package net.neoforged.neoforge.event.tick does not exist
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+                                        ^
+src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:15: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/ContraptionCollider.java:74: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:37: error: cannot find symbol
+	@Environment(EnvType.CLIENT)
+	 ^
+  symbol:   class Environment
+
+src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:37: error: cannot find symbol
+	@Environment(EnvType.CLIENT)
+	             ^
+  symbol:   variable EnvType
+
+src/main/java/com/simibubi/create/content/trains/track/TrackMaterialFactory.java:28: error: TagValue(TagKey<Item>) is not public in TagValue; cannot be accessed from outside package
+			new Ingredient.TagValue(ConventionalItemTags.IRON_NUGGETS),
+			^
+src/main/java/com/simibubi/create/content/trains/track/TrackMaterialFactory.java:29: error: TagValue(TagKey<Item>) is not public in TagValue; cannot be accessed from outside package
+
+src/main/java/com/simibubi/create/content/trains/track/TrackBlockEntity.java:255: error: cannot find symbol
+		return AABB.INFINITE;
+		           ^
+  symbol:   variable INFINITE
+
+src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:612: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:635: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:152: error: cannot find symbol
+		AllPackets.getChannel().sendToClientsTracking(new CarriageDataUpdatePacket(this), this);
+		          ^
+  symbol:   method getChannel()
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:157: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:159: error: incompatible types: FriendlyByteBuf cannot be converted to RegistryFriendlyByteBuf
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:163: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:165: error: incompatible types: FriendlyByteBuf cannot be converted to RegistryFriendlyByteBuf
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:52: error: cannot find symbol
+	public static final MinecartController EMPTY = new MinecartController.Empty();
+	                                                                     ^
+  symbol:   class Empty
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:54: error: cannot find symbol
+	public static final IAttachmentSerializer<CompoundTag, MinecartController> SERIALIZER = Type.SERIALIZER;
+	                                                                                        ^
+  symbol:   variable Type
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:79: error: cannot find symbol
+		return getType() == Type.EMPTY;
+		                    ^
+  symbol:   variable Type
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:84: error: cannot find symbol
+		return Type.NORMAL;
+		       ^
+  symbol:   variable Type
+
+src/main/java/com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.java:88: error: package Capabilities does not exist
+				Capabilities.FluidHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/fluids/tank/CreativeFluidTankBlockEntity.java:36: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:273: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:280: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/logistics/funnel/FunnelBlock.java:88: error: cannot find symbol
+			return ItemInteractionResult.PASS;
+			                            ^
+  symbol:   variable PASS
+
+src/main/java/com/simibubi/create/content/logistics/factoryBoard/FactoryPanelBehaviour.java:605: error: method openMenu in class ServerPlayer cannot be applied to given types;
+					sp.openMenu(this, buf -> FactoryPanelPosition.STREAM_CODEC.encode(buf, getPanelPosition()));
+					  ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/logistics/packager/InventorySummary.java:70: error: cannot find symbol
+		int count = TransferUtil.truncateLong(view.getAmount());
+		                        ^
+  symbol:   method truncateLong(long)
+
+src/main/java/com/simibubi/create/content/logistics/packager/InventorySummary.java:75: error: cannot find symbol
+		this.add(variant.toStack(TransferUtil.truncateLong(amount)));
+		                                     ^
+  symbol:   method truncateLong(long)
+
+src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlockEntity.java:118: error: package Capabilities does not exist
+			Capabilities.ItemHandler.BLOCK,
+			            ^
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlockEntity.java:81: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:126: error: cannot find symbol
+		capAbove = StorageProvider.createForItems(level, worldPosition.above());
+		^
+  symbol:   variable capAbove
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:127: error: cannot find symbol
+		capBelow = StorageProvider.createForItems(level, worldPosition.below());
+		^
+  symbol:   variable capBelow
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+				BlockCapabilityCache<IItemHandler, @Nullable Direction> cache = BlockCapabilityCache.create(
+				^
+  symbol:   class BlockCapabilityCache
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+				BlockCapabilityCache<IItemHandler, @Nullable Direction> cache = BlockCapabilityCache.create(
+				                     ^
+  symbol:   class IItemHandler
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:552: error: package Capabilities does not exist
+						Capabilities.ItemHandler.BLOCK,
+						            ^
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:560: error: package Capabilities does not exist
+				return level.getCapability(Capabilities.ItemHandler.BLOCK, pos, side.getOpposite());
+				                                       ^
+src/main/java/com/simibubi/create/content/logistics/chute/ChuteItemHandler.java:37: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelBlockEntity.java:130: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/infrastructure/gametest/CreateGameTestHelper.java:262: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelItemHandler.java:32: error: cannot find symbol
+		int toInsert = Math.min(ItemHelper.truncateLong(maxAmount), resource.getItem().getMaxStackSize());
+		                                                                              ^
+  symbol:   method getMaxStackSize()
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:54: error: cannot find symbol
+					PeripheralCapability.get(),
+					^
+  symbol:   variable PeripheralCapability
+
+src/main/java/com/simibubi/create/content/logistics/packagerLink/LogisticsNetworkSavedData.java:24: error: cannot infer type arguments for Factory<>
+		return new SavedData.Factory<>(LogisticsNetworkSavedData::new, LogisticsNetworkSavedData::load);
+		       ^
+  reason: cannot infer type-variable(s) T
+
+src/main/java/com/simibubi/create/content/trains/RailwaySavedData.java:32: error: cannot infer type arguments for Factory<>
+		return new SavedData.Factory<>(RailwaySavedData::new, RailwaySavedData::load);
+		       ^
+  reason: cannot infer type-variable(s) T
+
+src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:140: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:147: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:907: error: cannot find symbol
+			return AABB.INFINITE;
+			           ^
+  symbol:   variable INFINITE
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/PackagePortBlockEntity.java:154: error: method openMenu in class Player cannot be applied to given types;
+		player.openMenu(this, worldPosition);
+		      ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/logistics/depot/DepotItemHandler.java:33: error: cannot find symbol
+		int toInsert = Math.min(ItemHelper.truncateLong(maxAmount), resource.getItem().getMaxStackSize());
+		                                                                              ^
+  symbol:   method getMaxStackSize()
+
+src/main/java/com/simibubi/create/content/trains/bogey/StandardBogeyBlock.java:53: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/decoration/copycat/CopycatBlock.java:125: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:141: error: cannot find symbol
+		CompoundTag tag = box.getNbt();
+		                     ^
+  symbol:   method getNbt()
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:186: error: cannot find symbol
+		String boxAddress = !variant.hasNbt() ? ""
+		                            ^
+  symbol:   method hasNbt()
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:187: error: cannot find symbol
+			: variant.getNbt()
+			         ^
+  symbol:   method getNbt()
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:38: error: package Capabilities does not exist
+				Capabilities.FluidHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:82: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:92: error: cannot find symbol
+				TransactionSuccessCallback.register(transaction, this::keepAlive);
+				^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:96: error: method does not override or implement a method from a supertype
+		@Override
+		^
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:98: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:107: error: cannot find symbol
+			return new ListeningStorageView<>(view, this::keepAlive);
+			           ^
+  symbol:   class ListeningStorageView
+
+src/main/java/com/simibubi/create/content/fluids/FluidNetwork.java:224: error: cannot find symbol
+					long fill = targetHandler.insert(divided.getVariant(), divided.getAmount(), t);
+					                         ^
+  symbol:   method insert(FluidVariant,long,Transaction)
+
+src/main/java/com/simibubi/create/content/trains/track/FakeTrackBlock.java:39: error: cannot find symbol
+		LandPathNodeTypesRegistry.register(this, BlockPathTypes.DAMAGE_OTHER, null);
+		                                         ^
+  symbol:   variable BlockPathTypes
+
+src/main/java/com/simibubi/create/content/trains/schedule/condition/ItemThresholdCondition.java:69: error: cannot find symbol
+					foundItems += stackInSlot.getCount() == stackInSlot.getOrDefault(DataComponents.MAX_STACK_SIZE, 64) ? 1 : 0;
+					              ^
+  symbol:   variable stackInSlot
+
+src/main/java/com/simibubi/create/content/trains/schedule/condition/ItemThresholdCondition.java:69: error: cannot find symbol
+					foundItems += stackInSlot.getCount() == stackInSlot.getOrDefault(DataComponents.MAX_STACK_SIZE, 64) ? 1 : 0;
+					                                        ^
+  symbol:   variable stackInSlot
+
+src/main/java/com/simibubi/create/content/trains/schedule/ScheduleItem.java:68: error: method openMenu in class Player cannot be applied to given types;
+				player.openMenu(this, buf -> {
+				      ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/trains/observer/TrackObserverBlock.java:42: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:26: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:32: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:33: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/redstone/thresholdSwitch/ThresholdSwitchBlock.java:113: error: method getItemStorage in class TransferUtil cannot be applied to given types;
+			if (TransferUtil.getItemStorage(world, offsetPos, face.getOpposite()) != null
+			                ^
+  required: BlockEntity
+
+src/main/java/com/simibubi/create/content/redstone/thresholdSwitch/ThresholdSwitchBlock.java:114: error: cannot find symbol
+					|| TransferUtil.getFluidStorage(world, offsetPos, face.getOpposite()) != null) {
+					               ^
+  symbol:   method getFluidStorage(Level,BlockPos,Direction)
+
+src/main/java/com/simibubi/create/content/redstone/smartObserver/SmartObserverBlock.java:66: error: method getItemStorage in class TransferUtil cannot be applied to given types;
+			else if (TransferUtil.getItemStorage(world, offsetPos, face.getOpposite()) != null
+			                     ^
+  required: BlockEntity
+
+src/main/java/com/simibubi/create/content/redstone/smartObserver/SmartObserverBlock.java:67: error: cannot find symbol
+					|| TransferUtil.getFluidStorage(world, offsetPos, face.getOpposite()) != null)
+					               ^
+  symbol:   method getFluidStorage(Level,BlockPos,Direction)
+
+src/main/java/com/simibubi/create/content/redstone/nixieTube/NixieTubeBlock.java:89: error: cannot find symbol
+		DyeColor dye = TagUtil.getColorFromStack(heldItem);
+		                                         ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerClientHandler.java:230: error: cannot find symbol
+		tooltipScreen.init(mc, window.getGuiScaledWidth(), window.getGuiScaledHeight());
+		                       ^
+  symbol:   variable window
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerClientHandler.java:230: error: cannot find symbol
+		tooltipScreen.init(mc, window.getGuiScaledWidth(), window.getGuiScaledHeight());
+		                                                   ^
+  symbol:   variable window
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:98: error: method openMenu in class Player cannot be applied to given types;
+				player.openMenu(this, buf -> {
+				      ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlock.java:104: error: incompatible types: BlockGetter cannot be converted to LevelReader
+		return Blocks.LECTERN.getCloneItemStack(view, pos, state);
+		                                        ^
+src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:30: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:37: error: cannot find symbol
+		for(BlockPos offset : EnchantingTableBlock.BOOKSHELF_OFFSETS) {
+		                      ^
+  symbol:   variable EnchantingTableBlock
+
+src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:38: error: cannot find symbol
+			if (!EnchantingTableBlock.isValidBookShelf(level, pos, offset))
+			     ^
+  symbol:   variable EnchantingTableBlock
+
+src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:29: error: cannot find symbol
+		ItemModelBuilder builder = p.withExistingParent(name, p.modLoc(path + name));
+		^
+  symbol:   class ItemModelBuilder
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/ShoppingListItem.java:136: error: cannot find symbol
+			Couple<InventorySummary> lists = list.bakeEntries(context.level(), null);
+			                                                         ^
+  symbol:   method level()
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:36: error: cannot find symbol
+	private static final ModelProperty<CullData> CULL_PROPERTY = new ModelProperty<>();
+	                                                                 ^
+  symbol:   class ModelProperty
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:48: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:56: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:75: error: cannot find symbol
+			.getQuads(null, null, rand, ModelData.EMPTY, renderType)) {
+			                            ^
+  symbol:   variable ModelData
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:91: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:103: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:107: error: cannot find symbol
+		List<BakedQuad> mainQuads = super.getQuads(state, side, rand, extraData, renderType);
+		                            ^
+  symbol:   variable super
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerInteractionHandler.java:87: error: method openMenu in class ServerPlayer cannot be applied to given types;
+			sp.openMenu(stbe.new RequestMenuProvider(), buf -> {
+			  ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:83: error: cannot find symbol
+			if (!pLevel.isClientSide() && !stbe.receivedPayments.isEmpty()) {
+			     ^
+  symbol:   variable pLevel
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:89: error: variable stack is already defined in method useItemOn(ItemStack,BlockState,Level,BlockPos,Player,InteractionHand,BlockHitResult)
+							ItemStack stack = resource.toStack(TransferUtil.truncateLong(extracted));
+							          ^
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:89: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:90: error: cannot find symbol
+							pPlayer.getInventory().placeItemBackInInventory(stack);
+							^
+  symbol:   variable pPlayer
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:95: error: cannot find symbol
+				AllSoundEvents.playItemPickup(pPlayer);
+				                              ^
+  symbol:   variable pPlayer
+
+src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:101: error: method openMenu in class ServerPlayer cannot be applied to given types;
+					sp.openMenu(stbe.new CategoryMenuProvider(), stbe.getBlockPos());
+					  ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterMenu.java:93: error: incompatible types: SlottedStorage<ItemVariant> cannot be converted to SlottedStackStorage
+			super(itemHandler, index, xPosition, yPosition);
+			      ^
+src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterBlockEntity.java:131: error: method openMenu in class Player cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:63: error: cannot find symbol
+		TransactionSuccessCallback.register(ctx, () -> {
+		^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:107: error: incompatible types: ItemVariant cannot be converted to ItemStack
+			if (!defragmenter.isFragmented(resource)) {
+			                               ^
+src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:120: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:166: error: package Capabilities does not exist
+			Capabilities.ItemHandler.BLOCK,
+			            ^
+src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlock.java:120: error: incompatible types: boolean cannot be converted to TransactionContext
+
+src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlock.java:122: error: incompatible types: boolean cannot be converted to TransactionContext
+					be.unwrapBox(stack.copy(), false);
+					                           ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:45: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:87: error: package Capabilities does not exist
+			Capabilities.ItemHandler.BLOCK,
+			            ^
+src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:250: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:15: error: cannot find symbol
+	private static final DeferredRegister<PackagePortTargetType> REGISTER = DeferredRegister.create(CreateRegistries.PACKAGE_PORT_TARGET_TYPE, Create.ID);
+	                                                                        ^
+  symbol:   variable DeferredRegister
+
+src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:104: error: cannot find symbol
+		Direction facing = pState.getValue(FACING);
+		                   ^
+  symbol:   variable pState
+
+src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:105: error: cannot find symbol
+		BlockPos targetPos = pPos.relative(facing);
+		                     ^
+  symbol:   variable pPos
+
+src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:106: error: cannot find symbol
+		Storage<ItemVariant> storage = ItemStorage.SIDED.find(pLevel, targetPos, facing.getOpposite());
+		                                                      ^
+  symbol:   variable pLevel
+
+src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:141: error: cannot find symbol
+			int newSize = TransferUtil.truncateLong(item.getCount() - inserted);
+			                          ^
+  symbol:   method truncateLong(long)
+
+src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/attributes/ShulkerFillLevelAttribute.java:101: error: cannot find symbol
+			if (contents.getSlots() > 0) {
+			            ^
+  symbol:   method getSlots()
+
+src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/attributes/ShulkerFillLevelAttribute.java:102: error: cannot find symbol
+				int rawSize = contents.getSlots();
+				                      ^
+  symbol:   method getSlots()
+
+src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/AllItemAttributeTypes.java:42: error: package Capabilities does not exist
+		FLUID_CONTAINER = singleton("fluid_container", s -> s.getCapability(Capabilities.FluidHandler.ITEM) != null),
+		                                                                                ^
+src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/AllItemAttributeTypes.java:82: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/funnel/FunnelGenerator.java:53: error: cannot find symbol
+		BlockModelBuilder model = p.models()
+		^
+  symbol:   class BlockModelBuilder
+
+src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:56: error: bad operand types for binary operator '<'
+		for (int i = 0; i < ghostInventory.getSlots(); i++) {
+		                  ^
+  first type:  int
+
+src/main/java/com/simibubi/create/content/logistics/filter/FilterItem.java:177: error: method openMenu in class Player cannot be applied to given types;
+				player.openMenu(this, buf -> {
+				      ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/logistics/depot/DepotBlockEntity.java:33: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/logistics/depot/SharedDepotBlockMethods.java:81: error: variable stack is already defined in method onUse(ItemStack,BlockState,Level,BlockPos,Player,InteractionHand,BlockHitResult)
+
+src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:125: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:399: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:637: error: cannot find symbol
+		return AABB.INFINITE;
+		           ^
+  symbol:   variable INFINITE
+
+src/main/java/com/simibubi/create/content/logistics/crate/CreativeCrateMountedStorage.java:35: error: CreativeCrateMountedStorage is not abstract and does not override abstract method isItemValid(int,ItemStack) in SlottedStackStorage
+public class CreativeCrateMountedStorage extends MountedItemStorage implements SingleSlotStorage<ItemVariant> {
+       ^
+src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:47: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:111: error: incompatible types: BottomlessItemHandler cannot be converted to ItemStackHandler
+			super(0, BottomlessItemHandler.this, ItemStack.EMPTY);
+			                              ^
+src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:133: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:28: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:303: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:430: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:439: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemFilling.java:66: error: cannot find symbol
+		if (!isFluidHandlerValid(stack, capability))
+		                                ^
+  symbol:   variable capability
+
+src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemEmptying.java:38: error: cannot find symbol
+		return TransferUtil.getFluidContained(stack).isPresent();
+		                   ^
+  symbol:   method getFluidContained(ItemStack)
+
+src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemEmptying.java:66: error: cannot find symbol
+			resultingFluid = TransferUtil.extractAnyFluid(tank, FluidConstants.BUCKET);
+			                             ^
+  symbol:   method extractAnyFluid(Storage<FluidVariant>,long)
+
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:19: error: cannot find symbol
+			FluidStack.OPTIONAL_STREAM_CODEC, FluidSplashPacket::fluid,
+			^
+  symbol:   variable FluidStack
+
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:173: error: fluid has protected access in LiquidBlock
+					fluid = flowingFluid.fluid;
+					                    ^
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:206: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:253: error: cannot find symbol
+		TransactionSuccessCallback.register(ctx, blockEntity::sendData);
+		^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:413: error: cannot find symbol
+		if (ctx != null) TransactionSuccessCallback.register(ctx, blockEntity::sendData);
+		                 ^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:38: error: incompatible types: bad return type in method reference
+		ExtraCodecs.NON_NEGATIVE_INT.fieldOf("capacity").forGetter(FluidTankMountedStorage::getCapacity),
+		                                                           ^
+    long cannot be converted to Integer
+
+src/main/java/com/simibubi/create/content/fluids/tank/FluidTankItem.java:160: error: cannot find symbol
+		return BlockItem.getBlockEntityData(item) != null;
+		                ^
+  symbol:   method getBlockEntityData(ItemStack)
+
+src/main/java/com/simibubi/create/content/fluids/spout/SpoutBlockEntity.java:76: error: package Capabilities does not exist
+				Capabilities.FluidHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:44: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:49: error: cannot find symbol
+		if (potionContents == PotionContents.EMPTY) {
+		                      ^
+  symbol:   variable PotionContents
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:50: error: cannot find symbol
+			fs.remove(DataComponents.POTION_CONTENTS);
+			  ^
+  symbol:   method remove(DataComponentType<PotionContents>)
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:54: error: cannot find symbol
+		return new FluidStack(fs.getFluid(), fs.getAmount(), fs.getTag());
+		                                                       ^
+  symbol:   method getTag()
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:71: error: cannot find symbol
+		List<RecipeHolder<MixingRecipe>> mixingRecipes = new ArrayList<>();
+		     ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:162: error: cannot find symbol
+		return new RecipeHolder<>(recipeId, recipe);
+		           ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:168: error: cannot find symbol
+		for (RecipeHolder<MixingRecipe> recipe : all) {
+		     ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluidHandler.java:72: error: cannot find symbol
+		fluid.set(AllDataComponents.POTION_FLUID_BOTTLE_TYPE, bottleTypeFromItem);
+		     ^
+  symbol:   method set(DataComponentType<BottleType>,BottleType)
+
+src/main/java/com/simibubi/create/content/fluids/potion/PotionFluidHandler.java:116: error: cannot find symbol
+		PotionContents contents = fs.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
+		                            ^
+  symbol:   method getOrDefault(DataComponentType<PotionContents>,PotionContents)
+
+src/main/java/com/simibubi/create/content/fluids/particle/FluidStackParticle.java:106: error: cannot find symbol
+		Color color = new Color(clientFluid.getTintColor(fluid));
+		                        ^
+  symbol:   variable clientFluid
+
+src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:34: error: cannot find symbol
+		if (!internalTank.isEmpty() && !internalTank.getFluid().canFill(resource))
+		                                                       ^
+  symbol:   method canFill(FluidVariant)
+
+src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:63: error: cannot find symbol
+		if (resource != null && !internalTank.isEmpty() && !internalTank.getFluid().canFill(resource))
+		                                                                           ^
+  symbol:   method canFill(FluidVariant)
+
+src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:78: error: cannot find symbol
+				.isFluidEqual(returned) || returned.isEmpty())
+				^
+  symbol:   method isFluidEqual(FluidStack)
+
+src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:81: error: cannot find symbol
+		if (resource != null && !returned.canFill(resource))
+		                                 ^
+  symbol:   method canFill(FluidVariant)
+
+src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:86: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:96: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainItemHandler.java:33: error: cannot find symbol
+				: Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+				                                              ^
+  symbol:   method getMaxStackSize()
+
+src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlock.java:48: error: package Capabilities does not exist
+								 if (stack.getItem() instanceof BlockItem && stack.getCapability(Capabilities.FluidHandler.ITEM) == null)
+								                                                                             ^
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:131: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:148: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> world.scheduleTick(outputPos, Fluids.WATER, 1));
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:209: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> world.playSound(null, i, j, k, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5F,
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:217: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> world.scheduleTick(outputPos, Fluids.WATER, 1));
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:255: error: incompatible types: FluidVariant cannot be converted to FluidStack
+			if (!containedFluidStack.isEmpty() && !FluidStack.isSameFluidSameComponents(containedFluidStack, resource))
+			                                                                                                 ^
+src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:302: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/sync/LimbSwingUpdatePacket.java:32: error: cannot find symbol
+		CompoundTag data = entity.getPersistentData();
+		                         ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/contraptions/sync/ContraptionSeatMappingPacket.java:45: error: cannot find symbol
+				player.getPersistentData()
+				      ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:96: error: cannot find symbol
+			public ModelData getModelData(BlockPos pos) {
+			       ^
+  symbol: class ModelData
+
+src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:95: error: method does not override or implement a method from a supertype
+			@Override
+			^
+src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:97: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:97: error: cannot find symbol
+				return c.modelData.getOrDefault(pos, ModelData.EMPTY);
+				        ^
+  symbol:   variable modelData
+
+src/main/java/com/simibubi/create/content/contraptions/elevator/ElevatorContactBlock.java:212: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatBlock.java:65: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/contraptions/mounted/MinecartContraptionItem.java:273: error: cannot find symbol
+		if (ContraptionPickupLimiting.isTooLargeForPickup(generatedStack.saveOptional(event.getLevel().registryAccess()))) {
+		                                                                              ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:38: error: CapabilityMinecartController is not abstract and does not override abstract method deserializeNBT(Provider,CompoundTag) in INBTSerializable
+public class CapabilityMinecartController implements INBTSerializable<CompoundTag> {
+       ^
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionHelper.java:89: error: incompatible types: Player cannot be converted to ServerPlayer
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:68: error: cannot find symbol
+		double distance = ReachUtil.reach(placer);
+		                  ^
+  symbol:   variable ReachUtil
+
+src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:104: error: incompatible types: Player cannot be converted to ServerPlayer
+				itemstack.hurtAndBreak(1, serverLevel, placer, $ -> SuperGlueItem.onBroken(placer));
+				                                       ^
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:157: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:160: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:38: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:83: error: cannot find symbol
+				TransactionSuccessCallback.register(transaction, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+				^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:94: error: cannot find symbol
+				TransactionSuccessCallback.register(transaction, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+				^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:110: error: cannot find symbol
+			return new ListeningStorageView<>(view, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+			           ^
+  symbol:   class ListeningStorageView
+
+src/main/java/com/simibubi/create/content/contraptions/actors/harvester/HarvesterMovementBehaviour.java:158: error: cannot find symbol
+			if (state.getBlock() instanceof SpecialPlantable)
+			                                ^
+  symbol:   class SpecialPlantable
+
+src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:54: error: cannot find symbol
+		CompoundTag data = remotePlayer.getPersistentData();
+		                               ^
+  symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:85: error: cannot find symbol
+  public abstract class AbstractContraptionEntity extends Entity implements IEntityWithComplexSpawn {
+                                                                            ^
+    symbol: class IEntityWithComplexSpawn
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:54: error: cannot find symbol
+  	public static final IAttachmentSerializer<CompoundTag, MinecartController> SERIALIZER = Type.SERIALIZER;
+  	                    ^
+    symbol:   class IAttachmentSerializer
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:83: error: cannot find symbol
+  	protected Type getType() {
+  	          ^
+    symbol:   class Type
+
+  src/main/java/com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.java:86: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/fluids/tank/CreativeFluidTankBlockEntity.java:34: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:9: error: package net.neoforged.neoforge.entity does not exist
+  import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+                                      ^
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:60: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/funnel/FunnelBlockEntity.java:51: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlockEntity.java:116: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlockEntity.java:79: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:110: error: cannot find symbol
+  	private final EnumMap<Direction, BlockCapabilityCache<IItemHandler, @Nullable Direction>> capCaches = new EnumMap<>(Direction.class);
+  	                                 ^
+    symbol:   class BlockCapabilityCache
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:110: error: cannot find symbol
+  	private final EnumMap<Direction, BlockCapabilityCache<IItemHandler, @Nullable Direction>> capCaches = new EnumMap<>(Direction.class);
+  	                                                      ^
+    symbol:   class IItemHandler
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:540: error: cannot find symbol
+  	private @Nullable IItemHandler grabCapability(@NotNull Direction side) {
+  	                  ^
+    symbol:   class IItemHandler
+
+  src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelBlockEntity.java:128: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:19: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:51: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:65: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:138: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:9: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+                                                      ^
+    symbol:   class ListeningStorageView
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:36: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/trains/schedule/ScheduleItem.java:47: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/trains/observer/TrackObserverBlock.java:18: error: cannot find symbol
+  public class TrackObserverBlock extends Block implements IBE<TrackObserverBlockEntity>, IWrenchable, ConnectableRedstoneBlock {
+                                                                                                       ^
+    symbol: class ConnectableRedstoneBlock
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:4: error: cannot find symbol
+  import com.simibubi.create.foundation.networking.SimplePacketBase;
+                                                  ^
+    symbol:   class SimplePacketBase
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:10: error: cannot find symbol
+  public class CarriageDataUpdatePacket extends SimplePacketBase {
+                                                ^
+    symbol: class SimplePacketBase
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:33: error: cannot find symbol
+  	public boolean handle(Context context) {
+  	                      ^
+    symbol:   class Context
+
+  src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:33: error: cannot find symbol
+  	public static final StreamCodec<RegistryFriendlyByteBuf, CubeParticleData> STREAM_CODEC = StreamCodec.composite(
+  	                    ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:64: error: cannot find symbol
+  	public StreamCodec<? super RegistryFriendlyByteBuf, CubeParticleData> getStreamCodec() {
+  	       ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:11: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                      ^
+    symbol:   class ReachUtil
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:13: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlockEntity.java:42: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:8: error: cannot find symbol
+  import com.simibubi.create.foundation.item.render.SimpleCustomRenderer;
+                                                   ^
+    symbol:   class SimpleCustomRenderer
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:42: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:17: error: cannot find symbol
+  import net.minecraft.world.level.block.EnchantmentTableBlock;
+                                        ^
+    symbol:   class EnchantmentTableBlock
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:18: error: cannot find symbol
+  import net.minecraft.world.level.block.entity.EnchantmentTableBlockEntity;
+                                               ^
+    symbol:   class EnchantmentTableBlockEntity
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/ToggleLatchGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                            ^
+  src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:19: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:20: error: package io.github.fabricators_of_create.porting_lib.models.generators.item does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.item.ItemModelBuilder;
+                                                                           ^
+  src/main/java/com/simibubi/create/content/redstone/diodes/ToggleLatchGenerator.java:18: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:44: error: cannot find symbol
+  																	  BlockModelProvider prov);
+  																	  ^
+    symbol:   class BlockModelProvider
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:56: error: cannot find symbol
+  	protected ExistingModelFile existingModel(BlockModelProvider prov, String name) {
+  	                                          ^
+    symbol:   class BlockModelProvider
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/PoweredLatchGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                            ^
+  src/main/java/com/simibubi/create/content/redstone/diodes/PoweredLatchGenerator.java:18: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/BrassDiodeGenerator.java:13: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                            ^
+  src/main/java/com/simibubi/create/content/redstone/diodes/BrassDiodeGenerator.java:18: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:13: error: cannot find symbol
+  import com.simibubi.create.foundation.model.BakedModelWrapperWithData;
+                                             ^
+    symbol:   class BakedModelWrapperWithData
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:30: error: package net.neoforged.neoforge.client.model.data does not exist
+  import net.neoforged.neoforge.client.model.data.ModelData;
+                                                 ^
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:31: error: package net.neoforged.neoforge.client.model.data.ModelData does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:32: error: package net.neoforged.neoforge.client.model.data does not exist
+  import net.neoforged.neoforge.client.model.data.ModelProperty;
+                                                 ^
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:34: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:36: error: cannot find symbol
+  	private static final ModelProperty<CullData> CULL_PROPERTY = new ModelProperty<>();
+  	                     ^
+    symbol:   class ModelProperty
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:92: error: cannot find symbol
+  	protected Builder gatherModelData(Builder builder, BlockAndTintGetter world, BlockPos pos, BlockState state,
+  	                                  ^
+    symbol:   class Builder
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:93: error: cannot find symbol
+  									  ModelData blockEntityData) {
+  									  ^
+    symbol:   class ModelData
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:92: error: cannot find symbol
+  	protected Builder gatherModelData(Builder builder, BlockAndTintGetter world, BlockPos pos, BlockState state,
+  	          ^
+    symbol:   class Builder
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:105: error: cannot find symbol
+  											 @NotNull RandomSource rand, @NotNull ModelData extraData, @Nullable RenderType renderType) {
+  											                                      ^
+    symbol:   class ModelData
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerInteractionHandler.java:43: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:50: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockKeeperRequestScreen.java:44: error: package me.pepperbell.simplenetworking does not exist
+  import me.pepperbell.simplenetworking.SimpleChannel;
+                                       ^
+  src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterBlockEntity.java:30: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:164: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:24: error: package net.neoforged.neoforge.capabilities does not exist
+  import net.neoforged.neoforge.capabilities.Capabilities;
+                                            ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:25: error: package net.neoforged.neoforge.capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:43: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportVisual.java:24: error: package net.minecraftforge.registries does not exist
+  import net.minecraftforge.registries.ForgeRegistries;
+                                      ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:85: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportRenderer.java:18: error: package net.minecraftforge.registries does not exist
+  import net.minecraftforge.registries.ForgeRegistries;
+                                      ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlock.java:55: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:11: error: package net.neoforged.bus.api does not exist
+  import net.neoforged.bus.api.IEventBus;
+                              ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:12: error: package net.neoforged.neoforge.registries does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:15: error: cannot find symbol
+  	private static final DeferredRegister<PackagePortTargetType> REGISTER = DeferredRegister.create(CreateRegistries.PACKAGE_PORT_TARGET_TYPE, Create.ID);
+  	                     ^
+    symbol:   class DeferredRegister
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:21: error: cannot find symbol
+  	public static void register(IEventBus eventBus) {
+  	                            ^
+    symbol:   class IEventBus
+
+  src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:51: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.LazyOptional;
+                                                         ^
+    symbol:   class LazyOptional
+
+  src/main/java/com/simibubi/create/content/logistics/funnel/FunnelGenerator.java:17: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelBuilder;
+                                                                            ^
+  src/main/java/com/simibubi/create/content/logistics/filter/FilterItem.java:49: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/depot/DepotBlockEntity.java:31: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:123: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:15: error: package net.neoforged.neoforge.capabilities does not exist
+  import net.neoforged.neoforge.capabilities.Capabilities;
+                                            ^
+  src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:16: error: package net.neoforged.neoforge.capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:26: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:53: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.IEntityAdditionalSpawnData;
+                                                           ^
+    symbol:   class IEntityAdditionalSpawnData
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:55: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
+                                                                  ^
+    symbol:   class LivingAttackEvent
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:58: error: cannot find symbol
+  public class PackageEntity extends LivingEntity implements IEntityWithComplexSpawn {
+                                                             ^
+    symbol: class IEntityWithComplexSpawn
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageRenderer.java:22: error: package net.minecraftforge.registries does not exist
+  import net.minecraftforge.registries.ForgeRegistries;
+                                      ^
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardBlockEntity.java:28: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:14: error: package net.neoforged.neoforge.fluids does not exist
+  import net.neoforged.neoforge.fluids.FluidStack;
+                                      ^
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:16: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:20: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.CreateCodecs;
+                                               ^
+    symbol:   class CreateCodecs
+
+  src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:22: error: package net.neoforged.neoforge.fluids does not exist
+  import net.neoforged.neoforge.fluids.FluidStack;
+                                      ^
+  src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:23: error: package net.neoforged.neoforge.fluids.capability.templates does not exist
+
+  src/main/java/com/simibubi/create/content/fluids/spout/SpoutBlockEntity.java:74: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:37: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewing$MixAccessor;
+                                                                                    ^
+    symbol:   class PotionBrewing$MixAccessor
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:38: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewingAccessor;
+                                                                                    ^
+    symbol:   class PotionBrewingAccessor
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:44: error: cannot find symbol
+  	private static List<RecipeHolder<MixingRecipe>> RECIPES;
+  	                    ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:50: error: cannot find symbol
+  	public static List<RecipeHolder<MixingRecipe>> createRecipes(Level level) {
+  	                                                             ^
+    symbol:   class Level
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:50: error: cannot find symbol
+  	public static List<RecipeHolder<MixingRecipe>> createRecipes(Level level) {
+  	                   ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:59: error: cannot find symbol
+  	public static Map<Item, List<MixingRecipe>> sortRecipesByItem(Level level) {
+  	                                                              ^
+    symbol:   class Level
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:68: error: cannot find symbol
+  	private static List<RecipeHolder<MixingRecipe>> createRecipesImpl(Level level) {
+  	                                                                  ^
+    symbol:   class Level
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:68: error: cannot find symbol
+  	private static List<RecipeHolder<MixingRecipe>> createRecipesImpl(Level level) {
+  	                    ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:153: error: cannot find symbol
+  	private static RecipeHolder<MixingRecipe> createRecipe(String id, Ingredient ingredient, FluidStack fromFluid, FluidStack toFluid) {
+  	               ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:165: error: cannot find symbol
+  	private static Map<Item, List<MixingRecipe>> sortRecipesByItem(List<RecipeHolder<MixingRecipe>> all) {
+  	                                                                    ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:40: error: cannot find symbol
+  	public static FluidStack of(long amount, PotionContents potionContents, BottleType bottleType) {
+  	                                         ^
+    symbol:   class PotionContents
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:48: error: cannot find symbol
+  	public static FluidStack addPotionToFluidStack(FluidStack fs, PotionContents potionContents) {
+  	                                                              ^
+    symbol:   class PotionContents
+
+  src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:84: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:56: error: cannot find symbol
+  	private final ICapabilityProvider<IFluidHandler> fluidHandlerProvider = ICapabilityProvider.of(() -> fluidHandler);
+  	                                  ^
+    symbol:   class IFluidHandler
+
+  src/main/java/com/simibubi/create/content/fluids/FluidPropagator.java:24: error: package net.neoforged.neoforge.capabilities does not exist
+  import net.neoforged.neoforge.capabilities.Capabilities;
+                                            ^
+  src/main/java/com/simibubi/create/content/fluids/FluidPropagator.java:25: error: package net.neoforged.neoforge.fluids.capability does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/elevator/ElevatorContactBlock.java:64: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatBlock.java:40: error: cannot find symbol
+  import net.minecraft.world.level.pathfinder.BlockPathTypes;
+                                             ^
+    symbol:   class BlockPathTypes
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:30: error: package net.neoforged.neoforge.event.entity does not exist
+  import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+                                            ^
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:31: error: package net.neoforged.neoforge.event.entity does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:32: error: package net.neoforged.neoforge.event.entity.player does not exist
+  import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+                                                   ^
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:33: error: package net.neoforged.neoforge.event.level does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:34: error: package net.neoforged.neoforge.event.tick does not exist
+  import net.neoforged.neoforge.event.tick.EntityTickEvent;
+                                          ^
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:108: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionPacket.java:9: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                      ^
+    symbol:   class ReachUtil
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionHandler.java:14: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                      ^
+    symbol:   class ReachUtil
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:9: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                      ^
+    symbol:   class ReachUtil
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:37: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.IEntityAdditionalSpawnData;
+                                                           ^
+    symbol:   class IEntityAdditionalSpawnData
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:40: error: package net.neoforged.neoforge.common.util does not exist
+  import net.neoforged.neoforge.common.util.FakePlayer;
+                                           ^
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:41: error: package net.neoforged.neoforge.entity does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:43: error: cannot find symbol
+  public class SeatEntity extends Entity implements IEntityWithComplexSpawn {
+                                                    ^
+    symbol: class IEntityWithComplexSpawn
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:10: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+                                                      ^
+    symbol:   class ListeningStorageView
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:36: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/harvester/HarvesterMovementBehaviour.java:5: error: cannot find symbol
+  import net.neoforged.neoforge.common.SpecialPlantable;
+                                      ^
+    symbol:   class SpecialPlantable
+
+  src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:11: error: package net.neoforged.neoforge.event.tick does not exist
+  import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+                                          ^
+  src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:15: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/ContraptionCollider.java:74: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:37: error: cannot find symbol
+  	@Environment(EnvType.CLIENT)
+  	 ^
+    symbol:   class Environment
+
+  src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:37: error: cannot find symbol
+  	@Environment(EnvType.CLIENT)
+  	             ^
+    symbol:   variable EnvType
+
+  src/main/java/com/simibubi/create/content/trains/track/TrackMaterialFactory.java:28: error: TagValue(TagKey<Item>) is not public in TagValue; cannot be accessed from outside package
+  			new Ingredient.TagValue(ConventionalItemTags.IRON_NUGGETS),
+  			^
+  src/main/java/com/simibubi/create/content/trains/track/TrackMaterialFactory.java:29: error: TagValue(TagKey<Item>) is not public in TagValue; cannot be accessed from outside package
+
+  src/main/java/com/simibubi/create/content/trains/track/TrackBlockEntity.java:255: error: cannot find symbol
+  		return AABB.INFINITE;
+  		           ^
+    symbol:   variable INFINITE
+
+  src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:612: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/contraptions/AbstractContraptionEntity.java:635: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:152: error: cannot find symbol
+  		AllPackets.getChannel().sendToClientsTracking(new CarriageDataUpdatePacket(this), this);
+  		          ^
+    symbol:   method getChannel()
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:157: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:159: error: incompatible types: FriendlyByteBuf cannot be converted to RegistryFriendlyByteBuf
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:163: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageContraptionEntity.java:165: error: incompatible types: FriendlyByteBuf cannot be converted to RegistryFriendlyByteBuf
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:52: error: cannot find symbol
+  	public static final MinecartController EMPTY = new MinecartController.Empty();
+  	                                                                     ^
+    symbol:   class Empty
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:54: error: cannot find symbol
+  	public static final IAttachmentSerializer<CompoundTag, MinecartController> SERIALIZER = Type.SERIALIZER;
+  	                                                                                        ^
+    symbol:   variable Type
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:79: error: cannot find symbol
+  		return getType() == Type.EMPTY;
+  		                    ^
+    symbol:   variable Type
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/MinecartController.java:84: error: cannot find symbol
+  		return Type.NORMAL;
+  		       ^
+    symbol:   variable Type
+
+  src/main/java/com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.java:88: error: package Capabilities does not exist
+  				Capabilities.FluidHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/fluids/tank/CreativeFluidTankBlockEntity.java:36: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:273: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueEntity.java:280: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/logistics/funnel/FunnelBlock.java:88: error: cannot find symbol
+  			return ItemInteractionResult.PASS;
+  			                            ^
+    symbol:   variable PASS
+
+  src/main/java/com/simibubi/create/content/logistics/factoryBoard/FactoryPanelBehaviour.java:605: error: method openMenu in class ServerPlayer cannot be applied to given types;
+  					sp.openMenu(this, buf -> FactoryPanelPosition.STREAM_CODEC.encode(buf, getPanelPosition()));
+  					  ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/logistics/packager/InventorySummary.java:70: error: cannot find symbol
+  		int count = TransferUtil.truncateLong(view.getAmount());
+  		                        ^
+    symbol:   method truncateLong(long)
+
+  src/main/java/com/simibubi/create/content/logistics/packager/InventorySummary.java:75: error: cannot find symbol
+  		this.add(variant.toStack(TransferUtil.truncateLong(amount)));
+  		                                     ^
+    symbol:   method truncateLong(long)
+
+  src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlockEntity.java:118: error: package Capabilities does not exist
+  			Capabilities.ItemHandler.BLOCK,
+  			            ^
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlockEntity.java:81: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:126: error: cannot find symbol
+  		capAbove = StorageProvider.createForItems(level, worldPosition.above());
+  		^
+    symbol:   variable capAbove
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:127: error: cannot find symbol
+  		capBelow = StorageProvider.createForItems(level, worldPosition.below());
+  		^
+    symbol:   variable capBelow
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+  				BlockCapabilityCache<IItemHandler, @Nullable Direction> cache = BlockCapabilityCache.create(
+  				^
+    symbol:   class BlockCapabilityCache
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+  				BlockCapabilityCache<IItemHandler, @Nullable Direction> cache = BlockCapabilityCache.create(
+  				                     ^
+    symbol:   class IItemHandler
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:552: error: package Capabilities does not exist
+  						Capabilities.ItemHandler.BLOCK,
+  						            ^
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:551: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteBlockEntity.java:560: error: package Capabilities does not exist
+  				return level.getCapability(Capabilities.ItemHandler.BLOCK, pos, side.getOpposite());
+  				                                       ^
+  src/main/java/com/simibubi/create/content/logistics/chute/ChuteItemHandler.java:37: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelBlockEntity.java:130: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/infrastructure/gametest/CreateGameTestHelper.java:262: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/tunnel/BrassTunnelItemHandler.java:32: error: cannot find symbol
+  		int toInsert = Math.min(ItemHelper.truncateLong(maxAmount), resource.getItem().getMaxStackSize());
+  		                                                                              ^
+    symbol:   method getMaxStackSize()
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/DisplayLinkBlockEntity.java:54: error: cannot find symbol
+  					PeripheralCapability.get(),
+  					^
+    symbol:   variable PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/logistics/packagerLink/LogisticsNetworkSavedData.java:24: error: cannot infer type arguments for Factory<>
+  		return new SavedData.Factory<>(LogisticsNetworkSavedData::new, LogisticsNetworkSavedData::load);
+  		       ^
+    reason: cannot infer type-variable(s) T
+
+  src/main/java/com/simibubi/create/content/trains/RailwaySavedData.java:32: error: cannot infer type arguments for Factory<>
+  		return new SavedData.Factory<>(RailwaySavedData::new, RailwaySavedData::load);
+  		       ^
+    reason: cannot infer type-variable(s) T
+
+  src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:140: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:147: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/trains/station/StationBlockEntity.java:907: error: cannot find symbol
+  			return AABB.INFINITE;
+  			           ^
+    symbol:   variable INFINITE
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/PackagePortBlockEntity.java:154: error: method openMenu in class Player cannot be applied to given types;
+  		player.openMenu(this, worldPosition);
+  		      ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/logistics/depot/DepotItemHandler.java:33: error: cannot find symbol
+  		int toInsert = Math.min(ItemHelper.truncateLong(maxAmount), resource.getItem().getMaxStackSize());
+  		                                                                              ^
+    symbol:   method getMaxStackSize()
+
+  src/main/java/com/simibubi/create/content/trains/bogey/StandardBogeyBlock.java:53: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/decoration/copycat/CopycatBlock.java:125: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:141: error: cannot find symbol
+  		CompoundTag tag = box.getNbt();
+  		                     ^
+    symbol:   method getNbt()
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:186: error: cannot find symbol
+  		String boxAddress = !variant.hasNbt() ? ""
+  		                            ^
+    symbol:   method hasNbt()
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageItem.java:187: error: cannot find symbol
+  			: variant.getNbt()
+  			         ^
+    symbol:   method getNbt()
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:38: error: package Capabilities does not exist
+  				Capabilities.FluidHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:82: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:92: error: cannot find symbol
+  				TransactionSuccessCallback.register(transaction, this::keepAlive);
+  				^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:96: error: method does not override or implement a method from a supertype
+  		@Override
+  		^
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:98: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableFluidInterfaceBlockEntity.java:107: error: cannot find symbol
+  			return new ListeningStorageView<>(view, this::keepAlive);
+  			           ^
+    symbol:   class ListeningStorageView
+
+  src/main/java/com/simibubi/create/content/fluids/FluidNetwork.java:224: error: cannot find symbol
+  					long fill = targetHandler.insert(divided.getVariant(), divided.getAmount(), t);
+  					                         ^
+    symbol:   method insert(FluidVariant,long,Transaction)
+
+  src/main/java/com/simibubi/create/content/trains/track/FakeTrackBlock.java:39: error: cannot find symbol
+  		LandPathNodeTypesRegistry.register(this, BlockPathTypes.DAMAGE_OTHER, null);
+  		                                         ^
+    symbol:   variable BlockPathTypes
+
+  src/main/java/com/simibubi/create/content/trains/schedule/condition/ItemThresholdCondition.java:69: error: cannot find symbol
+  					foundItems += stackInSlot.getCount() == stackInSlot.getOrDefault(DataComponents.MAX_STACK_SIZE, 64) ? 1 : 0;
+  					              ^
+    symbol:   variable stackInSlot
+
+  src/main/java/com/simibubi/create/content/trains/schedule/condition/ItemThresholdCondition.java:69: error: cannot find symbol
+  					foundItems += stackInSlot.getCount() == stackInSlot.getOrDefault(DataComponents.MAX_STACK_SIZE, 64) ? 1 : 0;
+  					                                        ^
+    symbol:   variable stackInSlot
+
+  src/main/java/com/simibubi/create/content/trains/schedule/ScheduleItem.java:68: error: method openMenu in class Player cannot be applied to given types;
+  				player.openMenu(this, buf -> {
+  				      ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/trains/observer/TrackObserverBlock.java:42: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:26: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/trains/entity/CarriageDataUpdatePacket.java:32: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/trains/CubeParticleData.java:33: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/redstone/thresholdSwitch/ThresholdSwitchBlock.java:113: error: method getItemStorage in class TransferUtil cannot be applied to given types;
+  			if (TransferUtil.getItemStorage(world, offsetPos, face.getOpposite()) != null
+  			                ^
+    required: BlockEntity
+
+  src/main/java/com/simibubi/create/content/redstone/thresholdSwitch/ThresholdSwitchBlock.java:114: error: cannot find symbol
+  					|| TransferUtil.getFluidStorage(world, offsetPos, face.getOpposite()) != null) {
+  					               ^
+    symbol:   method getFluidStorage(Level,BlockPos,Direction)
+
+  src/main/java/com/simibubi/create/content/redstone/smartObserver/SmartObserverBlock.java:66: error: method getItemStorage in class TransferUtil cannot be applied to given types;
+  			else if (TransferUtil.getItemStorage(world, offsetPos, face.getOpposite()) != null
+  			                     ^
+    required: BlockEntity
+
+  src/main/java/com/simibubi/create/content/redstone/smartObserver/SmartObserverBlock.java:67: error: cannot find symbol
+  					|| TransferUtil.getFluidStorage(world, offsetPos, face.getOpposite()) != null)
+  					               ^
+    symbol:   method getFluidStorage(Level,BlockPos,Direction)
+
+  src/main/java/com/simibubi/create/content/redstone/nixieTube/NixieTubeBlock.java:89: error: cannot find symbol
+  		DyeColor dye = TagUtil.getColorFromStack(heldItem);
+  		                                         ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerClientHandler.java:230: error: cannot find symbol
+  		tooltipScreen.init(mc, window.getGuiScaledWidth(), window.getGuiScaledHeight());
+  		                       ^
+    symbol:   variable window
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerClientHandler.java:230: error: cannot find symbol
+  		tooltipScreen.init(mc, window.getGuiScaledWidth(), window.getGuiScaledHeight());
+  		                                                   ^
+    symbol:   variable window
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LinkedControllerItem.java:98: error: method openMenu in class Player cannot be applied to given types;
+  				player.openMenu(this, buf -> {
+  				      ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/redstone/link/controller/LecternControllerBlock.java:104: error: incompatible types: BlockGetter cannot be converted to LevelReader
+  		return Blocks.LECTERN.getCloneItemStack(view, pos, state);
+  		                                        ^
+  src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:30: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:37: error: cannot find symbol
+  		for(BlockPos offset : EnchantingTableBlock.BOOKSHELF_OFFSETS) {
+  		                      ^
+    symbol:   variable EnchantingTableBlock
+
+  src/main/java/com/simibubi/create/content/redstone/displayLink/source/EnchantPowerDisplaySource.java:38: error: cannot find symbol
+  			if (!EnchantingTableBlock.isValidBookShelf(level, pos, offset))
+  			     ^
+    symbol:   variable EnchantingTableBlock
+
+  src/main/java/com/simibubi/create/content/redstone/diodes/AbstractDiodeGenerator.java:29: error: cannot find symbol
+  		ItemModelBuilder builder = p.withExistingParent(name, p.modLoc(path + name));
+  		^
+    symbol:   class ItemModelBuilder
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/ShoppingListItem.java:136: error: cannot find symbol
+  			Couple<InventorySummary> lists = list.bakeEntries(context.level(), null);
+  			                                                         ^
+    symbol:   method level()
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:36: error: cannot find symbol
+  	private static final ModelProperty<CullData> CULL_PROPERTY = new ModelProperty<>();
+  	                                                                 ^
+    symbol:   class ModelProperty
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:48: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:56: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:75: error: cannot find symbol
+  			.getQuads(null, null, rand, ModelData.EMPTY, renderType)) {
+  			                            ^
+    symbol:   variable ModelData
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:91: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:103: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/logistics/tableCloth/TableClothModel.java:107: error: cannot find symbol
+  		List<BakedQuad> mainQuads = super.getQuads(state, side, rand, extraData, renderType);
+  		                            ^
+    symbol:   variable super
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerInteractionHandler.java:87: error: method openMenu in class ServerPlayer cannot be applied to given types;
+  			sp.openMenu(stbe.new RequestMenuProvider(), buf -> {
+  			  ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:83: error: cannot find symbol
+  			if (!pLevel.isClientSide() && !stbe.receivedPayments.isEmpty()) {
+  			     ^
+    symbol:   variable pLevel
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:89: error: variable stack is already defined in method useItemOn(ItemStack,BlockState,Level,BlockPos,Player,InteractionHand,BlockHitResult)
+  							ItemStack stack = resource.toStack(TransferUtil.truncateLong(extracted));
+  							          ^
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:89: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:90: error: cannot find symbol
+  							pPlayer.getInventory().placeItemBackInInventory(stack);
+  							^
+    symbol:   variable pPlayer
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:95: error: cannot find symbol
+  				AllSoundEvents.playItemPickup(pPlayer);
+  				                              ^
+    symbol:   variable pPlayer
+
+  src/main/java/com/simibubi/create/content/logistics/stockTicker/StockTickerBlock.java:101: error: method openMenu in class ServerPlayer cannot be applied to given types;
+  					sp.openMenu(stbe.new CategoryMenuProvider(), stbe.getBlockPos());
+  					  ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterMenu.java:93: error: incompatible types: SlottedStorage<ItemVariant> cannot be converted to SlottedStackStorage
+  			super(itemHandler, index, xPosition, yPosition);
+  			      ^
+  src/main/java/com/simibubi/create/content/logistics/redstoneRequester/RedstoneRequesterBlockEntity.java:131: error: method openMenu in class Player cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:63: error: cannot find symbol
+  		TransactionSuccessCallback.register(ctx, () -> {
+  		^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:107: error: incompatible types: ItemVariant cannot be converted to ItemStack
+  			if (!defragmenter.isFragmented(resource)) {
+  			                               ^
+  src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:120: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/packager/repackager/RepackagerBlockEntity.java:166: error: package Capabilities does not exist
+  			Capabilities.ItemHandler.BLOCK,
+  			            ^
+  src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlock.java:120: error: incompatible types: boolean cannot be converted to TransactionContext
+
+  src/main/java/com/simibubi/create/content/logistics/packager/PackagerBlock.java:122: error: incompatible types: boolean cannot be converted to TransactionContext
+  					be.unwrapBox(stack.copy(), false);
+  					                           ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/postbox/PostboxBlockEntity.java:45: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:87: error: package Capabilities does not exist
+  			Capabilities.ItemHandler.BLOCK,
+  			            ^
+  src/main/java/com/simibubi/create/content/logistics/packagePort/frogport/FrogportBlockEntity.java:250: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/packagePort/AllPackagePortTargetTypes.java:15: error: cannot find symbol
+  	private static final DeferredRegister<PackagePortTargetType> REGISTER = DeferredRegister.create(CreateRegistries.PACKAGE_PORT_TARGET_TYPE, Create.ID);
+  	                                                                        ^
+    symbol:   variable DeferredRegister
+
+  src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:104: error: cannot find symbol
+  		Direction facing = pState.getValue(FACING);
+  		                   ^
+    symbol:   variable pState
+
+  src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:105: error: cannot find symbol
+  		BlockPos targetPos = pPos.relative(facing);
+  		                     ^
+    symbol:   variable pPos
+
+  src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:106: error: cannot find symbol
+  		Storage<ItemVariant> storage = ItemStorage.SIDED.find(pLevel, targetPos, facing.getOpposite());
+  		                                                      ^
+    symbol:   variable pLevel
+
+  src/main/java/com/simibubi/create/content/logistics/itemHatch/ItemHatchBlock.java:141: error: cannot find symbol
+  			int newSize = TransferUtil.truncateLong(item.getCount() - inserted);
+  			                          ^
+    symbol:   method truncateLong(long)
+
+  src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/attributes/ShulkerFillLevelAttribute.java:101: error: cannot find symbol
+  			if (contents.getSlots() > 0) {
+  			            ^
+    symbol:   method getSlots()
+
+  src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/attributes/ShulkerFillLevelAttribute.java:102: error: cannot find symbol
+  				int rawSize = contents.getSlots();
+  				                      ^
+    symbol:   method getSlots()
+
+  src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/AllItemAttributeTypes.java:42: error: package Capabilities does not exist
+  		FLUID_CONTAINER = singleton("fluid_container", s -> s.getCapability(Capabilities.FluidHandler.ITEM) != null),
+  		                                                                                ^
+  src/main/java/com/simibubi/create/content/logistics/item/filter/attribute/AllItemAttributeTypes.java:82: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/funnel/FunnelGenerator.java:53: error: cannot find symbol
+  		BlockModelBuilder model = p.models()
+  		^
+    symbol:   class BlockModelBuilder
+
+  src/main/java/com/simibubi/create/content/logistics/filter/AbstractFilterMenu.java:56: error: bad operand types for binary operator '<'
+  		for (int i = 0; i < ghostInventory.getSlots(); i++) {
+  		                  ^
+    first type:  int
+
+  src/main/java/com/simibubi/create/content/logistics/filter/FilterItem.java:177: error: method openMenu in class Player cannot be applied to given types;
+  				player.openMenu(this, buf -> {
+  				      ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/logistics/depot/DepotBlockEntity.java:33: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/logistics/depot/SharedDepotBlockMethods.java:81: error: variable stack is already defined in method onUse(ItemStack,BlockState,Level,BlockPos,Player,InteractionHand,BlockHitResult)
+
+  src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:125: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:399: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/depot/EjectorBlockEntity.java:637: error: cannot find symbol
+  		return AABB.INFINITE;
+  		           ^
+    symbol:   variable INFINITE
+
+  src/main/java/com/simibubi/create/content/logistics/crate/CreativeCrateMountedStorage.java:35: error: CreativeCrateMountedStorage is not abstract and does not override abstract method isItemValid(int,ItemStack) in SlottedStackStorage
+  public class CreativeCrateMountedStorage extends MountedItemStorage implements SingleSlotStorage<ItemVariant> {
+         ^
+  src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:47: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:111: error: incompatible types: BottomlessItemHandler cannot be converted to ItemStackHandler
+  			super(0, BottomlessItemHandler.this, ItemStack.EMPTY);
+  			                              ^
+  src/main/java/com/simibubi/create/content/logistics/crate/BottomlessItemHandler.java:133: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/logistics/chute/SmartChuteBlockEntity.java:28: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:303: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:430: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/logistics/box/PackageEntity.java:439: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemFilling.java:66: error: cannot find symbol
+  		if (!isFluidHandlerValid(stack, capability))
+  		                                ^
+    symbol:   variable capability
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemEmptying.java:38: error: cannot find symbol
+  		return TransferUtil.getFluidContained(stack).isPresent();
+  		                   ^
+    symbol:   method getFluidContained(ItemStack)
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/GenericItemEmptying.java:66: error: cannot find symbol
+  			resultingFluid = TransferUtil.extractAnyFluid(tank, FluidConstants.BUCKET);
+  			                             ^
+    symbol:   method extractAnyFluid(Storage<FluidVariant>,long)
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidSplashPacket.java:19: error: cannot find symbol
+  			FluidStack.OPTIONAL_STREAM_CODEC, FluidSplashPacket::fluid,
+  			^
+    symbol:   variable FluidStack
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:173: error: fluid has protected access in LiquidBlock
+  					fluid = flowingFluid.fluid;
+  					                    ^
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:206: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:253: error: cannot find symbol
+  		TransactionSuccessCallback.register(ctx, blockEntity::sendData);
+  		^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/fluids/transfer/FluidDrainingBehaviour.java:413: error: cannot find symbol
+  		if (ctx != null) TransactionSuccessCallback.register(ctx, blockEntity::sendData);
+  		                 ^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/fluids/tank/storage/FluidTankMountedStorage.java:38: error: incompatible types: bad return type in method reference
+  		ExtraCodecs.NON_NEGATIVE_INT.fieldOf("capacity").forGetter(FluidTankMountedStorage::getCapacity),
+  		                                                           ^
+      long cannot be converted to Integer
+
+  src/main/java/com/simibubi/create/content/fluids/tank/FluidTankItem.java:160: error: cannot find symbol
+  		return BlockItem.getBlockEntityData(item) != null;
+  		                ^
+    symbol:   method getBlockEntityData(ItemStack)
+
+  src/main/java/com/simibubi/create/content/fluids/spout/SpoutBlockEntity.java:76: error: package Capabilities does not exist
+  				Capabilities.FluidHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:44: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:49: error: cannot find symbol
+  		if (potionContents == PotionContents.EMPTY) {
+  		                      ^
+    symbol:   variable PotionContents
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:50: error: cannot find symbol
+  			fs.remove(DataComponents.POTION_CONTENTS);
+  			  ^
+    symbol:   method remove(DataComponentType<PotionContents>)
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluid.java:54: error: cannot find symbol
+  		return new FluidStack(fs.getFluid(), fs.getAmount(), fs.getTag());
+  		                                                       ^
+    symbol:   method getTag()
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:71: error: cannot find symbol
+  		List<RecipeHolder<MixingRecipe>> mixingRecipes = new ArrayList<>();
+  		     ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:162: error: cannot find symbol
+  		return new RecipeHolder<>(recipeId, recipe);
+  		           ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionMixingRecipes.java:168: error: cannot find symbol
+  		for (RecipeHolder<MixingRecipe> recipe : all) {
+  		     ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluidHandler.java:72: error: cannot find symbol
+  		fluid.set(AllDataComponents.POTION_FLUID_BOTTLE_TYPE, bottleTypeFromItem);
+  		     ^
+    symbol:   method set(DataComponentType<BottleType>,BottleType)
+
+  src/main/java/com/simibubi/create/content/fluids/potion/PotionFluidHandler.java:116: error: cannot find symbol
+  		PotionContents contents = fs.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
+  		                            ^
+    symbol:   method getOrDefault(DataComponentType<PotionContents>,PotionContents)
+
+  src/main/java/com/simibubi/create/content/fluids/particle/FluidStackParticle.java:106: error: cannot find symbol
+  		Color color = new Color(clientFluid.getTintColor(fluid));
+  		                        ^
+    symbol:   variable clientFluid
+
+  src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:34: error: cannot find symbol
+  		if (!internalTank.isEmpty() && !internalTank.getFluid().canFill(resource))
+  		                                                       ^
+    symbol:   method canFill(FluidVariant)
+
+  src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:63: error: cannot find symbol
+  		if (resource != null && !internalTank.isEmpty() && !internalTank.getFluid().canFill(resource))
+  		                                                                           ^
+    symbol:   method canFill(FluidVariant)
+
+  src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:78: error: cannot find symbol
+  				.isFluidEqual(returned) || returned.isEmpty())
+  				^
+    symbol:   method isFluidEqual(FluidStack)
+
+  src/main/java/com/simibubi/create/content/fluids/hosePulley/HosePulleyFluidHandler.java:81: error: cannot find symbol
+  		if (resource != null && !returned.canFill(resource))
+  		                                 ^
+    symbol:   method canFill(FluidVariant)
+
+  src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:86: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlockEntity.java:96: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainItemHandler.java:33: error: cannot find symbol
+  				: Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+  				                                              ^
+    symbol:   method getMaxStackSize()
+
+  src/main/java/com/simibubi/create/content/fluids/drain/ItemDrainBlock.java:48: error: package Capabilities does not exist
+  								 if (stack.getItem() instanceof BlockItem && stack.getCapability(Capabilities.FluidHandler.ITEM) == null)
+  								                                                                             ^
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:131: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:148: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> world.scheduleTick(outputPos, Fluids.WATER, 1));
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:209: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> world.playSound(null, i, j, k, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5F,
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:217: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> world.scheduleTick(outputPos, Fluids.WATER, 1));
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:255: error: incompatible types: FluidVariant cannot be converted to FluidStack
+  			if (!containedFluidStack.isEmpty() && !FluidStack.isSameFluidSameComponents(containedFluidStack, resource))
+  			                                                                                                 ^
+  src/main/java/com/simibubi/create/content/fluids/OpenEndedPipe.java:302: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/sync/LimbSwingUpdatePacket.java:32: error: cannot find symbol
+  		CompoundTag data = entity.getPersistentData();
+  		                         ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/contraptions/sync/ContraptionSeatMappingPacket.java:45: error: cannot find symbol
+  				player.getPersistentData()
+  				      ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:96: error: cannot find symbol
+  			public ModelData getModelData(BlockPos pos) {
+  			       ^
+    symbol: class ModelData
+
+  src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:95: error: method does not override or implement a method from a supertype
+  			@Override
+  			^
+  src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:97: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/render/ContraptionRenderInfo.java:97: error: cannot find symbol
+  				return c.modelData.getOrDefault(pos, ModelData.EMPTY);
+  				        ^
+    symbol:   variable modelData
+
+  src/main/java/com/simibubi/create/content/contraptions/elevator/ElevatorContactBlock.java:212: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatBlock.java:65: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/contraptions/mounted/MinecartContraptionItem.java:273: error: cannot find symbol
+  		if (ContraptionPickupLimiting.isTooLargeForPickup(generatedStack.saveOptional(event.getLevel().registryAccess()))) {
+  		                                                                              ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/contraptions/minecart/capability/CapabilityMinecartController.java:38: error: CapabilityMinecartController is not abstract and does not override abstract method deserializeNBT(Provider,CompoundTag) in INBTSerializable
+  public class CapabilityMinecartController implements INBTSerializable<CompoundTag> {
+         ^
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueSelectionHelper.java:89: error: incompatible types: Player cannot be converted to ServerPlayer
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:68: error: cannot find symbol
+  		double distance = ReachUtil.reach(placer);
+  		                  ^
+    symbol:   variable ReachUtil
+
+  src/main/java/com/simibubi/create/content/contraptions/glue/SuperGlueHandler.java:104: error: incompatible types: Player cannot be converted to ServerPlayer
+  				itemstack.hurtAndBreak(1, serverLevel, placer, $ -> SuperGlueItem.onBroken(placer));
+  				                                       ^
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:157: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/seat/SeatEntity.java:160: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:38: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:83: error: cannot find symbol
+  				TransactionSuccessCallback.register(transaction, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+  				^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:94: error: cannot find symbol
+  				TransactionSuccessCallback.register(transaction, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+  				^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/psi/PortableItemInterfaceBlockEntity.java:110: error: cannot find symbol
+  			return new ListeningStorageView<>(view, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+  			           ^
+    symbol:   class ListeningStorageView
+
+  src/main/java/com/simibubi/create/content/contraptions/actors/harvester/HarvesterMovementBehaviour.java:158: error: cannot find symbol
+  			if (state.getBlock() instanceof SpecialPlantable)
+  			                                ^
+    symbol:   class SpecialPlantable
+
+  src/main/java/com/simibubi/create/content/contraptions/ContraptionHandlerClient.java:54: error: cannot find symbol
+  		CompoundTag data = remotePlayer.getPersistentData();
+  		                               ^
+    symbol:   method getPersistentData()

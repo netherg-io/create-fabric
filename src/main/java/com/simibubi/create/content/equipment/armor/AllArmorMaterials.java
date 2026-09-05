@@ -11,19 +11,16 @@ import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
 
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class AllArmorMaterials {
-	private static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, Create.ID);
-
 	public static final Holder<ArmorMaterial> COPPER = register(
 				"copper",
 				new int[] { 2, 4, 3, 1, 4 },
@@ -73,13 +70,13 @@ public class AllArmorMaterials {
 			enummap.put(armoritem$type, defense[armoritem$type.ordinal()]);
 		}
 
-		return ARMOR_MATERIALS.register(name,
-				() -> new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngridient, layers, toughness, knockbackResistance)
+		return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, Create.asResource(name),
+				new ArmorMaterial(enummap, enchantmentValue, equipSound, repairIngridient, layers, toughness, knockbackResistance)
 		);
 	}
 
 	@Internal
-	public static void register(IEventBus eventBus) {
-		ARMOR_MATERIALS.register(eventBus);
+	public static void register() {
+		// fabric: no deferred registry, the static initializers above register eagerly
 	}
 }

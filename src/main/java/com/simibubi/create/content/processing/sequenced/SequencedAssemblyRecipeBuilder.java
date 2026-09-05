@@ -10,8 +10,6 @@ import com.simibubi.create.content.processing.recipe.ProcessingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder.ProcessingRecipeFactory;
 
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
-
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -21,14 +19,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.ItemLike;
 
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
+import net.fabricmc.fabric.impl.datagen.FabricDataGenHelper;
 
 public class SequencedAssemblyRecipeBuilder {
 
 	private ResourceLocation id;
 	private SequencedAssemblyRecipe recipe;
-	protected List<ConditionJsonProvider> recipeConditions;
+	protected List<ResourceCondition> recipeConditions;
 
 	public SequencedAssemblyRecipeBuilder(ResourceLocation id) {
 		this.id = id;
@@ -91,6 +90,8 @@ public class SequencedAssemblyRecipeBuilder {
 		ResourceLocation id = ResourceLocation.fromNamespaceAndPath(holder.id().getNamespace(),
 				AllRecipeTypes.SEQUENCED_ASSEMBLY.getId().getPath() + "/" + holder.id().getPath());
 
-		consumer.accept(id, holder.value(), null, recipeConditions.toArray(new ICondition[0]));
+		if (!recipeConditions.isEmpty())
+			FabricDataGenHelper.addConditions(holder.value(), recipeConditions.toArray(new ResourceCondition[0]));
+		consumer.accept(id, holder.value(), null);
 	}
 }

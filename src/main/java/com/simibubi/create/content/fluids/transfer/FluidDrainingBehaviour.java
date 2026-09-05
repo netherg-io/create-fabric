@@ -1,5 +1,7 @@
 package com.simibubi.create.content.fluids.transfer;
 
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -170,7 +172,7 @@ public class FluidDrainingBehaviour extends FluidManipulationBehaviour {
 			} else if (blockState.getBlock() instanceof LiquidBlock flowingFluid) {
 				emptied = Blocks.AIR.defaultBlockState();
 				if (blockState.getValue(LiquidBlock.LEVEL) == 0)
-					fluid = flowingFluid.fluid;
+					fluid = blockState.getFluidState().getType();
 				else {
 					affectedArea = BBHelper.encapsulate(affectedArea, BoundingBox.fromCorners(currentPos, currentPos));
 					if (!blockEntity.isVirtual())

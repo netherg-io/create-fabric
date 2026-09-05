@@ -57,10 +57,12 @@ public class ProcessingRecipeSerializer<T extends ProcessingRecipe<?>> implement
 			ExtraCodecs.NON_NEGATIVE_INT.optionalFieldOf("processing_time", 0).forGetter(T::getProcessingDuration),
 			HeatCondition.CODEC.optionalFieldOf("heat_requirement", HeatCondition.NONE).forGetter(T::getRequiredHeat)
 		).apply(instance, (ingredients, results, processingTime, heatRequirement) -> {
-			if (!(recipeTypes.serializerSupplier.get() instanceof ProcessingRecipeSerializer processingRecipeSerializer))
-				throw new RuntimeException("Not a processing recipe serializer " + recipeTypes.serializerSupplier.get());
+			RecipeSerializer<?> serializer = recipeTypes.getSerializer();
+			if (!(serializer instanceof ProcessingRecipeSerializer processingRecipeSerializer))
+				throw new RuntimeException("Not a processing recipe serializer " + serializer);
 
-			ProcessingRecipeBuilder<T> builder = new ProcessingRecipeBuilder<T>(processingRecipeSerializer.getFactory(), recipeTypes.id);
+			ProcessingRecipeBuilder<T> builder =
+				new ProcessingRecipeBuilder<T>(processingRecipeSerializer.getFactory(), recipeTypes.getId());
 
 			NonNullList<Ingredient> ingredientList = NonNullList.create();
 			NonNullList<FluidIngredient> fluidIngredientList = NonNullList.create();

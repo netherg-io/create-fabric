@@ -6,7 +6,8 @@ import java.util.Iterator;
 import org.jetbrains.annotations.Nullable;
 
 import com.simibubi.create.content.contraptions.Contraption;
-import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+import com.simibubi.create.infrastructure.fabric.transfer.ChangeListeningViewWrapper;
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
 import com.simibubi.create.infrastructure.fabric.ProcessingIterator;
 
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
@@ -31,14 +32,6 @@ public class PortableFluidInterfaceBlockEntity extends PortableStorageInterfaceB
 	public PortableFluidInterfaceBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
 		capability = createEmptyHandler();
-	}
-
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.FluidHandler.BLOCK,
-				AllBlockEntityTypes.PORTABLE_FLUID_INTERFACE.get(),
-				(be, context) -> be.capability
-		);
 	}
 
 	@Override
@@ -94,17 +87,12 @@ public class PortableFluidInterfaceBlockEntity extends PortableStorageInterfaceB
 		}
 
 		@Override
-		public @Nullable StorageView<FluidVariant> exactView(FluidVariant resource) {
-			return listen(super.exactView(resource));
-		}
-
-		@Override
 		public Iterator<StorageView<FluidVariant>> iterator() {
 			return new ProcessingIterator<>(super.iterator(), this::listen);
 		}
 
 		public <T> StorageView<T> listen(StorageView<T> view) {
-			return new ListeningStorageView<>(view, this::keepAlive);
+			return new ChangeListeningViewWrapper<>(view, this::keepAlive);
 		}
 
 		public void keepAlive() {

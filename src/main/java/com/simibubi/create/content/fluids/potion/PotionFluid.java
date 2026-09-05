@@ -19,6 +19,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.alchemy.Potions;
 
 import com.simibubi.create.infrastructure.fabric.transfer.fluid.FluidStack;
@@ -38,20 +39,16 @@ public class PotionFluid extends VirtualFluid {
 	}
 
 	public static FluidStack of(long amount, PotionContents potionContents, BottleType bottleType) {
-		FluidStack fluidStack;
-		fluidStack = new FluidStack(AllFluids.POTION.get().getSource(), amount);
-		addPotionToFluidStack(fluidStack, potionContents);
-		fluidStack.set(AllDataComponents.POTION_FLUID_BOTTLE_TYPE, bottleType);
-		return fluidStack;
+		FluidStack fluidStack = new FluidStack(AllFluids.POTION.get().getSource(), amount);
+		return addPotionToFluidStack(fluidStack, potionContents)
+			.with(AllDataComponents.POTION_FLUID_BOTTLE_TYPE, bottleType);
 	}
 
 	public static FluidStack addPotionToFluidStack(FluidStack fs, PotionContents potionContents) {
-		if (potionContents == PotionContents.EMPTY) {
-			fs.remove(DataComponents.POTION_CONTENTS);
-			return fs;
-		}
-		fs.set(DataComponents.POTION_CONTENTS, potionContents);
-		return new FluidStack(fs.getFluid(), fs.getAmount(), fs.getTag());
+		// fabric: FluidVariant is immutable, so component edits produce a new stack
+		if (potionContents == PotionContents.EMPTY)
+			return fs.without(DataComponents.POTION_CONTENTS);
+		return fs.with(DataComponents.POTION_CONTENTS, potionContents);
 	}
 
 	public enum BottleType implements StringRepresentable {

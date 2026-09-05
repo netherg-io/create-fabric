@@ -34,7 +34,6 @@ import net.minecraft.core.UUIDUtil;
 import net.minecraft.core.Vec3i;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponentType.Builder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -46,11 +45,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import io.github.fabricators_of_create.porting_lib.util.DeferredRegister;
 
 public class AllDataComponents {
-	private static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, Create.ID);
+	private static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Create.ID);
 
 	public static final DataComponentType<Integer> BACKTANK_AIR = register(
 			"banktank_air",
@@ -341,7 +339,7 @@ public class AllDataComponents {
 	}
 
 	@Internal
-	public static void register(IEventBus modEventBus) {
-		DATA_COMPONENTS.register(modEventBus);
+	public static void register() {
+		DATA_COMPONENTS.register();
 	}
 }

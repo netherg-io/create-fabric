@@ -27,6 +27,8 @@ import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.level.Level;
 
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 
@@ -34,8 +36,6 @@ import io.github.fabricators_of_create.porting_lib.brewing.BrewingRecipe;
 import io.github.fabricators_of_create.porting_lib.brewing.BrewingRecipeRegistry;
 import io.github.fabricators_of_create.porting_lib.brewing.IBrewingRecipe;
 import com.simibubi.create.infrastructure.fabric.transfer.fluid.FluidStack;
-import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewing$MixAccessor;
-import io.github.fabricators_of_create.porting_lib.mixin.accessors.common.accessor.PotionBrewingAccessor;
 
 public class PotionMixingRecipes {
 

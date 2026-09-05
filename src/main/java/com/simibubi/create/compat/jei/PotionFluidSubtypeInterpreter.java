@@ -14,6 +14,7 @@ import mezz.jei.api.fabric.ingredients.fluids.IJeiFluidIngredient;
 import mezz.jei.api.ingredients.subtypes.ISubtypeInterpreter;
 import mezz.jei.api.ingredients.subtypes.UidContext;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.PotionContents;
 
@@ -26,7 +27,7 @@ public class PotionFluidSubtypeInterpreter implements ISubtypeInterpreter<IJeiFl
 			return null;
 
 		PotionContents contents = ingredient.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
-		String potionTypeString = ingredient.getDescriptionId();
+		String potionTypeString = BuiltInRegistries.FLUID.getKey(ingredient.getFluid()).toString();
 		String bottleType = ingredient.getOrDefault(AllDataComponents.POTION_FLUID_BOTTLE_TYPE, BottleType.REGULAR).name();
 
 		StringBuilder stringBuilder = new StringBuilder(potionTypeString);

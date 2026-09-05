@@ -118,7 +118,7 @@ public class DeployingRecipeGen extends ProcessingRecipeGen {
 			.output(waxed.get()));
 	}
 
-	public DeployingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public DeployingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

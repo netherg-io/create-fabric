@@ -48,7 +48,7 @@ public class EmptyingRecipeGen extends ProcessingRecipeGen {
 
 	;
 
-	public EmptyingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public EmptyingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

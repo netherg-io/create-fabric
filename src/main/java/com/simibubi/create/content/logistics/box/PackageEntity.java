@@ -50,9 +50,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 
-import io.github.fabricators_of_create.porting_lib.entity.IEntityAdditionalSpawnData;
+import io.github.fabricators_of_create.porting_lib.entity.IEntityWithComplexSpawn;
 import io.github.fabricators_of_create.porting_lib.entity.PortingLibEntity;
-import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
 import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 
 public class PackageEntity extends LivingEntity implements IEntityWithComplexSpawn {
@@ -119,11 +118,8 @@ public class PackageEntity extends LivingEntity implements IEntityWithComplexSpa
 			.add(Attributes.MOVEMENT_SPEED, 1f);
 	}
 
-	public static EntityType.Builder<?> build(EntityType.Builder<?> builder) {
-		@SuppressWarnings("unchecked")
-		EntityType.Builder<PackageEntity> boxBuilder = (EntityType.Builder<PackageEntity>) builder;
-		return boxBuilder.sized(1, 1);
-		/*.setCustomClientFactory(PackageEntity::spawn)*/
+	public static FabricEntityTypeBuilder<?> build(FabricEntityTypeBuilder<?> builder) {
+		return builder.dimensions(EntityDimensions.scalable(1, 1));
 	}
 
 	@Override
@@ -300,9 +296,7 @@ public class PackageEntity extends LivingEntity implements IEntityWithComplexSpa
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source.getEntity() instanceof Player player && !CommonHooks.onPlayerAttackTarget(player, this))
-			return false;
-
+		// fabric: porting lib already fires AttackEntityEvent on the vanilla attack path, no manual hook needed
 		if (level().isClientSide || !this.isAlive())
 			return false;
 

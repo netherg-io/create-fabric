@@ -8,6 +8,8 @@ import org.jetbrains.annotations.ApiStatus;
 
 import com.google.common.collect.HashBiMap;
 
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
+
 import net.minecraft.world.level.block.Block;
 
 @ApiStatus.Internal
@@ -29,5 +31,14 @@ public class CopperRegistries {
 
 	public static synchronized void addWaxable(Supplier<Block> original, Supplier<Block> waxed) {
 		WAXABLE.put(original, waxed);
+	}
+
+	/**
+	 * fabric: replaces NeoForge's OXIDIZABLES/WAXABLES data maps (and their datagen provider).
+	 * Must run after block registration, see {@code Create#onInitialize}.
+	 */
+	public static void inject() {
+		WEATHERING.forEach((now, after) -> OxidizableBlocksRegistry.registerOxidizableBlockPair(now.get(), after.get()));
+		WAXABLE.forEach((now, after) -> OxidizableBlocksRegistry.registerWaxableBlockPair(now.get(), after.get()));
 	}
 }

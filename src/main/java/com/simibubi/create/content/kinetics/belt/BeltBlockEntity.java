@@ -83,19 +83,6 @@ public class BeltBlockEntity extends KineticBlockEntity implements SidedStorageB
 		color = Optional.empty();
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.BELT.get(),
-				(be, context) -> {
-						if (!BeltBlock.canTransportObjects(be.getBlockState()))
-							return null;
-						if (!be.isRemoved() && be.itemHandler == null)
-							be.initializeItemHandler();
-						return be.itemHandler;
-				}
-		);
-	}
 
 	@Override
 	public void addBehaviours(List<BlockEntityBehaviour> behaviours) {

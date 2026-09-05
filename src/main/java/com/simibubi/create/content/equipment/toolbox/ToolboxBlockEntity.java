@@ -98,13 +98,6 @@ public class ToolboxBlockEntity extends SmartBlockEntity implements MenuProvider
 		setLazyTickRate(10);
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.TOOLBOX.get(),
-				(be, context) -> be.inventory
-		);
-	}
 
 	public DyeColor getColor() {
 		return colorProvider.get();

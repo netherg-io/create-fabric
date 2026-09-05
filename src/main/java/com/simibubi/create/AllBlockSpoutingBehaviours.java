@@ -9,7 +9,6 @@ import com.simibubi.create.api.behaviour.spouting.CauldronSpoutingBehavior;
 import com.simibubi.create.api.behaviour.spouting.StateChangingBehavior;
 import com.simibubi.create.compat.Mods;
 import com.simibubi.create.compat.botania.ApothecaryFilling;
-import com.simibubi.create.compat.tconstruct.SpoutCasting;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -41,14 +40,6 @@ public class AllBlockSpoutingBehaviours {
 			);
 		}
 
-		if (!Mods.TCONSTRUCT.isLoaded())
-			return;
-
-		for (String name : List.of("table", "basin")) {
-			getTypeForCompat(Mods.TCONSTRUCT, name).ifPresent(
-				type -> BlockSpoutingBehaviour.BY_BLOCK_ENTITY.register(type, SpoutCasting.INSTANCE)
-			);
-		}
 	}
 
 	private static Optional<BlockEntityType<?>> getTypeForCompat(Mods mod, String name) {

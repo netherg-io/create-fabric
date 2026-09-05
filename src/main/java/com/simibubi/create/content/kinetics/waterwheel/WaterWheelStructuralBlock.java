@@ -42,7 +42,12 @@ import net.minecraft.world.phys.HitResult;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
-public class WaterWheelStructuralBlock extends DirectionalBlock implements IWrenchable, IProxyHoveringInformation, MultiPosDestructionHandler {
+import io.github.fabricators_of_create.porting_lib.block.CustomDestroyEffectsBlock;
+import io.github.fabricators_of_create.porting_lib.block.CustomHitEffectsBlock;
+import io.github.fabricators_of_create.porting_lib.block.CustomLandingEffectsBlock;
+
+public class WaterWheelStructuralBlock extends DirectionalBlock implements IWrenchable, IProxyHoveringInformation,
+	MultiPosDestructionHandler, CustomLandingEffectsBlock, CustomDestroyEffectsBlock, CustomHitEffectsBlock {
 
 	public static final MapCodec<WaterWheelStructuralBlock> CODEC = simpleCodec(WaterWheelStructuralBlock::new);
 

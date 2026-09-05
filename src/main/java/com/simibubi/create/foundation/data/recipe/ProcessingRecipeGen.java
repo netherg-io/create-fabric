@@ -30,42 +30,11 @@ import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
 
 public abstract class ProcessingRecipeGen extends CreateRecipeProvider {
 
-	protected static final List<ProcessingRecipeGen> GENERATORS = new ArrayList<>();
 	protected static final long BUCKET = FluidConstants.BUCKET;
 	protected static final long BOTTLE = FluidConstants.BOTTLE;
 
-	public static void registerAll(DataGenerator gen, PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-		GENERATORS.add(new CrushingRecipeGen(output, registries));
-		GENERATORS.add(new MillingRecipeGen(output, registries));
-		GENERATORS.add(new CuttingRecipeGen(output, registries));
-		GENERATORS.add(new WashingRecipeGen(output, registries));
-		GENERATORS.add(new PolishingRecipeGen(output, registries));
-		GENERATORS.add(new DeployingRecipeGen(output, registries));
-		GENERATORS.add(new MixingRecipeGen(output, registries));
-		GENERATORS.add(new CompactingRecipeGen(output, registries));
-		GENERATORS.add(new PressingRecipeGen(output, registries));
-		GENERATORS.add(new FillingRecipeGen(output, registries));
-		GENERATORS.add(new EmptyingRecipeGen(output, registries));
-		GENERATORS.add(new HauntingRecipeGen(output, registries));
-		GENERATORS.add(new ItemApplicationRecipeGen(output, registries));
-
-		return new DataProvider() {
-
-			@Override
-			public String getName() {
-				return "Create's Processing Recipes";
-			}
-
-			@Override
-			public CompletableFuture<?> run(CachedOutput dc) {
-				return CompletableFuture.allOf(GENERATORS.stream()
-					.map(gen -> gen.run(dc))
-					.toArray(CompletableFuture[]::new));
-			}
-		};
-	}
-
-	public ProcessingRecipeGen(PackOutput generator, CompletableFuture<HolderLookup.Provider> registries) {
+	// fabric: providers are registered individually on the FabricDataGenerator pack, see CreateDatagen
+	public ProcessingRecipeGen(FabricDataOutput generator, CompletableFuture<HolderLookup.Provider> registries) {
 		super(generator, registries);
 	}
 

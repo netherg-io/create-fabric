@@ -6,13 +6,13 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeInput;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.transfer.item.SlottedStackStorage;
 
 public class LegacyRecipeWrapper implements Container, RecipeInput {
 
-	protected final IItemHandlerModifiable inv;
+	protected final SlottedStackStorage inv;
 
-	public LegacyRecipeWrapper(IItemHandlerModifiable inv)
+	public LegacyRecipeWrapper(SlottedStackStorage inv)
 	{
 		this.inv = inv;
 	}
@@ -30,7 +30,7 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	@Override
 	public int getContainerSize()
 	{
-		return inv.getSlots();
+		return inv.getSlotCount();
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	@Override
 	public boolean isEmpty()
 	{
-		for(int i = 0; i < inv.getSlots(); i++)
+		for(int i = 0; i < inv.getSlotCount(); i++)
 		{
 			if(!inv.getStackInSlot(i).isEmpty()) return false;
 		}
@@ -92,7 +92,7 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	@Override
 	public void clearContent()
 	{
-		for(int i = 0; i < inv.getSlots(); i++)
+		for(int i = 0; i < inv.getSlotCount(); i++)
 		{
 			inv.setStackInSlot(i, ItemStack.EMPTY);
 		}

@@ -1,5 +1,7 @@
 package com.simibubi.create.content.trains.schedule;
 
+import com.simibubi.create.foundation.fabric.MenuUtil;
+
 import java.util.List;
 
 import com.simibubi.create.AllDataComponents;
@@ -44,7 +46,6 @@ import net.minecraft.world.level.Level;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
-import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
 
 public class ScheduleItem extends Item implements MenuProvider, SupportsItemCopying {
 
@@ -65,7 +66,7 @@ public class ScheduleItem extends Item implements MenuProvider, SupportsItemCopy
 
 		if (!player.isShiftKeyDown() && hand == InteractionHand.MAIN_HAND) {
 			if (!world.isClientSide && player instanceof ServerPlayer)
-				player.openMenu(this, buf -> {
+				MenuUtil.open(player, this, buf -> {
 					ItemStack.STREAM_CODEC.encode(buf, heldItem);
 				});
 			return InteractionResultHolder.success(heldItem);

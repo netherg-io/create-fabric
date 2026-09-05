@@ -40,7 +40,8 @@ public class DynamicPack implements PackResources {
 		this.packId = packId;
 		this.packType = packType;
 
-		metadata = new PackMetadataSection(Component.empty(), SharedConstants.getCurrentVersion().getPackVersion(packType));
+		metadata = new PackMetadataSection(Component.empty(),
+			SharedConstants.getCurrentVersion().getPackVersion(packType), Optional.empty());
 		packLocationInfo = new PackLocationInfo(packId, Component.literal(packId), PackSource.BUILT_IN, Optional.empty());
 	}
 

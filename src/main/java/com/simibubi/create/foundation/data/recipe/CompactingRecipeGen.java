@@ -60,7 +60,7 @@ public class CompactingRecipeGen extends ProcessingRecipeGen {
 
 	;
 
-	public CompactingRecipeGen(PackOutput output, CompletableFuture<Provider> registries) {
+	public CompactingRecipeGen(FabricDataOutput output, CompletableFuture<Provider> registries) {
 		super(output, registries);
 	}
 

@@ -11,7 +11,6 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
-import com.simibubi.create.AllAttachmentTypes;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.contraptions.minecart.CouplingHandler;
 
@@ -27,15 +26,9 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.level.ChunkEvent;
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
-import io.github.fabricators_of_create.porting_lib.core.util.INBTSerializable;
 
-public class CapabilityMinecartController implements INBTSerializable<CompoundTag> {
+public class CapabilityMinecartController {
 
 	/* Global map of loaded carts */
 
@@ -105,12 +98,12 @@ public class CapabilityMinecartController implements INBTSerializable<CompoundTa
 		}
 	}
 
-	public static void entityTick(EntityTickEvent event) {
-		Entity entity = event.getEntity();
-		if (!(entity instanceof AbstractMinecart))
+	public static void entityTick(Entity entity) {
+		if (!(entity instanceof AbstractMinecart cart))
 			return;
-		MinecartController data = entity.getData(AllAttachmentTypes.MINECART_CONTROLLER);
-		if (data != MinecartController.EMPTY)
+		// fabric: the controller lives on the minecart itself (AbstractMinecartMixin), not in an attachment
+		MinecartController data = cart.create$getController();
+		if (data != null && data != MinecartController.EMPTY)
 			data.tick();
 	}
 
@@ -132,7 +125,6 @@ public class CapabilityMinecartController implements INBTSerializable<CompoundTa
 	}
 
 	public static void onCartRemoved(Level world, AbstractMinecart entity) {
-		entity.removeData(AllAttachmentTypes.MINECART_CONTROLLER);
 		Map<UUID, MinecartController> carts = loadedMinecartsByUUID.get(world);
 		List<UUID> unloads = queuedUnloads.get(world);
 		UUID uniqueID = entity.getUUID();

@@ -7,7 +7,8 @@ import org.jetbrains.annotations.Nullable;
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.content.contraptions.Contraption;
 import com.simibubi.create.foundation.item.ItemHandlerWrapper;
-import com.simibubi.create.foundation.utility.fabric.ListeningStorageView;
+import com.simibubi.create.infrastructure.fabric.transfer.ChangeListeningViewWrapper;
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
 import com.simibubi.create.infrastructure.fabric.ProcessingIterator;
 
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
@@ -31,14 +32,6 @@ public class PortableItemInterfaceBlockEntity extends PortableStorageInterfaceBl
 	public PortableItemInterfaceBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
 		capability = createEmptyHandler();
-	}
-
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.PORTABLE_STORAGE_INTERFACE.get(),
-				(be, context) -> be.capability
-		);
 	}
 
 	@Override
@@ -97,17 +90,12 @@ public class PortableItemInterfaceBlockEntity extends PortableStorageInterfaceBl
 		}
 
 		@Override
-		public @Nullable StorageView<ItemVariant> exactView(ItemVariant resource) {
-			return listen(super.exactView(resource));
-		}
-
-		@Override
 		public Iterator<StorageView<ItemVariant>> iterator() {
 			return new ProcessingIterator<>(super.iterator(), this::listen);
 		}
 
 		public <T> StorageView<T> listen(StorageView<T> view) {
-			return new ListeningStorageView<>(view, PortableItemInterfaceBlockEntity.this::onContentTransferred);
+			return new ChangeListeningViewWrapper<>(view, PortableItemInterfaceBlockEntity.this::onContentTransferred);
 		}
 
 		private void setWrapped(Storage<ItemVariant> wrapped) {

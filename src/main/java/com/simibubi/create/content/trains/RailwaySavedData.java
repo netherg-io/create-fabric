@@ -1,5 +1,7 @@
 package com.simibubi.create.content.trains;
 
+import net.minecraft.util.datafix.DataFixTypes;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -29,7 +31,9 @@ public class RailwaySavedData extends SavedData {
 	private Map<UUID, Train> trains = new HashMap<>();
 
 	public static SavedData.Factory<RailwaySavedData> factory() {
-		return new SavedData.Factory<>(RailwaySavedData::new, RailwaySavedData::load);
+		return new SavedData.Factory<>(RailwaySavedData::new, RailwaySavedData::load,
+			// ponytail: vanilla requires a DataFixTypes; this slot has no fixers, swap it if Create ever ships datafixers
+			DataFixTypes.SAVED_DATA_RANDOM_SEQUENCES);
 	}
 
 	@Override

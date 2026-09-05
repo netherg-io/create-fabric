@@ -56,15 +56,15 @@ public class FillingRecipeGen extends ProcessingRecipeGen {
 			.require(Items.DIRT)
 			.output(Items.GRASS_BLOCK)),
 
-		GUNPOWDER = create("gunpowder", b -> b.require(PotionFluidHandler.potionIngredient(Potions.HARMING, FluidConstants.BUCKET / 40))
+		GUNPOWDER = create("gunpowder", b -> b.require(PotionFluidHandler.potionIngredient(Potions.HARMING, (int) (FluidConstants.BUCKET / 40)))
 			.require(AllItems.CINDER_FLOUR.get())
 			.output(Items.GUNPOWDER)),
 
-		REDSTONE = create("redstone", b -> b.require(PotionFluidHandler.potionIngredient(Potions.STRENGTH, FluidConstants.BUCKET / 40))
+		REDSTONE = create("redstone", b -> b.require(PotionFluidHandler.potionIngredient(Potions.STRENGTH, (int) (FluidConstants.BUCKET / 40)))
 			.require(AllItems.CINDER_FLOUR.get())
 			.output(Items.REDSTONE)),
 
-		GLOWSTONE = create("glowstone", b -> b.require(PotionFluidHandler.potionIngredient(Potions.NIGHT_VISION, FluidConstants.BUCKET / 40))
+		GLOWSTONE = create("glowstone", b -> b.require(PotionFluidHandler.potionIngredient(Potions.NIGHT_VISION, (int) (FluidConstants.BUCKET / 40)))
 			.require(AllItems.CINDER_FLOUR.get())
 			.output(Items.GLOWSTONE_DUST)),
 
@@ -115,7 +115,7 @@ public class FillingRecipeGen extends ProcessingRecipeGen {
 				.whenModLoaded(mod.getId()));
 	}
 
-	public FillingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public FillingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

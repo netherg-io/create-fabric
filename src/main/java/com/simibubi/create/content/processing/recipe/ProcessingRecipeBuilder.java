@@ -14,9 +14,6 @@ import com.tterrag.registrate.util.DataIngredient;
 import net.createmod.catnip.data.Pair;
 
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
-
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 
 import net.minecraft.core.NonNullList;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -28,10 +25,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 
-import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
+import net.fabricmc.fabric.impl.datagen.FabricDataGenHelper;
 
 import com.simibubi.create.infrastructure.fabric.transfer.fluid.FluidStack;
 
@@ -39,7 +35,7 @@ public class ProcessingRecipeBuilder<T extends ProcessingRecipe<?>> {
 	protected ResourceLocation recipeId;
 	protected ProcessingRecipeFactory<T> factory;
 	protected ProcessingRecipeParams params;
-	protected List<ConditionJsonProvider> recipeConditions;
+	protected List<ResourceCondition> recipeConditions;
 
 	public ProcessingRecipeBuilder(ProcessingRecipeFactory<T> factory, ResourceLocation recipeId) {
 		this.recipeId = recipeId;
@@ -118,7 +114,9 @@ public class ProcessingRecipeBuilder<T extends ProcessingRecipe<?>> {
 		ResourceLocation id = ResourceLocation.fromNamespaceAndPath(recipe.id.getNamespace(),
 				typeId.getPath() + "/" + recipe.id.getPath());
 
-		consumer.accept(id, recipe, null, recipeConditions.toArray(new ICondition[0]));
+		if (!recipeConditions.isEmpty())
+			FabricDataGenHelper.addConditions(recipe, recipeConditions.toArray(new ResourceCondition[0]));
+		consumer.accept(id, recipe, null);
 	}
 
 	public static final long[] SUS_AMOUNTS = { 10, 250, 500, 1000 };
@@ -238,14 +236,14 @@ public class ProcessingRecipeBuilder<T extends ProcessingRecipe<?>> {
 	//
 
 	public ProcessingRecipeBuilder<T> whenModLoaded(String modid) {
-		return withCondition(DefaultResourceConditions.allModsLoaded(modid));
+		return withCondition(ResourceConditions.allModsLoaded(modid));
 	}
 
 	public ProcessingRecipeBuilder<T> whenModMissing(String modid) {
-		return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+		return withCondition(ResourceConditions.not(ResourceConditions.allModsLoaded(modid)));
 	}
 
-	public ProcessingRecipeBuilder<T> withCondition(ConditionJsonProvider condition) {
+	public ProcessingRecipeBuilder<T> withCondition(ResourceCondition condition) {
 		recipeConditions.add(condition);
 		return this;
 	}

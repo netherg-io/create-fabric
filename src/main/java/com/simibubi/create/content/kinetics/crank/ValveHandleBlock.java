@@ -8,6 +8,8 @@ import com.simibubi.create.AllItems;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.foundation.utility.BlockHelper;
 
+import io.github.fabricators_of_create.porting_lib.util.TagUtil;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

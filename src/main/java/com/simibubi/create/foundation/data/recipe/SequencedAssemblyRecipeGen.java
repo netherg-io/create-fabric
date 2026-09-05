@@ -80,7 +80,7 @@ public class SequencedAssemblyRecipeGen extends CreateRecipeProvider {
 
 	;
 
-	public SequencedAssemblyRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public SequencedAssemblyRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

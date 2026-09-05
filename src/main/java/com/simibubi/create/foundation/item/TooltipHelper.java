@@ -17,7 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 
-import io.github.fabricators_of_create.porting_lib.common.util.MinecraftClientUtil;
+import io.github.fabricators_of_create.porting_lib.common.ext.LanguageManagerExt;
 
 public class TooltipHelper {
 
@@ -84,7 +84,8 @@ public class TooltipHelper {
 
 		// Split words
 		List<String> words = new LinkedList<>();
-		BreakIterator iterator = BreakIterator.getLineInstance(MinecraftClientUtil.getLocale());
+		BreakIterator iterator = BreakIterator.getLineInstance(
+			((LanguageManagerExt) Minecraft.getInstance().getLanguageManager()).getJavaLocale());
 		iterator.setText(s);
 		int start = iterator.first();
 		for (int end = iterator.next(); end != BreakIterator.DONE; start = end, end = iterator.next()) {

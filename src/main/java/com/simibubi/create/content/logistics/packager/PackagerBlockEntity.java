@@ -113,14 +113,6 @@ public class PackagerBlockEntity extends SmartBlockEntity implements SidedStorag
 		buttonCooldown = 0;
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-			Capabilities.ItemHandler.BLOCK,
-			AllBlockEntityTypes.PACKAGER.get(),
-			(be, context) -> be.inventory
-		);
-	}
-
 	@Override
 	public void addBehaviours(List<BlockEntityBehaviour> behaviours) {
 		behaviours.add(targetInventory = new InvManipulationBehaviour(this, InterfaceProvider.oppositeOfBlockFacing())

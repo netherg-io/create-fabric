@@ -44,7 +44,6 @@ import net.fabricmc.api.EnvType;
 
 import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 import io.github.fabricators_of_create.porting_lib.transfer.item.RecipeWrapper;
-import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

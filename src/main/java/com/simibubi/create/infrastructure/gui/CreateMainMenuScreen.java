@@ -29,6 +29,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.renderer.CubeMap;
 import net.minecraft.client.renderer.PanoramaRenderer;
@@ -38,7 +39,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 import io.github.fabricators_of_create.porting_lib.mixin.accessors.client.accessor.ScreenAccessor;
-import io.github.fabricators_of_create.porting_lib.mixin.accessors.client.accessor.TitleScreenAccessor;
 
 public class CreateMainMenuScreen extends AbstractSimiScreen {
 
@@ -77,6 +77,8 @@ public class CreateMainMenuScreen extends AbstractSimiScreen {
 	public CreateMainMenuScreen(Screen parent) {
 		this.parent = parent;
 		returnOnClose = true;
+		// Вне мира (титул, список модов ModMenu) — «Начало работы» недоступно
+		fromTitleOrMods = parent instanceof TitleScreen || Minecraft.getInstance().level == null;
 		if (parent instanceof TitleScreen)
 			vanillaPanorama = Screen.PANORAMA;
 		else

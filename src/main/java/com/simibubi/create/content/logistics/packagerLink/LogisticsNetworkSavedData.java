@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.packagerLink;
 
+import net.minecraft.util.datafix.DataFixTypes;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -21,7 +23,9 @@ public class LogisticsNetworkSavedData extends SavedData {
 	private Map<UUID, LogisticsNetwork> logisticsNetworks = new HashMap<>();
 
 	public static SavedData.Factory<LogisticsNetworkSavedData> factory() {
-		return new SavedData.Factory<>(LogisticsNetworkSavedData::new, LogisticsNetworkSavedData::load);
+		return new SavedData.Factory<>(LogisticsNetworkSavedData::new, LogisticsNetworkSavedData::load,
+			// ponytail: vanilla requires a DataFixTypes; this slot has no fixers, swap it if Create ever ships datafixers
+			DataFixTypes.SAVED_DATA_RANDOM_SEQUENCES);
 	}
 
 	@Override

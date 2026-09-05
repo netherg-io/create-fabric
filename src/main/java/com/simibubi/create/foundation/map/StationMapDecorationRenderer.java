@@ -15,10 +15,9 @@ import net.minecraft.client.resources.MapDecorationTextureManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
-import net.neoforged.neoforge.client.gui.map.IMapDecorationRenderer;
 
-public class StationMapDecorationRenderer implements IMapDecorationRenderer {
-	@Override
+// fabric: no RegisterMapDecorationRenderers event exists; kept for whoever wires a MapRenderer mixin
+public class StationMapDecorationRenderer {
 	public boolean render(MapDecoration decoration, PoseStack poseStack, MultiBufferSource bufferSource, @NotNull MapItemSavedData mapData, MapDecorationTextureManager decorationTextures, boolean inItemFrame, int packedLight, int index) {
 		poseStack.pushPose();
 

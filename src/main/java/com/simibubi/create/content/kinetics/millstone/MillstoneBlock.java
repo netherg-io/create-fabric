@@ -116,7 +116,7 @@ public class MillstoneBlock extends KineticBlock implements IBE<MillstoneBlockEn
 			long inserted = handler.insert(ItemVariant.of(inEntity), inEntity.getCount(), t);
 			if (inserted == inEntity.getCount())
 				itemEntity.discard();
-			else itemEntity.setItem(ItemHandlerHelper.copyStackWithSize(inEntity, (int) (inEntity.getCount() - inserted)));
+			else itemEntity.setItem(inEntity.copyWithCount((int) (inEntity.getCount() - inserted)));
 			t.commit();
 		}
 	}

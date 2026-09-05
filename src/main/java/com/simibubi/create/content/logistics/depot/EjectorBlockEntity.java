@@ -1,5 +1,9 @@
 package com.simibubi.create.content.logistics.depot;
 
+import net.minecraft.world.phys.shapes.CollisionContext;
+
+import io.github.fabricators_of_create.porting_lib.block.CustomRenderBoundingBoxBlockEntity;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -118,14 +122,6 @@ public class EjectorBlockEntity extends KineticBlockEntity implements SidedStora
 		this.state = State.RETRACTING;
 		launchedItems = new ArrayList<>();
 		powered = false;
-	}
-
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.WEIGHTED_EJECTOR.get(),
-				(be, context) -> be.depotBehaviour.itemHandler
-		);
 	}
 
 	@Override
@@ -634,7 +630,7 @@ public class EjectorBlockEntity extends KineticBlockEntity implements SidedStora
 	@Override
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
-		return AABB.INFINITE;
+		return CustomRenderBoundingBoxBlockEntity.INFINITE_EXTENT_AABB;
 	}
 
 	private static abstract class EntityHack extends Entity {

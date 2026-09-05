@@ -1,5 +1,7 @@
 package com.simibubi.create.content.fluids.transfer;
 
+import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -35,7 +37,10 @@ public class GenericItemEmptying {
 			.isPresent())
 			return true;
 
-		return TransferUtil.getFluidContained(stack).isPresent();
+		Storage<FluidVariant> contained = FluidStorage.ITEM.find(stack, ContainerItemContext.withConstant(stack));
+		return contained != null && contained.nonEmptyViews()
+			.iterator()
+			.hasNext();
 	}
 
 	public static Pair<FluidStack, ItemStack> emptyItem(Level world, ItemStack stack, boolean simulate) {

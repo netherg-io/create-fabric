@@ -68,9 +68,8 @@ import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.chunk.LevelChunkSection;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.SpecialPlantable;
-import net.neoforged.neoforge.event.level.BlockDropsEvent;
+
+import io.github.fabricators_of_create.porting_lib.level.events.BlockDropsEvent;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
@@ -220,7 +219,7 @@ public class BlockHelper {
 			List<ItemStack> drops = Block.getDrops(state, serverLevel, pos, blockEntity, player, usedTool);
 			if (player != null) {
 				BlockDropsEvent event = new BlockDropsEvent(serverLevel, pos, state, blockEntity, List.of(), player, usedTool);
-				NeoForge.EVENT_BUS.post(event);
+				event.sendEvent();
 				if (!event.isCanceled()) {
 					if ( event.getDroppedExperience() > 0)
 						state.getBlock().popExperience(serverLevel, pos, event.getDroppedExperience());
@@ -236,7 +235,7 @@ public class BlockHelper {
 			// entities as a side-effect
 			Registry<Enchantment> enchantmentRegistry = world.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
 			if (state.getBlock() instanceof IceBlock
-				&& EnchantmentHelper.getItemEnchantmentLevel(enchantmentRegistry.getHolderOrThrow(Enchantments.SILK_TOUCH, usedTool)) == 0) {
+				&& EnchantmentHelper.getItemEnchantmentLevel(enchantmentRegistry.getHolderOrThrow(Enchantments.SILK_TOUCH), usedTool) == 0) {
 				if (world.dimensionType()
 					.ultraWarm())
 					return;
@@ -333,10 +332,6 @@ safeNbtBE.writeSafe(data, access);
 
 		if (block == Blocks.COMPOSTER) {
 			state = Blocks.COMPOSTER.defaultBlockState();
-		} else if (block != Blocks.SEA_PICKLE && block instanceof SpecialPlantable specialPlantable) {
-			alreadyPlaced = true;
-			if (specialPlantable.canPlacePlantAtPosition(stack, world, target, null))
-				specialPlantable.spawnPlantAtPosition(stack, world, target, null);
 		} else if (state.is(BlockTags.CAULDRONS)) {
 			state = Blocks.CAULDRON.defaultBlockState();
 		}

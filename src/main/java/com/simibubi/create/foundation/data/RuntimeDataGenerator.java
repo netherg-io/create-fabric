@@ -16,6 +16,7 @@ import org.jetbrains.annotations.ApiStatus;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.gson.JsonElement;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.JsonOps;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.kinetics.saw.CuttingRecipe;
@@ -36,10 +37,15 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 
-import net.neoforged.neoforge.common.conditions.WithConditions;
+import io.github.fabricators_of_create.porting_lib.conditions.ConditionalOps;
+import io.github.fabricators_of_create.porting_lib.conditions.WithConditions;
 
 @ApiStatus.Internal
 public class RuntimeDataGenerator {
+	// fabric: NeoForge's Recipe#CONDITIONAL_CODEC extension, rebuilt on porting lib's conditions
+	private static final Codec<Optional<WithConditions<Recipe<?>>>> RECIPE_CONDITIONAL_CODEC =
+		ConditionalOps.createConditionalCodecWithConditions(Recipe.CODEC);
+
 	// (1. variant_prefix, optional, can be null)stripped_(2. wood name)(3. type)(4. empty group)endofline
 	private static final Pattern STRIPPED_WOODS_PREFIX_REGEX = Pattern.compile("(\\w*)??stripped_(\\w*)(_log|_wood|_stem|_hyphae|_block|(?<!_)wood)()$");
 	// (1. wood name)(2. type)(3. variant_suffix, optional)_stripped(4. 2nd variant_suffix, optional)
@@ -189,7 +195,8 @@ public class RuntimeDataGenerator {
 			ResourceLocation id = ResourceLocation.fromNamespaceAndPath(recipe.id.getNamespace(),
 				typeId.getPath() + "/" + recipe.id.getPath());
 
-			Optional<JsonElement> serialized = CatnipCodecUtils.encode(Recipe.CONDITIONAL_CODEC, JsonOps.INSTANCE, Optional.of(new WithConditions<>(recipe)));
+			Optional<JsonElement> serialized = CatnipCodecUtils.encode(RECIPE_CONDITIONAL_CODEC, JsonOps.INSTANCE,
+				Optional.of(new WithConditions<Recipe<?>>(recipe)));
 			serialized.ifPresent(r -> JSON_FILES.put(id.withPrefix("recipe/"), r));
 			return recipe;
 		}

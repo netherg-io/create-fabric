@@ -2,13 +2,13 @@ package com.simibubi.create.content.logistics.crate;
 
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.function.Supplier;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerSlot;
 
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.storage.StorageView;
@@ -30,7 +30,6 @@ import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
 import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 
 import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerSlot;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -44,9 +43,39 @@ public class BottomlessItemHandler extends ItemStackHandler implements SingleSlo
 		setSize(1); // create slot after setting supplier
 	}
 
+	// fabric: this handler is a single infinite slot; the inherited slot storage is never used directly
 	@Override
-	protected ItemStackHandlerSlot makeSlot(int index, ItemStack stack) {
-		return new BottomlessSlot();
+	public ItemStack getStackInSlot(int slot) {
+		return getStack();
+	}
+
+	@Override
+	public void setStackInSlot(int slot, ItemStack stack) {
+	}
+
+	@Override
+	public ItemVariant getVariantInSlot(int slot) {
+		return getResource();
+	}
+
+	@Override
+	public int getSlotLimit(int slot) {
+		return 64;
+	}
+
+	@Override
+	public boolean isItemValid(int slot, ItemStack stack) {
+		return true;
+	}
+
+	@Override
+	public SingleSlotStorage<ItemVariant> getSlot(int slot) {
+		return this;
+	}
+
+	@Override
+	public List<SingleSlotStorage<ItemVariant>> getSlots() {
+		return List.of(this);
 	}
 
 	@Override
@@ -106,38 +135,4 @@ public class BottomlessItemHandler extends ItemStackHandler implements SingleSlo
 		return isResourceBlank() ? Collections.emptyIterator() : iterator();
 	}
 
-	private class BottomlessSlot extends ItemStackHandlerSlot {
-		public BottomlessSlot() {
-			super(0, BottomlessItemHandler.this, ItemStack.EMPTY);
-		}
-
-		@Override
-		public ItemStack getStack() {
-			return BottomlessItemHandler.this.getStack();
-		}
-
-		@Override
-		public ItemVariant getResource() {
-			return BottomlessItemHandler.this.getResource();
-		}
-
-		@Override
-		public long getAmount() {
-			return BottomlessItemHandler.this.getAmount();
-		}
-
-		@Override
-		protected void setStack(ItemStack stack) {
-		}
-
-		@Override
-		@Nullable
-		public CompoundTag save() {
-			return null;
-		}
-
-		@Override
-		protected void onFinalCommit() {
-		}
-	}
 }

@@ -34,11 +34,6 @@ public class WrenchItem extends Item {
 		super(properties);
 	}
 
-	@Override
-	@Environment(EnvType.CLIENT)
-	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-		consumer.accept(SimpleCustomRenderer.create(this, new WrenchItemRenderer()));
-	}
 
 	@Nonnull
 	@Override
@@ -93,11 +88,5 @@ public class WrenchItem extends Item {
 		minecart.hurt(minecart.damageSources().playerAttack(player), 100);
 		return InteractionResult.SUCCESS;
 	}
-
-//	@Override
-//	@Environment(EnvType.CLIENT)
-//	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-//		consumer.accept(SimpleCustomRenderer.create(this, new WrenchItemRenderer()));
-//	}
 
 }

@@ -1,13 +1,13 @@
 package com.simibubi.create.content.equipment.tool;
 
-import java.util.function.Consumer;
-
 import org.jetbrains.annotations.Nullable;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllSoundEvents;
 
 import net.createmod.catnip.platform.CatnipServices;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -29,36 +29,43 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-import io.github.fabricators_of_create.porting_lib.enchant.CustomEnchantingBehaviorItem;
-import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
+import net.fabricmc.fabric.api.item.v1.EnchantingContext;
+import net.fabricmc.fabric.api.util.TriState;
 
-public class CardboardSwordItem extends SwordItem implements CustomEnchantingBehaviorItem {
+import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingAttackEvent;
+
+public class CardboardSwordItem extends SwordItem {
 
 	public CardboardSwordItem(Properties pProperties) {
 		super(AllToolMaterials.CARDBOARD, pProperties);
 	}
 
-	@Override
-	public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
-		return enchantment == Enchantments.KNOCKBACK;
+	/** Fabric: registered on {@code EnchantmentEvents.ALLOW_ENCHANTING} instead of NeoForge's item hook. */
+	public static TriState onlyAcceptsKnockback(Holder<Enchantment> enchantment, ItemStack target,
+		EnchantingContext context) {
+		if (!AllItems.CARDBOARD_SWORD.isIn(target))
+			return TriState.DEFAULT;
+		return enchantment.is(Enchantments.KNOCKBACK) ? TriState.DEFAULT : TriState.FALSE;
 	}
 
-	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand, BlockPos pos, Direction direction) {
-		if (!AllItems.CARDBOARD_SWORD.isIn(itemStack))
-			return;
-		if (event.getAction() != PlayerInteractEvent.LeftClickBlock.Action.START)
-			return;
-		if (event.getSide() == LogicalSide.CLIENT)
-			AllSoundEvents.CARDBOARD_SWORD.playAt(event.getLevel(), event.getPos(), 0.5f, 1.85f, false);
+	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand,
+		BlockPos pos, Direction direction) {
+		if (!AllItems.CARDBOARD_SWORD.isIn(player.getItemInHand(hand)))
+			return InteractionResult.PASS;
+
+		if (level.isClientSide)
+			AllSoundEvents.CARDBOARD_SWORD.playAt(level, pos, 0.5f, 1.85f, false);
 		else
 			AllSoundEvents.CARDBOARD_SWORD.play(level, player, pos, 0.5f, 1.85f);
 
-		return InteractionResult.SUCCESS;
+		// don't cancel the swing, this only adds the sound
+		return InteractionResult.PASS;
 	}
 
-	public static void cardboardSwordsCannotHurtYou(io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent event) {
-		Entity attacker = event.getSource()
-			.getEntity();
+	public static void cardboardSwordsCannotHurtYou(LivingAttackEvent event) {
+		if (!(event.getSource()
+			.getEntity() instanceof Player attacker))
+			return;
 		LivingEntity target = event.getEntity();
 		if (target == null || target.getType().is(EntityTypeTags.ARTHROPOD))
 			return;

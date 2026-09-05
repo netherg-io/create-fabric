@@ -1,0 +1,2959 @@
+src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:14: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:74: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:28: error: package io.github.fabricators_of_create.porting_lib.models.generators.item does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.item.ItemModelBuilder;
+                                                                         ^
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:62: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlockEntity.java:86: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:122: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:130: error: cannot find symbol
+	protected IItemHandler getInvCapability() {
+	          ^
+  symbol:   class IItemHandler
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:17: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                     ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:19: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+                                                     ^
+  symbol:   class DefaultResourceConditions
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:32: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                     ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:33: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+                                                     ^
+  symbol:   class DefaultResourceConditions
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:42: error: cannot find symbol
+	protected List<ConditionJsonProvider> recipeConditions;
+	               ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:248: error: cannot find symbol
+	public ProcessingRecipeBuilder<T> withCondition(ConditionJsonProvider condition) {
+	                                                ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:13: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                     ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:24: error: cannot find symbol
+import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                     ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:31: error: cannot find symbol
+	protected List<ConditionJsonProvider> recipeConditions;
+	               ^
+  symbol:   class ConditionJsonProvider
+
+src/main/java/com/simibubi/create/content/schematics/table/SchematicTableBlock.java:29: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlock.java:27: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                       ^
+  symbol:   class NetworkHooks
+
+src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:27: error: cannot find symbol
+	public StreamCodec<? super RegistryFriendlyByteBuf, BasicParticleData<T>> getStreamCodec() {
+	       ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:27: error: cannot find symbol
+	public StreamCodec<? super RegistryFriendlyByteBuf, BasicParticleData<T>> getStreamCodec() {
+	                           ^
+  symbol:   class RegistryFriendlyByteBuf
+
+src/main/java/com/simibubi/create/content/kinetics/waterwheel/LargeWaterWheelBlockItem.java:27: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:21: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:42: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:115: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:16: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:38: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:14: error: cannot find symbol
+import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                          ^
+  symbol:   class PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:37: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:27: error: cannot find symbol
+	public static final StreamCodec<RegistryFriendlyByteBuf, AirFlowParticleData> STREAM_CODEC = StreamCodec.composite(
+	                    ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:63: error: cannot find symbol
+	public StreamCodec<? super RegistryFriendlyByteBuf, AirFlowParticleData> getStreamCodec() {
+	       ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:43: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.events.EntityEvents;
+                                                                ^
+  symbol:   class EntityEvents
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:44: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.events.LivingEntityEvents;
+                                                                ^
+  symbol:   class LivingEntityEvents
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:138: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:108: error: package EntityEvents does not exist
+	public static void deployerHasEyesOnHisFeet(EntityEvents.Size event) {
+	                                                        ^
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:142: error: package LivingEntityEvents.ChangeTarget does not exist
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:25: error: cannot find symbol
+	RecipeHolder<? extends Recipe<? extends RecipeInput>> recipe = null;
+	^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:25: error: cannot find symbol
+	RecipeHolder<? extends Recipe<? extends RecipeInput>> recipe = null;
+	                                        ^
+  symbol:   class RecipeInput
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:58: error: cannot find symbol
+	public RecipeHolder<? extends Recipe<? extends RecipeInput>> getRecipe() {
+	       ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:58: error: cannot find symbol
+	public RecipeHolder<? extends Recipe<? extends RecipeInput>> getRecipe() {
+	                                               ^
+  symbol:   class RecipeInput
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:64: error: cannot find symbol
+	public void addRecipe(Supplier<Optional<? extends RecipeHolder<? extends Recipe<? extends RecipeInput>>>> recipeSupplier, int priority) {
+	                                                  ^
+  symbol:   class RecipeHolder
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:64: error: cannot find symbol
+	public void addRecipe(Supplier<Optional<? extends RecipeHolder<? extends Recipe<? extends RecipeInput>>>> recipeSupplier, int priority) {
+	                                                                                          ^
+  symbol:   class RecipeInput
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:62: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:86: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainPackageInteractionHandler.java:8: error: cannot find symbol
+import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                    ^
+  symbol:   class ReachUtil
+
+src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainConveyorVisual.java:32: error: package net.minecraftforge.registries does not exist
+import net.minecraftforge.registries.ForgeRegistries;
+                                    ^
+src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainConveyorInteractionHandler.java:18: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:77: error: cannot find symbol
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+                                           ^
+  symbol:   class BlockPathTypes
+
+src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:42: error: cannot find symbol
+	public static final StreamCodec<RegistryFriendlyByteBuf, RotationIndicatorParticleData> STREAM_CODEC = StreamCodec.composite(
+	                    ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:83: error: cannot find symbol
+	public StreamCodec<? super RegistryFriendlyByteBuf, RotationIndicatorParticleData> getStreamCodec() {
+	       ^
+  symbol:   class StreamCodec
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:50: error: cannot find symbol
+public abstract class ZapperItem extends Item implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem {
+                                                                            ^
+  symbol: class EntitySwingListenerItem
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:50: error: cannot find symbol
+public abstract class ZapperItem extends Item implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem {
+                                                                                                     ^
+  symbol: class ReequipAnimationItem
+
+src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:38: error: cannot find symbol
+	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+	                                      ^
+  symbol:   class IClientItemExtensions
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:7: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback;
+                                                               ^
+  symbol:   class RenderHandCallback
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:22: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback;
+                                                               ^
+  symbol:   class RenderHandCallback
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:23: error: package io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback does not exist
+import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback.RenderHandEvent;
+                                                                                  ^
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:75: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:39: error: cannot find symbol
+	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+	                             ^
+  symbol:   class Consumer
+
+src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:39: error: cannot find symbol
+	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+	                                      ^
+  symbol:   class IClientItemExtensions
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlockEntity.java:101: error: cannot find symbol
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+	                                        ^
+  symbol:   class RegisterCapabilitiesEvent
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:18: error: package net.neoforged.neoforge.items does not exist
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+                                   ^
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlock.java:51: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:33: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
+                                                                ^
+  symbol:   class LivingAttackEvent
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:46: error: cannot find symbol
+	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand, BlockPos pos, Direction direction) {
+	                                                                                                                  ^
+  symbol:   class BlockPos
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:46: error: cannot find symbol
+	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand, BlockPos pos, Direction direction) {
+	                                                                                                                                ^
+  symbol:   class Direction
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:59: error: cannot find symbol
+	public static void cardboardSwordsCannotHurtYou(io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent event) {
+	                                                                                                         ^
+  symbol:   class LivingAttackEvent
+
+src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:53: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:48: error: cannot find symbol
+public class PotatoProjectileEntity extends AbstractHurtingProjectile implements IEntityWithComplexSpawn {
+                                                                                 ^
+  symbol: class IEntityWithComplexSpawn
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:23: error: package io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback does not exist
+import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback.RenderHandEvent;
+                                                                                  ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:52: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:13: error: cannot find symbol
+import com.simibubi.create.foundation.item.render.SimpleCustomRenderer;
+                                                 ^
+  symbol:   class SimpleCustomRenderer
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:40: error: package net.neoforged.neoforge.event.tick does not exist
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+                                        ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:43: error: package net.neoforged.bus.api does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:44: error: package net.neoforged.bus.api does not exist
+import net.neoforged.bus.api.SubscribeEvent;
+                            ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:45: error: package net.neoforged.fml.common does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:46: error: package net.neoforged.neoforge.client.event does not exist
+import net.neoforged.neoforge.client.event.InputEvent;
+                                          ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:47: error: package net.neoforged.neoforge.client.extensions.common does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:48: error: package net.neoforged.neoforge.event.entity.living does not exist
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+                                                 ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:49: error: package net.neoforged.neoforge.event.entity.living does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:50: error: package net.neoforged.neoforge.event.entity.player does not exist
+import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+                                                 ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:51: error: package net.neoforged.neoforge.event.entity.player does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:52: error: package net.neoforged.neoforge.event.entity.player does not exist
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+                                                 ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:53: error: package net.neoforged.neoforge.event.level.BlockEvent does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:54: error: package net.neoforged.neoforge.event.level.BlockEvent does not exist
+import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+                                                    ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:56: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:84: error: package EntityTickEvent does not exist
+	public static void holdingExtendoGripIncreasesRange(EntityTickEvent.Pre event) {
+	                                                                   ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:126: error: package PlayerEvent does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:140: error: package InputEvent does not exist
+	public static void dontMissEntitiesWhenYouHaveHighReachDistance(InputEvent.InteractionKeyMappingTriggered event) {
+	                                                                          ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:177: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:182: error: cannot find symbol
+	public static void consumeDurabilityOnPlace(EntityPlaceEvent event) {
+	                                            ^
+  symbol:   class EntityPlaceEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:230: error: cannot find symbol
+	public static void bufferLivingAttackEvent(LivingIncomingDamageEvent event) {
+	                                           ^
+  symbol:   class LivingIncomingDamageEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:243: error: cannot find symbol
+	public static void attacksByExtendoGripHaveMoreKnockback(LivingKnockBackEvent event) {
+	                                                         ^
+  symbol:   class LivingKnockBackEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:268: error: cannot find symbol
+	public static void notifyServerOfLongRangeAttacks(AttackEntityEvent event) {
+	                                                  ^
+  symbol:   class AttackEntityEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:280: error: package PlayerInteractEvent does not exist
+	public static void notifyServerOfLongRangeInteractions(PlayerInteractEvent.EntityInteract event) {
+	                                                                          ^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:292: error: package PlayerInteractEvent does not exist
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:310: error: cannot find symbol
+	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+	                                      ^
+  symbol:   class IClientItemExtensions
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardBlock.java:53: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:76: error: cannot find symbol
+	implements IEntityWithComplexSpawn, SpecialEntityItemRequirement, ISyncPersistentData, IInteractionChecker {
+	           ^
+  symbol: class IEntityWithComplexSpawn
+
+src/main/java/com/simibubi/create/content/equipment/bell/HauntedBellPulser.java:31: error: package PlayerTickEvent does not exist
+	public static void hauntedBellCreatesPulse(PlayerTickEvent.Post event) {
+	                                                          ^
+src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:20: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:21: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.entity.events.LivingEntityEvents;
+                                                                ^
+  symbol:   class LivingEntityEvents
+
+src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:25: error: package EntityEvents does not exist
+	public static void playerHitboxChangesWhenHidingAsBox(EntityEvents.Size event) {
+	                                                                  ^
+src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:39: error: package LivingEvent does not exist
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:33: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                       ^
+  symbol:   class EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:21: error: package net.neoforged.bus.api does not exist
+import net.neoforged.bus.api.IEventBus;
+                            ^
+src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:22: error: package net.neoforged.neoforge.registries does not exist
+
+src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:25: error: cannot find symbol
+	private static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, Create.ID);
+	                     ^
+  symbol:   class DeferredRegister
+
+src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:82: error: cannot find symbol
+	public static void register(IEventBus eventBus) {
+	                            ^
+  symbol:   class IEventBus
+
+src/main/java/com/simibubi/create/content/decoration/girder/GirderPlacementHelper.java:7: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
+                                                 ^
+src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:11: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+
+src/main/java/com/simibubi/create/content/decoration/copycat/SpecialCopycatPanelBlockState.java:14: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                          ^
+src/main/java/com/simibubi/create/content/decoration/MetalLadderBlock.java:5: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:53: error: cannot find symbol
+	public @NotNull ParticleType<?> getType() {
+	        ^
+  symbol:   class NotNull
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:83: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:125: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:138: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:176: error: cannot find symbol
+	@SubscribeEvent(priority = EventPriority.LOWEST)
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:176: error: cannot find symbol
+	@SubscribeEvent(priority = EventPriority.LOWEST)
+	                           ^
+  symbol:   variable EventPriority
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:181: error: cannot find symbol
+	@SubscribeEvent(priority = EventPriority.LOWEST)
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:181: error: cannot find symbol
+	@SubscribeEvent(priority = EventPriority.LOWEST)
+	                           ^
+  symbol:   variable EventPriority
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:229: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:242: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:266: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:278: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:290: error: cannot find symbol
+	@SubscribeEvent
+	 ^
+  symbol:   class SubscribeEvent
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintMenu.java:122: error: cannot find symbol
+	@Environment(EnvType.CLIENT)
+	 ^
+  symbol:   class Environment
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintMenu.java:122: error: cannot find symbol
+	@Environment(EnvType.CLIENT)
+	             ^
+  symbol:   variable EnvType
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankItem.java:36: error: cannot find symbol
+	@Nullable
+	 ^
+  symbol:   class Nullable
+
+src/main/java/com/simibubi/create/content/decoration/placard/PlacardBlock.java:233: error: cannot find symbol
+	protected @NotNull MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
+	           ^
+  symbol:   class NotNull
+
+src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:77: error: cannot find symbol
+					PeripheralCapability.get(),
+					^
+  symbol:   variable PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmInteractionPoint.java:112: error: cannot find symbol
+		return ItemHandlerHelper.copyStackWithSize(stack, ItemHelper.truncateLong(stack.getCount() - inserted));
+		       ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmInteractionPoint.java:119: error: cannot find symbol
+		return TransferUtil.extractAnyItem(handler, amount);
+		                   ^
+  symbol:   method extractAnyItem(Storage<ItemVariant>,int)
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:366: error: cannot find symbol
+				TransactionSuccessCallback.register(ctx, () ->
+				^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:496: error: cannot find symbol
+					TransactionSuccessCallback.register(ctx, () -> {
+					^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:530: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> campfireBE.placeFood(null, inserted, recipe.get().value().getCookingTime()));
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:620: error: cannot find symbol
+			ItemStack record = jukeboxBE.getFirstItem();
+			                            ^
+  symbol:   method getFirstItem()
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:625: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> {
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:651: error: cannot find symbol
+			TransactionSuccessCallback.register(ctx, () -> RespawnAnchorBlock.charge(null, level, pos, cachedState));
+			^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmBlockEntity.java:312: error: incompatible types: boolean cannot be converted to TransactionContext
+			ItemStack remainder = armInteractionPoint.insert(held, true);
+			                                                       ^
+src/main/java/com/simibubi/create/foundation/item/ItemHelper.java:127: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:64: error: cannot find symbol
+		ItemModelBuilder builder = p.generated(c::get);
+		^
+  symbol:   class ItemModelBuilder
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlockEntity.java:88: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlockEntity.java:746: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlockEntity.java:891: error: cannot find symbol
+		return AABB.INFINITE;
+		           ^
+  symbol:   variable INFINITE
+
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonInventory.java:28: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonInventory.java:43: error: method isItemValid in class ItemStackHandler cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/schematics/cannon/MaterialChecklist.java:88: error: cannot find symbol
+		int amount = TransferUtil.truncateLong(view.getAmount());
+		                         ^
+  symbol:   method truncateLong(long)
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:72: error: incompatible types: incompatible parameter types in lambda expression
+			whenContentsChanged(() -> {
+			                    ^
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:88: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:124: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:131: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:132: error: cannot find symbol
+			invCap = input.getItemHandler(getLevel(), getBlockPos());
+			^
+  symbol:   variable invCap
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:134: error: cannot find symbol
+		return invCap;
+		       ^
+  symbol:   variable invCap
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:473: error: cannot find symbol
+		if (!inventory.getItem(0)
+		              ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:475: error: cannot find symbol
+			dropItem(ejectPos, inventory.getItem(0));
+			                            ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:500: error: cannot find symbol
+		return !inventory.getItem(0)
+		                 ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:505: error: cannot find symbol
+		return !inventory.getItem(0)
+		                 ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:525: error: cannot find symbol
+		groupedItems = new GroupedItems(inventory.getItem(0));
+		                                         ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:121: error: cannot find symbol
+		consumer.accept(id, recipe, null, recipeConditions.toArray(new ICondition[0]));
+		                                                               ^
+  symbol:   class ICondition
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:157: error: cannot find symbol
+		params.ingredients.add(new SimpleDatagenIngredient(mod, id).toVanilla());
+		                                                           ^
+  symbol:   method toVanilla()
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:241: error: cannot find symbol
+		return withCondition(DefaultResourceConditions.allModsLoaded(modid));
+		                     ^
+  symbol:   variable DefaultResourceConditions
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:245: error: cannot find symbol
+		return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+		                     ^
+  symbol:   variable DefaultResourceConditions
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:245: error: cannot find symbol
+		return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+		                                                   ^
+  symbol:   variable DefaultResourceConditions
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:60: error: cannot find symbol
+			if (!(recipeTypes.serializerSupplier.get() instanceof ProcessingRecipeSerializer processingRecipeSerializer))
+			                 ^
+  symbol:   variable serializerSupplier
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:61: error: cannot find symbol
+				throw new RuntimeException("Not a processing recipe serializer " + recipeTypes.serializerSupplier.get());
+				                                                                              ^
+  symbol:   variable serializerSupplier
+
+src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:63: error: id has private access in AllRecipeTypes
+			ProcessingRecipeBuilder<T> builder = new ProcessingRecipeBuilder<T>(processingRecipeSerializer.getFactory(), recipeTypes.id);
+			                                                                                                                        ^
+src/main/java/com/simibubi/create/foundation/data/recipe/StandardRecipeGen.java:1561: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:94: error: cannot find symbol
+		consumer.accept(id, holder.value(), null, recipeConditions.toArray(new ICondition[0]));
+		                                                                       ^
+  symbol:   class ICondition
+
+src/main/java/com/simibubi/create/content/processing/sequenced/SequencedRecipe.java:66: error: cannot find symbol
+					.set(0, isFirst ? CompoundIngredient.of(transit, parent.getIngredient()) : transit);
+					                  ^
+  symbol:   variable CompoundIngredient
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/ItemApplicationRecipe.java:20: error: type argument Container is not within bounds of type-variable T
+public class ItemApplicationRecipe extends ProcessingRecipe<Container> {
+                                                            ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:52: error: type argument Container is not within bounds of type-variable T
+		RecipeType<Recipe<Container>> type = AllRecipeTypes.ITEM_APPLICATION.getType();
+		                  ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:52: error: incompatible types: inference variable I has incompatible bounds
+		RecipeType<Recipe<Container>> type = AllRecipeTypes.ITEM_APPLICATION.getType();
+		                                                                            ^
+    equality constraints: Container
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:53: error: type argument Container is not within bounds of type-variable T
+		Optional<RecipeHolder<Recipe<Container>>> foundRecipe = level.getRecipeManager()
+		                             ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:54: error: method getAllRecipesFor in class RecipeManager cannot be applied to given types;
+			.getAllRecipesFor(type)
+			^
+  required: RecipeType<T>
+
+src/main/java/com/simibubi/create/content/decoration/copycat/CopycatBlock.java:358: error: incompatible types: BlockGetter cannot be converted to LevelReader
+				mat -> mat.getBlock().getCloneItemStack(level, pos, mat)
+				                                        ^
+src/main/java/com/simibubi/create/content/kinetics/crank/ValveHandleBlock.java:74: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/schematics/table/SchematicTableBlock.java:66: error: method openMenu in class Player cannot be applied to given types;
+				be -> player.openMenu(be, be::sendToMenu));
+				            ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlock.java:54: error: method openMenu in class Player cannot be applied to given types;
+				be -> player.openMenu(be, be::sendToMenu));
+				            ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/processing/burner/BlazeBurnerHandler.java:85: error: cannot find symbol
+			BlockHitResult result = (BlockHitResult) event.getRayTraceResult();
+			                                         ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinRenderer.java:63: error: cannot find symbol
+			List<ItemStack> stacks = TransferUtil.getAllItems(inv);
+			                                     ^
+  symbol:   method getAllItems(Storage<ItemVariant>)
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinRecipe.java:143: error: cannot find symbol
+			CraftingInput remainderInput = new DummyCraftingContainer(availableItems, extractedItemsFromSlot)
+			                                                                          ^
+  symbol:   variable extractedItemsFromSlot
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:92: error: method tryEmptyItemIntoBE in class FluidHelper cannot be applied to given types;
+				if (FluidHelper.tryEmptyItemIntoBE(level, player, hand, stack, be))
+				               ^
+  required: Level,Player,InteractionHand,ItemStack,SmartBlockEntity,Direction
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:94: error: method tryFillItemFromBE in class FluidHelper cannot be applied to given types;
+				if (FluidHelper.tryFillItemFromBE(level, player, hand, stack, be))
+				               ^
+  required: Level,Player,InteractionHand,ItemStack,SmartBlockEntity,Direction
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:101: error: cannot find symbol
+					Storage<FluidVariant> storage = be.getFluidStorage(direction);
+					                                                   ^
+  symbol:   variable direction
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:102: error: cannot find symbol
+					if (storage != null && !TransferUtil.extractAnyFluid(storage, Long.MAX_VALUE).isEmpty()) {
+					                                    ^
+  symbol:   method extractAnyFluid(Storage<FluidVariant>,long)
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:111: error: cannot find symbol
+			List<ItemStack> extracted = TransferUtil.extractAllAsStacks(inv);
+			                                        ^
+  symbol:   method extractAllAsStacks(Storage<ItemVariant>)
+
+src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:110: error: incompatible types: bad return type in lambda expression
+			if (inv == null) return InteractionResult.PASS;
+			                                         ^
+    InteractionResult cannot be converted to ItemInteractionResult
+
+src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:28: error: cannot find symbol
+		return StreamCodec.unit(this);
+		       ^
+  symbol:   variable StreamCodec
+
+src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:170: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:175: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/kinetics/waterwheel/LargeWaterWheelBlock.java:88: error: incompatible types: InteractionResult cannot be converted to ItemInteractionResult
+			return InteractionResult.PASS;
+			                        ^
+src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlock.java:100: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/steamEngine/PoweredShaftBlock.java:75: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:45: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:117: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:174: error: getSoundType(BlockState) has protected access in BlockBehaviour
+
+src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:404: error: no suitable method found for getRecipe(Level,ItemStack,RecipeType<Recipe<RecipeInput>>,Class<CuttingRecipe>)
+		Optional<RecipeHolder<CuttingRecipe>> assemblyRecipe = SequencedAssemblyRecipe.getRecipe(level, inventory.getStackInSlot(0),
+		                                                                              ^
+    method SequencedAssemblyRecipe.<I#1,R#1>getRecipe(Level,I#1,RecipeType<R#1>,Class<R#1>) is not applicable
+
+src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:438: error: cannot find symbol
+				entity.setItem(ItemHandlerHelper.copyStackWithSize(contained, (int) (contained.getCount() - inserted)));
+				               ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/kinetics/base/BlockBreakingMovementBehaviour.java:188: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+		world.playSound(null, breakingPos, stateToBreak.getSoundType(world, breakingPos, null)
+		                                               ^
+  required: no arguments
+
+src/main/java/com/simibubi/create/content/kinetics/saw/CuttingRecipe.java:29: error: type argument Container is not within bounds of type-variable T
+public class CuttingRecipe extends ProcessingRecipe<Container> implements IAssemblyRecipe {
+                                                    ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/press/MechanicalPressBlockEntity.java:94: error: cannot find symbol
+				ItemStack stackInSlot = inputs.getItem(slot);
+				                              ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/mixer/MechanicalMixerBlockEntity.java:196: error: cannot find symbol
+				ItemStack stackInSlot = inv.getItem(slot);
+				                           ^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:127: error: cannot find symbol
+		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		^
+  symbol:   class RecipeWrapper
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:127: error: cannot find symbol
+		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		                                ^
+  symbol:   class RecipeWrapper
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:158: error: cannot find symbol
+		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		^
+  symbol:   class RecipeWrapper
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:158: error: cannot find symbol
+		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+		                                ^
+  symbol:   class RecipeWrapper
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:225: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+		if (lastRecipe != null && lastRecipe.matches(tester, level))
+		                                             ^
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:227: error: method find in enum AllRecipeTypes cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:234: error: incompatible types: inference variable E has incompatible bounds
+			super(List.of(inputInv, outputInv));
+			^
+    equality constraints: io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandler
+
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlock.java:76: error: incompatible types: ItemStackHandlerContainer cannot be converted to ItemStackHandler
+				inv = millstone.inputInv;
+				               ^
+src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlock.java:119: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/gearbox/GearboxBlock.java:46: error: incompatible types: BlockGetter cannot be converted to LevelReader
+			return super.getCloneItemStack(view, pos, state);
+			                               ^
+src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:41: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:40: error: cannot find symbol
+					PeripheralCapability.get(),
+					^
+  symbol:   variable PeripheralCapability
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:28: error: cannot find symbol
+			ByteBufCodecs.INT, p -> p.posX,
+			^
+  symbol:   variable ByteBufCodecs
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:29: error: cannot find symbol
+			ByteBufCodecs.INT, p -> p.posY,
+			^
+  symbol:   variable ByteBufCodecs
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:30: error: cannot find symbol
+			ByteBufCodecs.INT, p -> p.posZ,
+			^
+  symbol:   variable ByteBufCodecs
+
+src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:27: error: cannot find symbol
+	public static final StreamCodec<RegistryFriendlyByteBuf, AirFlowParticleData> STREAM_CODEC = StreamCodec.composite(
+	                                                                                             ^
+  symbol:   variable StreamCodec
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:140: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:609: error: no suitable method found for getRecipe(Level,ItemStackHandlerContainer,RecipeType<Recipe<RecipeInput>>,Class<DeployerApplicationRecipe>)
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:611: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+		event.addRecipe(() -> checkRecipe(AllRecipeTypes.DEPLOYING, event.getInventory(), level), 50);
+		                                                                              ^
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:612: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerItemHandler.java:55: error: cannot find symbol
+		int maxInsert = Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+		                                                            ^
+  symbol:   method getMaxStackSize()
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerItemHandler.java:206: error: cannot find symbol
+			ItemStack newStack = io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper.copyStackWithSize(stack, stack.getCount() - toExtract);
+			                                                                                                ^
+  symbol:   method copyStackWithSize(ItemStack,int)
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:59: error: cannot find symbol
+		if (isCanceled())
+		    ^
+  symbol:   method isCanceled()
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:119: error: content has private access in BucketItem
+			Fluid fluid = bucketItem.content;
+			                        ^
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:135: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:190: error: cannot find symbol
+						FoodProperties foodProperties = item.getFoodProperties(stack, player);
+						                                    ^
+  symbol:   method getFoodProperties(ItemStack,DeployerFakePlayer)
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:88: error: package Capabilities does not exist
+				Capabilities.ItemHandler.BLOCK,
+				            ^
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:312: error: type argument Container is not within bounds of type-variable T
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:334: error: type argument Container is not within bounds of type-variable T
+	public Optional<RecipeHolder<ProcessingRecipe<Container>>> findRecipe() {
+	                                              ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:335: error: type argument Container is not within bounds of type-variable T
+		Optional<RecipeHolder<ProcessingRecipe<Container>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(wrapper, level);
+		                                       ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:335: error: cannot find symbol
+		Optional<RecipeHolder<ProcessingRecipe<Container>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(wrapper, level);
+		                                                                                                  ^
+  symbol:   variable wrapper
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:337: error: method find in enum AllRecipeTypes cannot be applied to given types;
+			crushingRecipe = AllRecipeTypes.MILLING.find(inventory, level);
+			                                       ^
+  required: I,Level
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:367: error: type argument Container is not within bounds of type-variable T
+		Optional<RecipeHolder<ProcessingRecipe<Container>>> recipe = findRecipe();
+		                                       ^
+  where T is a type-variable:
+
+src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlock.java:180: error: cannot find symbol
+		CompoundTag data = entity.getPersistentData();
+		                         ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCraftingInput.java:13: error: CraftingInput(int,int,List<ItemStack>) has private access in CraftingInput
+		super(width, height, item);
+		^
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterRenderer.java:72: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:201: error: cannot find symbol
+					long inserted = capability.insert(ItemVariant.of(heldItem), heldItem.getCount(), t);
+					                                                 ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:201: error: cannot find symbol
+					long inserted = capability.insert(ItemVariant.of(heldItem), heldItem.getCount(), t);
+					                                                            ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+					                     ^
+  symbol:   variable handIn
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+					                                                                 ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+					                                                                                  ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+					                             ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:212: error: cannot find symbol
+				.getItem(0);
+				^
+  symbol:   method getItem(int)
+
+src/main/java/com/simibubi/create/content/kinetics/belt/transport/ItemHandlerBeltSegment.java:21: error: cannot find symbol
+			int toInsert = Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+			                                                           ^
+  symbol:   method getMaxStackSize()
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:115: error: cannot find symbol
+		LandPathNodeTypesRegistry.register(this, BlockPathTypes.RAIL, null);
+		                                         ^
+  symbol:   variable BlockPathTypes
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:275: error: cannot find symbol
+				be -> be.applyColor(TagUtil.getColorFromStack(heldItem)) ? ItemInteractionResult.SUCCESS : ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
+				                                              ^
+  symbol:   variable heldItem
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:330: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+				.getSoundType(level, pos, player);
+				^
+  required: no arguments
+
+src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:342: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+				.getSoundType(level, pos, player);
+				^
+  required: no arguments
+
+src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:42: error: cannot find symbol
+	public static final StreamCodec<RegistryFriendlyByteBuf, RotationIndicatorParticleData> STREAM_CODEC = StreamCodec.composite(
+	                                                                                                       ^
+  symbol:   variable StreamCodec
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:66: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:191: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:36: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:39: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:72: error: package RenderHandCallback does not exist
+		RenderHandCallback.EVENT.register(this::onRenderPlayerHand);
+		                  ^
+src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetItemMethods.java:55: error: method getUseDuration in class ItemStack cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:37: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:40: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:114: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:127: error: method isItemValid in class ItemStackHandler cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:142: error: cannot find symbol
+			if (ctx != null) TransactionSuccessCallback.register(ctx, blockEntity::notifyUpdate);
+			                 ^
+  symbol:   variable TransactionSuccessCallback
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:193: error: cannot find symbol
+		return ItemHandlerHelper.copyStackWithSize(stack, toInsert - inserted);
+		       ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:204: error: incompatible types: SingleSlotStorage<ItemVariant> cannot be converted to ItemStackHandlerSlot
+			ItemStackHandlerSlot handlerSlot = getSlot(slot);
+			                                          ^
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlockEntity.java:103: error: package Capabilities does not exist
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxHandlerClient.java:188: error: cannot find symbol
+		int x = window.getGuiScaledWidth() / 2 - 90;
+		        ^
+  symbol:   variable window
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxHandlerClient.java:189: error: cannot find symbol
+		int y = window.getGuiScaledHeight() - 23;
+		        ^
+  symbol:   variable window
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:63: error: cannot find symbol
+				ItemStack remainder = ItemHandlerHelper.insertItemStacked(inventory, playerStack, false);
+				                      ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:65: error: cannot find symbol
+					remainder = ItemHandlerHelper.insertItemStacked(new ItemReturnInvWrapper(player.getInventory()),
+					                                                    ^
+  symbol:   class ItemReturnInvWrapper
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:65: error: cannot find symbol
+					remainder = ItemHandlerHelper.insertItemStacked(new ItemReturnInvWrapper(player.getInventory()),
+					            ^
+  symbol:   variable ItemHandlerHelper
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:72: error: cannot find symbol
+		CompoundTag compound = player.getPersistentData()
+		                             ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:81: error: cannot find symbol
+		player.getPersistentData()
+		      ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxDisposeAllPacket.java:47: error: cannot find symbol
+		CompoundTag compound = player.getPersistentData()
+		                             ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlock.java:164: error: method openMenu in class Player cannot be applied to given types;
+			toolbox -> player.openMenu(toolbox, toolbox::sendToMenu));
+			                 ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/equipment/toolbox/RadialToolboxMenu.java:278: error: cannot find symbol
+		Window window = getMinecraft().getWindow();
+		                ^
+  symbol:   method getMinecraft()
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:41: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:47: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:48: error: incompatible types: missing return value
+			return;
+			^
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:49: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:49: error: package PlayerInteractEvent.LeftClickBlock does not exist
+		if (event.getAction() != PlayerInteractEvent.LeftClickBlock.Action.START)
+		                                                           ^
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:50: error: incompatible types: missing return value
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:51: error: cannot find symbol
+		if (event.getSide() == LogicalSide.CLIENT)
+		    ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:51: error: cannot find symbol
+		if (event.getSide() == LogicalSide.CLIENT)
+		                       ^
+  symbol:   variable LogicalSide
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:52: error: cannot find symbol
+			AllSoundEvents.CARDBOARD_SWORD.playAt(event.getLevel(), event.getPos(), 0.5f, 1.85f, false);
+			                                      ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:52: error: cannot find symbol
+			AllSoundEvents.CARDBOARD_SWORD.playAt(event.getLevel(), event.getPos(), 0.5f, 1.85f, false);
+			                                                        ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:60: error: cannot find symbol
+		Entity attacker = event.getSource()
+		^
+  symbol:   class Entity
+
+src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:243: error: cannot find symbol
+				boolean placeInterrupted = EventHooks.onBlockPlace(player, blocksnapshot, Direction.UP);
+				                                                           ^
+  symbol:   variable blocksnapshot
+
+src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:243: error: cannot find symbol
+				boolean placeInterrupted = EventHooks.onBlockPlace(player, blocksnapshot, Direction.UP);
+				                           ^
+  symbol:   variable EventHooks
+
+src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:264: error: variable ogBlock is already defined in method remove(Level,ItemStack,Player,BlockPos,BlockState)
+		BlockState ogBlock = world.getBlockState(pos);
+		           ^
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:78: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:336: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:343: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:61: error: PotatoCannonItem is not abstract and does not override abstract method onEntitySwing(ItemStack,LivingEntity) in EntitySwingListenerItem
+public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem, CustomEnchantingBehaviorItem {
+       ^
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:191: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:192: error: cannot find symbol
+		int punch = stack.getEnchantmentLevel(lookup.getOrThrow(Enchantments.PUNCH));
+		                 ^
+  symbol:   method getEnchantmentLevel(Reference<Enchantment>)
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:249: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:261: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:283: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/potatoCannon/AllPotatoProjectileBlockHitActions.java:61: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:115: error: cannot find symbol
+				ClientHooks.handleCameraTransforms(ms, mc.getItemRenderer()
+				^
+  symbol:   variable ClientHooks
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:88: error: cannot find symbol
+		CompoundTag persistentData = player.getPersistentData();
+		                                   ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:128: error: cannot find symbol
+		CompoundTag persistentData = player.getPersistentData();
+		                                   ^
+  symbol:   method getPersistentData()
+
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:308: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:311: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:154: error: cannot find symbol
+			if (event instanceof ICancellableEvent cancellableEvent) {
+			    ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:154: error: cannot find symbol
+			if (event instanceof ICancellableEvent cancellableEvent) {
+			                     ^
+  symbol:   class ICancellableEvent
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:157: error: cannot find symbol
+				switch (event) {
+				        ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:158: error: cannot find symbol
+					case EntityInteractSpecific e -> e.setCancellationResult(InteractionResult.SUCCESS);
+					     ^
+  symbol:   class EntityInteractSpecific
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:159: error: cannot find symbol
+					case EntityInteract e -> e.setCancellationResult(InteractionResult.SUCCESS);
+					     ^
+  symbol:   class EntityInteract
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:160: error: cannot find symbol
+					case RightClickBlock e -> e.setCancellationResult(InteractionResult.SUCCESS);
+					     ^
+  symbol:   class RightClickBlock
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:161: error: cannot find symbol
+					case RightClickItem e -> e.setCancellationResult(InteractionResult.SUCCESS);
+					     ^
+  symbol:   class RightClickItem
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:225: error: cannot find symbol
+					cc.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(), world.isClientSide());
+					                                                                                    ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:229: error: cannot find symbol
+			boolean success = cc.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+			                                                                           ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:239: error: cannot find symbol
+				anySuccess |= ccbe.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(),
+				                                                                                                    ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:243: error: cannot find symbol
+				boolean success = ccbe.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+				                                                                             ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:251: error: incompatible types: missing return value
+			return;
+			^
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:253: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:253: error: cannot find symbol
+		((ICancellableEvent) event).setCanceled(true);
+		                     ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:254: error: cannot find symbol
+		if (event instanceof RightClickBlock rightClickBlock)
+		    ^
+  symbol:   variable event
+
+src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:254: error: cannot find symbol
+		if (event instanceof RightClickBlock rightClickBlock)
+		                     ^
+  symbol:   class RightClickBlock
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:207: error: recalculateBoundingBox() in BlueprintEntity cannot override recalculateBoundingBox() in HangingEntity
+	protected void recalculateBoundingBox() {
+	               ^
+  overridden method is final
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:333: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:338: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:341: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:344: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:363: error: cannot find symbol
+			CommonHooks.setCraftingPlayer(player);
+			^
+  symbol:   variable CommonHooks
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:396: error: no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,CraftingContainer,Level)
+									.getRecipeFor(RecipeType.CRAFTING, craftingInventory, level());
+									^
+    method RecipeManager.<I#1,T#1>getRecipeFor(RecipeType<T#1>,I#1,Level) is not applicable
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:397: error: cannot find symbol
+						ItemStack result = recipe.filter(r -> r.matches(craftingInventory, level()))
+						                                       ^
+  symbol:   method matches(CraftingContainer,Level)
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:398: error: cannot find symbol
+								.map(r -> r.assemble(craftingInventory, level().registryAccess()))
+								           ^
+  symbol:   method assemble(CraftingContainer,RegistryAccess)
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:399: error: incompatible types: Object cannot be converted to ItemStack
+								.orElse(ItemStack.EMPTY);
+								       ^
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:410: error: method getRemainingItemsFor in class RecipeManager cannot be applied to given types;
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:437: error: method openMenu in class Player cannot be applied to given types;
+			player.openMenu(section, buf -> {
+			      ^
+  required: MenuProvider
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:270: error: no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,CraftingContainer,ClientLevel)
+								.getRecipeFor(RecipeType.CRAFTING, craftingInventory, mc.level);
+								^
+    method RecipeManager.<I#1,T#1>getRecipeFor(RecipeType<T#1>,I#1,Level) is not applicable
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:271: error: cannot find symbol
+					ItemStack resultFromRecipe = recipe.filter(r -> r.matches(craftingInventory, mc.level))
+					                                                 ^
+  symbol:   method matches(CraftingContainer,ClientLevel)
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:272: error: incompatible types: CraftingContainer cannot be converted to CraftingInput
+							.map(r -> r.value().assemble(craftingInventory, mc.level.registryAccess()))
+							                             ^
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:273: error: incompatible types: Object cannot be converted to ItemStack
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:350: error: method renderTooltipBackground in class TooltipRenderUtil cannot be applied to given types;
+			TooltipRenderUtil.renderTooltipBackground(guiGraphics, x - 2, y + 1, w + 4, 19, 0, 0x55_000000, 0x55_000000, 0,
+			                 ^
+  required: GuiGraphics,int,int,int,int,int
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:58: error: cannot find symbol
+		CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
+		                                  ^
+  symbol:   variable DataComponents
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:92: error: cannot find symbol
+		boolean isCompoundIngredient = ingredient.getCustomIngredient() instanceof CompoundIngredient;
+		                                                                           ^
+  symbol:   class CompoundIngredient
+
+src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:120: error: cannot find symbol
+			ItemAttribute at = new InTagAttribute(ItemTags.create(tagValue.tag().location()));
+			                                              ^
+  symbol:   method create(ResourceLocation)
+
+src/main/java/com/simibubi/create/content/equipment/armor/NetheriteDivingHandler.java:19: error: cannot find symbol
+		if (slot.getType() != EquipmentSlot.Type.ARMOR) {
+		                                        ^
+  symbol:   variable ARMOR
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:37: error: DivingHelmetItem is not abstract and does not override abstract method modifyEnchantmentLevel(ItemStack,Enchantment,int) in CustomEnchantmentLevelItem
+public class DivingHelmetItem extends BaseArmorItem implements CustomEnchantingBehaviorItem, CustomEnchantmentLevelItem, CustomEnchantmentsItem {
+       ^
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:45: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:49: error: cannot find symbol
+		return super.supportsEnchantment(stack, enchantment);
+		            ^
+  symbol: method supportsEnchantment(ItemStack,Holder<Enchantment>)
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:52: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:56: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:59: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:61: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:95: error: cannot find symbol
+		if (!helmet.has(DataComponents.FIRE_RESISTANT) && lavaDiving)
+		                ^
+  symbol:   variable DataComponents
+
+src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:110: error: cannot find symbol
+				.noneMatch(backtank -> backtank.has(DataComponents.FIRE_RESISTANT)))
+				                                    ^
+  symbol:   variable DataComponents
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:109: error: cannot find symbol
+		ItemEnchantments enchants = backtank.getTagEnchantments();
+		^
+  symbol:   class ItemEnchantments
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:109: error: cannot find symbol
+		ItemEnchantments enchants = backtank.getTagEnchantments();
+		                                    ^
+  symbol:   method getTagEnchantments()
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:146: error: cannot find symbol
+		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+		                ^
+  symbol:   variable EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:158: error: cannot find symbol
+		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+		                ^
+  symbol:   variable EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:184: error: cannot find symbol
+		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+		                ^
+  symbol:   variable EnvExecutor
+
+src/main/java/com/simibubi/create/content/equipment/armor/BacktankBlock.java:114: error: cannot find symbol
+			be.setCapacityEnchantLevel(stack.getEnchantmentLevel(worldIn.holderOrThrow(AllEnchantments.CAPACITY)));
+			                                                            ^
+  symbol:   method holderOrThrow(ResourceKey<Enchantment>)
+
+src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:25: error: cannot find symbol
+	private static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, Create.ID);
+	                                                                       ^
+  symbol:   variable DeferredRegister
+
+src/main/java/com/simibubi/create/content/decoration/palettes/AllPaletteBlocks.java:46: error: package net.neoforged.neoforge.common.Tags does not exist
+		.recipe((c, p) -> p.stonecutting(DataIngredient.tag(net.neoforged.neoforge.common.Tags.Items.GLASS_BLOCKS_COLORLESS), RecipeCategory.BUILDING_BLOCKS, c))
+		                                                                                      ^
+src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:17: error: cannot find symbol
+
+src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:48: error: cannot find symbol
+		MultiPartBlockStateBuilder builder = p.getMultipartBuilder(c.get());
+		^
+  symbol:   class MultiPartBlockStateBuilder
+
+src/main/java/com/simibubi/create/content/decoration/copycat/SpecialCopycatPanelBlockState.java:41: error: cannot find symbol
+		BlockModelProvider models = prov.models();
+		^
+  symbol:   class BlockModelProvider
+
+  src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:14: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:74: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:28: error: package io.github.fabricators_of_create.porting_lib.models.generators.item does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.item.ItemModelBuilder;
+                                                                           ^
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:62: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlockEntity.java:86: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:122: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:130: error: cannot find symbol
+  	protected IItemHandler getInvCapability() {
+  	          ^
+    symbol:   class IItemHandler
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:17: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                       ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:19: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+                                                       ^
+    symbol:   class DefaultResourceConditions
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:32: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                       ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:33: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+                                                       ^
+    symbol:   class DefaultResourceConditions
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:42: error: cannot find symbol
+  	protected List<ConditionJsonProvider> recipeConditions;
+  	               ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:248: error: cannot find symbol
+  	public ProcessingRecipeBuilder<T> withCondition(ConditionJsonProvider condition) {
+  	                                                ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:13: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                       ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:24: error: cannot find symbol
+  import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+                                                       ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:31: error: cannot find symbol
+  	protected List<ConditionJsonProvider> recipeConditions;
+  	               ^
+    symbol:   class ConditionJsonProvider
+
+  src/main/java/com/simibubi/create/content/schematics/table/SchematicTableBlock.java:29: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlock.java:27: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
+                                                         ^
+    symbol:   class NetworkHooks
+
+  src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:27: error: cannot find symbol
+  	public StreamCodec<? super RegistryFriendlyByteBuf, BasicParticleData<T>> getStreamCodec() {
+  	       ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:27: error: cannot find symbol
+  	public StreamCodec<? super RegistryFriendlyByteBuf, BasicParticleData<T>> getStreamCodec() {
+  	                           ^
+    symbol:   class RegistryFriendlyByteBuf
+
+  src/main/java/com/simibubi/create/content/kinetics/waterwheel/LargeWaterWheelBlockItem.java:27: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:21: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:42: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:115: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:16: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:38: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:14: error: cannot find symbol
+  import dan200.computercraft.api.peripheral.PeripheralCapability;
+                                            ^
+    symbol:   class PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:37: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:27: error: cannot find symbol
+  	public static final StreamCodec<RegistryFriendlyByteBuf, AirFlowParticleData> STREAM_CODEC = StreamCodec.composite(
+  	                    ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:63: error: cannot find symbol
+  	public StreamCodec<? super RegistryFriendlyByteBuf, AirFlowParticleData> getStreamCodec() {
+  	       ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:43: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.events.EntityEvents;
+                                                                  ^
+    symbol:   class EntityEvents
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:44: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.events.LivingEntityEvents;
+                                                                  ^
+    symbol:   class LivingEntityEvents
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:138: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:108: error: package EntityEvents does not exist
+  	public static void deployerHasEyesOnHisFeet(EntityEvents.Size event) {
+  	                                                        ^
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerFakePlayer.java:142: error: package LivingEntityEvents.ChangeTarget does not exist
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:25: error: cannot find symbol
+  	RecipeHolder<? extends Recipe<? extends RecipeInput>> recipe = null;
+  	^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:25: error: cannot find symbol
+  	RecipeHolder<? extends Recipe<? extends RecipeInput>> recipe = null;
+  	                                        ^
+    symbol:   class RecipeInput
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:58: error: cannot find symbol
+  	public RecipeHolder<? extends Recipe<? extends RecipeInput>> getRecipe() {
+  	       ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:58: error: cannot find symbol
+  	public RecipeHolder<? extends Recipe<? extends RecipeInput>> getRecipe() {
+  	                                               ^
+    symbol:   class RecipeInput
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:64: error: cannot find symbol
+  	public void addRecipe(Supplier<Optional<? extends RecipeHolder<? extends Recipe<? extends RecipeInput>>>> recipeSupplier, int priority) {
+  	                                                  ^
+    symbol:   class RecipeHolder
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:64: error: cannot find symbol
+  	public void addRecipe(Supplier<Optional<? extends RecipeHolder<? extends Recipe<? extends RecipeInput>>>> recipeSupplier, int priority) {
+  	                                                                                          ^
+    symbol:   class RecipeInput
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:62: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:86: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainPackageInteractionHandler.java:8: error: cannot find symbol
+  import com.simibubi.create.foundation.utility.fabric.ReachUtil;
+                                                      ^
+    symbol:   class ReachUtil
+
+  src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainConveyorVisual.java:32: error: package net.minecraftforge.registries does not exist
+  import net.minecraftforge.registries.ForgeRegistries;
+                                      ^
+  src/main/java/com/simibubi/create/content/kinetics/chainConveyor/ChainConveyorInteractionHandler.java:18: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:77: error: cannot find symbol
+  import net.minecraft.world.level.pathfinder.BlockPathTypes;
+                                             ^
+    symbol:   class BlockPathTypes
+
+  src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:42: error: cannot find symbol
+  	public static final StreamCodec<RegistryFriendlyByteBuf, RotationIndicatorParticleData> STREAM_CODEC = StreamCodec.composite(
+  	                    ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:83: error: cannot find symbol
+  	public StreamCodec<? super RegistryFriendlyByteBuf, RotationIndicatorParticleData> getStreamCodec() {
+  	       ^
+    symbol:   class StreamCodec
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:50: error: cannot find symbol
+  public abstract class ZapperItem extends Item implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem {
+                                                                              ^
+    symbol: class EntitySwingListenerItem
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:50: error: cannot find symbol
+  public abstract class ZapperItem extends Item implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem {
+                                                                                                       ^
+    symbol: class ReequipAnimationItem
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:38: error: cannot find symbol
+  	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+  	                                      ^
+    symbol:   class IClientItemExtensions
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:7: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback;
+                                                                 ^
+    symbol:   class RenderHandCallback
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:22: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback;
+                                                                 ^
+    symbol:   class RenderHandCallback
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:23: error: package io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback does not exist
+  import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback.RenderHandEvent;
+                                                                                    ^
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:75: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:39: error: cannot find symbol
+  	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+  	                             ^
+    symbol:   class Consumer
+
+  src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:39: error: cannot find symbol
+  	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+  	                                      ^
+    symbol:   class IClientItemExtensions
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlockEntity.java:101: error: cannot find symbol
+  	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+  	                                        ^
+    symbol:   class RegisterCapabilitiesEvent
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:18: error: package net.neoforged.neoforge.items does not exist
+  import net.neoforged.neoforge.items.ItemHandlerHelper;
+                                     ^
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlock.java:51: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:33: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent;
+                                                                  ^
+    symbol:   class LivingAttackEvent
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:46: error: cannot find symbol
+  	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand, BlockPos pos, Direction direction) {
+  	                                                                                                                  ^
+    symbol:   class BlockPos
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:46: error: cannot find symbol
+  	public static InteractionResult cardboardSwordsMakeNoiseOnClick(Player player, Level level, InteractionHand hand, BlockPos pos, Direction direction) {
+  	                                                                                                                                ^
+    symbol:   class Direction
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:59: error: cannot find symbol
+  	public static void cardboardSwordsCannotHurtYou(io.github.fabricators_of_create.porting_lib.entity.events.LivingAttackEvent event) {
+  	                                                                                                         ^
+    symbol:   class LivingAttackEvent
+
+  src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:53: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:48: error: cannot find symbol
+  public class PotatoProjectileEntity extends AbstractHurtingProjectile implements IEntityWithComplexSpawn {
+                                                                                   ^
+    symbol: class IEntityWithComplexSpawn
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:23: error: package io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback does not exist
+  import io.github.fabricators_of_create.porting_lib.event.client.RenderHandCallback.RenderHandEvent;
+                                                                                    ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:52: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:13: error: cannot find symbol
+  import com.simibubi.create.foundation.item.render.SimpleCustomRenderer;
+                                                   ^
+    symbol:   class SimpleCustomRenderer
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:40: error: package net.neoforged.neoforge.event.tick does not exist
+  import net.neoforged.neoforge.event.tick.EntityTickEvent;
+                                          ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:43: error: package net.neoforged.bus.api does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:44: error: package net.neoforged.bus.api does not exist
+  import net.neoforged.bus.api.SubscribeEvent;
+                              ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:45: error: package net.neoforged.fml.common does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:46: error: package net.neoforged.neoforge.client.event does not exist
+  import net.neoforged.neoforge.client.event.InputEvent;
+                                            ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:47: error: package net.neoforged.neoforge.client.extensions.common does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:48: error: package net.neoforged.neoforge.event.entity.living does not exist
+  import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+                                                   ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:49: error: package net.neoforged.neoforge.event.entity.living does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:50: error: package net.neoforged.neoforge.event.entity.player does not exist
+  import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+                                                   ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:51: error: package net.neoforged.neoforge.event.entity.player does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:52: error: package net.neoforged.neoforge.event.entity.player does not exist
+  import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+                                                   ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:53: error: package net.neoforged.neoforge.event.level.BlockEvent does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:54: error: package net.neoforged.neoforge.event.level.BlockEvent does not exist
+  import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+                                                      ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:56: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:84: error: package EntityTickEvent does not exist
+  	public static void holdingExtendoGripIncreasesRange(EntityTickEvent.Pre event) {
+  	                                                                   ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:126: error: package PlayerEvent does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:140: error: package InputEvent does not exist
+  	public static void dontMissEntitiesWhenYouHaveHighReachDistance(InputEvent.InteractionKeyMappingTriggered event) {
+  	                                                                          ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:177: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:182: error: cannot find symbol
+  	public static void consumeDurabilityOnPlace(EntityPlaceEvent event) {
+  	                                            ^
+    symbol:   class EntityPlaceEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:230: error: cannot find symbol
+  	public static void bufferLivingAttackEvent(LivingIncomingDamageEvent event) {
+  	                                           ^
+    symbol:   class LivingIncomingDamageEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:243: error: cannot find symbol
+  	public static void attacksByExtendoGripHaveMoreKnockback(LivingKnockBackEvent event) {
+  	                                                         ^
+    symbol:   class LivingKnockBackEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:268: error: cannot find symbol
+  	public static void notifyServerOfLongRangeAttacks(AttackEntityEvent event) {
+  	                                                  ^
+    symbol:   class AttackEntityEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:280: error: package PlayerInteractEvent does not exist
+  	public static void notifyServerOfLongRangeInteractions(PlayerInteractEvent.EntityInteract event) {
+  	                                                                          ^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:292: error: package PlayerInteractEvent does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:310: error: cannot find symbol
+  	public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+  	                                      ^
+    symbol:   class IClientItemExtensions
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardBlock.java:53: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:76: error: cannot find symbol
+  	implements IEntityWithComplexSpawn, SpecialEntityItemRequirement, ISyncPersistentData, IInteractionChecker {
+  	           ^
+    symbol: class IEntityWithComplexSpawn
+
+  src/main/java/com/simibubi/create/content/equipment/bell/HauntedBellPulser.java:31: error: package PlayerTickEvent does not exist
+  	public static void hauntedBellCreatesPulse(PlayerTickEvent.Post event) {
+  	                                                          ^
+  src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:20: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:21: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.entity.events.LivingEntityEvents;
+                                                                  ^
+    symbol:   class LivingEntityEvents
+
+  src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:25: error: package EntityEvents does not exist
+  	public static void playerHitboxChangesWhenHidingAsBox(EntityEvents.Size event) {
+  	                                                                  ^
+  src/main/java/com/simibubi/create/content/equipment/armor/CardboardArmorHandler.java:39: error: package LivingEvent does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:33: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
+                                                         ^
+    symbol:   class EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:21: error: package net.neoforged.bus.api does not exist
+  import net.neoforged.bus.api.IEventBus;
+                              ^
+  src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:22: error: package net.neoforged.neoforge.registries does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:25: error: cannot find symbol
+  	private static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, Create.ID);
+  	                     ^
+    symbol:   class DeferredRegister
+
+  src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:82: error: cannot find symbol
+  	public static void register(IEventBus eventBus) {
+  	                            ^
+    symbol:   class IEventBus
+
+  src/main/java/com/simibubi/create/content/decoration/girder/GirderPlacementHelper.java:7: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+  import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
+                                                   ^
+  src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:11: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+
+  src/main/java/com/simibubi/create/content/decoration/copycat/SpecialCopycatPanelBlockState.java:14: error: package io.github.fabricators_of_create.porting_lib.models.generators.block does not exist
+  import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
+                                                                            ^
+  src/main/java/com/simibubi/create/content/decoration/MetalLadderBlock.java:5: error: package com.jamieswhiteshirt.reachentityattributes does not exist
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:53: error: cannot find symbol
+  	public @NotNull ParticleType<?> getType() {
+  	        ^
+    symbol:   class NotNull
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:83: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:125: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:138: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:176: error: cannot find symbol
+  	@SubscribeEvent(priority = EventPriority.LOWEST)
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:176: error: cannot find symbol
+  	@SubscribeEvent(priority = EventPriority.LOWEST)
+  	                           ^
+    symbol:   variable EventPriority
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:181: error: cannot find symbol
+  	@SubscribeEvent(priority = EventPriority.LOWEST)
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:181: error: cannot find symbol
+  	@SubscribeEvent(priority = EventPriority.LOWEST)
+  	                           ^
+    symbol:   variable EventPriority
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:229: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:242: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:266: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:278: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:290: error: cannot find symbol
+  	@SubscribeEvent
+  	 ^
+    symbol:   class SubscribeEvent
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintMenu.java:122: error: cannot find symbol
+  	@Environment(EnvType.CLIENT)
+  	 ^
+    symbol:   class Environment
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintMenu.java:122: error: cannot find symbol
+  	@Environment(EnvType.CLIENT)
+  	             ^
+    symbol:   variable EnvType
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankItem.java:36: error: cannot find symbol
+  	@Nullable
+  	 ^
+    symbol:   class Nullable
+
+  src/main/java/com/simibubi/create/content/decoration/placard/PlacardBlock.java:233: error: cannot find symbol
+  	protected @NotNull MapCodec<? extends FaceAttachedHorizontalDirectionalBlock> codec() {
+  	           ^
+    symbol:   class NotNull
+
+  src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlockEntity.java:77: error: cannot find symbol
+  					PeripheralCapability.get(),
+  					^
+    symbol:   variable PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmInteractionPoint.java:112: error: cannot find symbol
+  		return ItemHandlerHelper.copyStackWithSize(stack, ItemHelper.truncateLong(stack.getCount() - inserted));
+  		       ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmInteractionPoint.java:119: error: cannot find symbol
+  		return TransferUtil.extractAnyItem(handler, amount);
+  		                   ^
+    symbol:   method extractAnyItem(Storage<ItemVariant>,int)
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:366: error: cannot find symbol
+  				TransactionSuccessCallback.register(ctx, () ->
+  				^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:496: error: cannot find symbol
+  					TransactionSuccessCallback.register(ctx, () -> {
+  					^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:530: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> campfireBE.placeFood(null, inserted, recipe.get().value().getCookingTime()));
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:620: error: cannot find symbol
+  			ItemStack record = jukeboxBE.getFirstItem();
+  			                            ^
+    symbol:   method getFirstItem()
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:625: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> {
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/AllArmInteractionPointTypes.java:651: error: cannot find symbol
+  			TransactionSuccessCallback.register(ctx, () -> RespawnAnchorBlock.charge(null, level, pos, cachedState));
+  			^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/kinetics/mechanicalArm/ArmBlockEntity.java:312: error: incompatible types: boolean cannot be converted to TransactionContext
+  			ItemStack remainder = armInteractionPoint.insert(held, true);
+  			                                                       ^
+  src/main/java/com/simibubi/create/foundation/item/ItemHelper.java:127: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardOverrides.java:64: error: cannot find symbol
+  		ItemModelBuilder builder = p.generated(c::get);
+  		^
+    symbol:   class ItemModelBuilder
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlockEntity.java:88: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlockEntity.java:746: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlockEntity.java:891: error: cannot find symbol
+  		return AABB.INFINITE;
+  		           ^
+    symbol:   variable INFINITE
+
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonInventory.java:28: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonInventory.java:43: error: method isItemValid in class ItemStackHandler cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/schematics/cannon/MaterialChecklist.java:88: error: cannot find symbol
+  		int amount = TransferUtil.truncateLong(view.getAmount());
+  		                         ^
+    symbol:   method truncateLong(long)
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:72: error: incompatible types: incompatible parameter types in lambda expression
+  			whenContentsChanged(() -> {
+  			                    ^
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:88: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:124: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:131: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:132: error: cannot find symbol
+  			invCap = input.getItemHandler(getLevel(), getBlockPos());
+  			^
+    symbol:   variable invCap
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:134: error: cannot find symbol
+  		return invCap;
+  		       ^
+    symbol:   variable invCap
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:473: error: cannot find symbol
+  		if (!inventory.getItem(0)
+  		              ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:475: error: cannot find symbol
+  			dropItem(ejectPos, inventory.getItem(0));
+  			                            ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:500: error: cannot find symbol
+  		return !inventory.getItem(0)
+  		                 ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:505: error: cannot find symbol
+  		return !inventory.getItem(0)
+  		                 ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlockEntity.java:525: error: cannot find symbol
+  		groupedItems = new GroupedItems(inventory.getItem(0));
+  		                                         ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:121: error: cannot find symbol
+  		consumer.accept(id, recipe, null, recipeConditions.toArray(new ICondition[0]));
+  		                                                               ^
+    symbol:   class ICondition
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:157: error: cannot find symbol
+  		params.ingredients.add(new SimpleDatagenIngredient(mod, id).toVanilla());
+  		                                                           ^
+    symbol:   method toVanilla()
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:241: error: cannot find symbol
+  		return withCondition(DefaultResourceConditions.allModsLoaded(modid));
+  		                     ^
+    symbol:   variable DefaultResourceConditions
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:245: error: cannot find symbol
+  		return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+  		                     ^
+    symbol:   variable DefaultResourceConditions
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeBuilder.java:245: error: cannot find symbol
+  		return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+  		                                                   ^
+    symbol:   variable DefaultResourceConditions
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:60: error: cannot find symbol
+  			if (!(recipeTypes.serializerSupplier.get() instanceof ProcessingRecipeSerializer processingRecipeSerializer))
+  			                 ^
+    symbol:   variable serializerSupplier
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:61: error: cannot find symbol
+  				throw new RuntimeException("Not a processing recipe serializer " + recipeTypes.serializerSupplier.get());
+  				                                                                              ^
+    symbol:   variable serializerSupplier
+
+  src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipeSerializer.java:63: error: id has private access in AllRecipeTypes
+  			ProcessingRecipeBuilder<T> builder = new ProcessingRecipeBuilder<T>(processingRecipeSerializer.getFactory(), recipeTypes.id);
+  			                                                                                                                        ^
+  src/main/java/com/simibubi/create/foundation/data/recipe/StandardRecipeGen.java:1561: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/processing/sequenced/SequencedAssemblyRecipeBuilder.java:94: error: cannot find symbol
+  		consumer.accept(id, holder.value(), null, recipeConditions.toArray(new ICondition[0]));
+  		                                                                       ^
+    symbol:   class ICondition
+
+  src/main/java/com/simibubi/create/content/processing/sequenced/SequencedRecipe.java:66: error: cannot find symbol
+  					.set(0, isFirst ? CompoundIngredient.of(transit, parent.getIngredient()) : transit);
+  					                  ^
+    symbol:   variable CompoundIngredient
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/ItemApplicationRecipe.java:20: error: type argument Container is not within bounds of type-variable T
+  public class ItemApplicationRecipe extends ProcessingRecipe<Container> {
+                                                              ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:52: error: type argument Container is not within bounds of type-variable T
+  		RecipeType<Recipe<Container>> type = AllRecipeTypes.ITEM_APPLICATION.getType();
+  		                  ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:52: error: incompatible types: inference variable I has incompatible bounds
+  		RecipeType<Recipe<Container>> type = AllRecipeTypes.ITEM_APPLICATION.getType();
+  		                                                                            ^
+      equality constraints: Container
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:53: error: type argument Container is not within bounds of type-variable T
+  		Optional<RecipeHolder<Recipe<Container>>> foundRecipe = level.getRecipeManager()
+  		                             ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/ManualApplicationRecipe.java:54: error: method getAllRecipesFor in class RecipeManager cannot be applied to given types;
+  			.getAllRecipesFor(type)
+  			^
+    required: RecipeType<T>
+
+  src/main/java/com/simibubi/create/content/decoration/copycat/CopycatBlock.java:358: error: incompatible types: BlockGetter cannot be converted to LevelReader
+  				mat -> mat.getBlock().getCloneItemStack(level, pos, mat)
+  				                                        ^
+  src/main/java/com/simibubi/create/content/kinetics/crank/ValveHandleBlock.java:74: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/schematics/table/SchematicTableBlock.java:66: error: method openMenu in class Player cannot be applied to given types;
+  				be -> player.openMenu(be, be::sendToMenu));
+  				            ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/schematics/cannon/SchematicannonBlock.java:54: error: method openMenu in class Player cannot be applied to given types;
+  				be -> player.openMenu(be, be::sendToMenu));
+  				            ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/processing/burner/BlazeBurnerHandler.java:85: error: cannot find symbol
+  			BlockHitResult result = (BlockHitResult) event.getRayTraceResult();
+  			                                         ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinRenderer.java:63: error: cannot find symbol
+  			List<ItemStack> stacks = TransferUtil.getAllItems(inv);
+  			                                     ^
+    symbol:   method getAllItems(Storage<ItemVariant>)
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinRecipe.java:143: error: cannot find symbol
+  			CraftingInput remainderInput = new DummyCraftingContainer(availableItems, extractedItemsFromSlot)
+  			                                                                          ^
+    symbol:   variable extractedItemsFromSlot
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:92: error: method tryEmptyItemIntoBE in class FluidHelper cannot be applied to given types;
+  				if (FluidHelper.tryEmptyItemIntoBE(level, player, hand, stack, be))
+  				               ^
+    required: Level,Player,InteractionHand,ItemStack,SmartBlockEntity,Direction
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:94: error: method tryFillItemFromBE in class FluidHelper cannot be applied to given types;
+  				if (FluidHelper.tryFillItemFromBE(level, player, hand, stack, be))
+  				               ^
+    required: Level,Player,InteractionHand,ItemStack,SmartBlockEntity,Direction
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:101: error: cannot find symbol
+  					Storage<FluidVariant> storage = be.getFluidStorage(direction);
+  					                                                   ^
+    symbol:   variable direction
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:102: error: cannot find symbol
+  					if (storage != null && !TransferUtil.extractAnyFluid(storage, Long.MAX_VALUE).isEmpty()) {
+  					                                    ^
+    symbol:   method extractAnyFluid(Storage<FluidVariant>,long)
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:111: error: cannot find symbol
+  			List<ItemStack> extracted = TransferUtil.extractAllAsStacks(inv);
+  			                                        ^
+    symbol:   method extractAllAsStacks(Storage<ItemVariant>)
+
+  src/main/java/com/simibubi/create/content/processing/basin/BasinBlock.java:110: error: incompatible types: bad return type in lambda expression
+  			if (inv == null) return InteractionResult.PASS;
+  			                                         ^
+      InteractionResult cannot be converted to ItemInteractionResult
+
+  src/main/java/com/simibubi/create/content/equipment/bell/BasicParticleData.java:28: error: cannot find symbol
+  		return StreamCodec.unit(this);
+  		       ^
+    symbol:   variable StreamCodec
+
+  src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:170: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:175: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/kinetics/waterwheel/LargeWaterWheelBlock.java:88: error: incompatible types: InteractionResult cannot be converted to ItemInteractionResult
+  			return InteractionResult.PASS;
+  			                        ^
+  src/main/java/com/simibubi/create/content/kinetics/transmission/sequencer/SequencedGearshiftBlock.java:100: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/steamEngine/PoweredShaftBlock.java:75: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/kinetics/speedController/SpeedControllerBlockEntity.java:45: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:117: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:174: error: getSoundType(BlockState) has protected access in BlockBehaviour
+
+  src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:404: error: no suitable method found for getRecipe(Level,ItemStack,RecipeType<Recipe<RecipeInput>>,Class<CuttingRecipe>)
+  		Optional<RecipeHolder<CuttingRecipe>> assemblyRecipe = SequencedAssemblyRecipe.getRecipe(level, inventory.getStackInSlot(0),
+  		                                                                              ^
+      method SequencedAssemblyRecipe.<I#1,R#1>getRecipe(Level,I#1,RecipeType<R#1>,Class<R#1>) is not applicable
+
+  src/main/java/com/simibubi/create/content/kinetics/saw/SawBlockEntity.java:438: error: cannot find symbol
+  				entity.setItem(ItemHandlerHelper.copyStackWithSize(contained, (int) (contained.getCount() - inserted)));
+  				               ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/kinetics/base/BlockBreakingMovementBehaviour.java:188: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+  		world.playSound(null, breakingPos, stateToBreak.getSoundType(world, breakingPos, null)
+  		                                               ^
+    required: no arguments
+
+  src/main/java/com/simibubi/create/content/kinetics/saw/CuttingRecipe.java:29: error: type argument Container is not within bounds of type-variable T
+  public class CuttingRecipe extends ProcessingRecipe<Container> implements IAssemblyRecipe {
+                                                      ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/press/MechanicalPressBlockEntity.java:94: error: cannot find symbol
+  				ItemStack stackInSlot = inputs.getItem(slot);
+  				                              ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/mixer/MechanicalMixerBlockEntity.java:196: error: cannot find symbol
+  				ItemStack stackInSlot = inv.getItem(slot);
+  				                           ^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:127: error: cannot find symbol
+  		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+  		^
+    symbol:   class RecipeWrapper
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:127: error: cannot find symbol
+  		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+  		                                ^
+    symbol:   class RecipeWrapper
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:158: error: cannot find symbol
+  		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+  		^
+    symbol:   class RecipeWrapper
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:158: error: cannot find symbol
+  		RecipeWrapper inventoryIn = new RecipeWrapper(inputInv);
+  		                                ^
+    symbol:   class RecipeWrapper
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:225: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+  		if (lastRecipe != null && lastRecipe.matches(tester, level))
+  		                                             ^
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:227: error: method find in enum AllRecipeTypes cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlockEntity.java:234: error: incompatible types: inference variable E has incompatible bounds
+  			super(List.of(inputInv, outputInv));
+  			^
+      equality constraints: io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandler
+
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlock.java:76: error: incompatible types: ItemStackHandlerContainer cannot be converted to ItemStackHandler
+  				inv = millstone.inputInv;
+  				               ^
+  src/main/java/com/simibubi/create/content/kinetics/millstone/MillstoneBlock.java:119: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/gearbox/GearboxBlock.java:46: error: incompatible types: BlockGetter cannot be converted to LevelReader
+  			return super.getCloneItemStack(view, pos, state);
+  			                               ^
+  src/main/java/com/simibubi/create/content/kinetics/gauge/StressGaugeBlockEntity.java:41: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/gauge/SpeedGaugeBlockEntity.java:40: error: cannot find symbol
+  					PeripheralCapability.get(),
+  					^
+    symbol:   variable PeripheralCapability
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:28: error: cannot find symbol
+  			ByteBufCodecs.INT, p -> p.posX,
+  			^
+    symbol:   variable ByteBufCodecs
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:29: error: cannot find symbol
+  			ByteBufCodecs.INT, p -> p.posY,
+  			^
+    symbol:   variable ByteBufCodecs
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:30: error: cannot find symbol
+  			ByteBufCodecs.INT, p -> p.posZ,
+  			^
+    symbol:   variable ByteBufCodecs
+
+  src/main/java/com/simibubi/create/content/kinetics/fan/AirFlowParticleData.java:27: error: cannot find symbol
+  	public static final StreamCodec<RegistryFriendlyByteBuf, AirFlowParticleData> STREAM_CODEC = StreamCodec.composite(
+  	                                                                                             ^
+    symbol:   variable StreamCodec
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:140: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:609: error: no suitable method found for getRecipe(Level,ItemStackHandlerContainer,RecipeType<Recipe<RecipeInput>>,Class<DeployerApplicationRecipe>)
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:611: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+  		event.addRecipe(() -> checkRecipe(AllRecipeTypes.DEPLOYING, event.getInventory(), level), 50);
+  		                                                                              ^
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerBlockEntity.java:612: error: incompatible types: ItemStackHandlerContainer cannot be converted to RecipeInput
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerItemHandler.java:55: error: cannot find symbol
+  		int maxInsert = Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+  		                                                            ^
+    symbol:   method getMaxStackSize()
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerItemHandler.java:206: error: cannot find symbol
+  			ItemStack newStack = io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper.copyStackWithSize(stack, stack.getCount() - toExtract);
+  			                                                                                                ^
+    symbol:   method copyStackWithSize(ItemStack,int)
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerRecipeSearchEvent.java:59: error: cannot find symbol
+  		if (isCanceled())
+  		    ^
+    symbol:   method isCanceled()
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:119: error: content has private access in BucketItem
+  			Fluid fluid = bucketItem.content;
+  			                        ^
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:135: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/deployer/DeployerHandler.java:190: error: cannot find symbol
+  						FoodProperties foodProperties = item.getFoodProperties(stack, player);
+  						                                    ^
+    symbol:   method getFoodProperties(ItemStack,DeployerFakePlayer)
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:88: error: package Capabilities does not exist
+  				Capabilities.ItemHandler.BLOCK,
+  				            ^
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:312: error: type argument Container is not within bounds of type-variable T
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:334: error: type argument Container is not within bounds of type-variable T
+  	public Optional<RecipeHolder<ProcessingRecipe<Container>>> findRecipe() {
+  	                                              ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:335: error: type argument Container is not within bounds of type-variable T
+  		Optional<RecipeHolder<ProcessingRecipe<Container>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(wrapper, level);
+  		                                       ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:335: error: cannot find symbol
+  		Optional<RecipeHolder<ProcessingRecipe<Container>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(wrapper, level);
+  		                                                                                                  ^
+    symbol:   variable wrapper
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:337: error: method find in enum AllRecipeTypes cannot be applied to given types;
+  			crushingRecipe = AllRecipeTypes.MILLING.find(inventory, level);
+  			                                       ^
+    required: I,Level
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlockEntity.java:367: error: type argument Container is not within bounds of type-variable T
+  		Optional<RecipeHolder<ProcessingRecipe<Container>>> recipe = findRecipe();
+  		                                       ^
+    where T is a type-variable:
+
+  src/main/java/com/simibubi/create/content/kinetics/crusher/CrushingWheelControllerBlock.java:180: error: cannot find symbol
+  		CompoundTag data = entity.getPersistentData();
+  		                         ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCraftingInput.java:13: error: CraftingInput(int,int,List<ItemStack>) has private access in CraftingInput
+  		super(width, height, item);
+  		^
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterRenderer.java:72: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:201: error: cannot find symbol
+  					long inserted = capability.insert(ItemVariant.of(heldItem), heldItem.getCount(), t);
+  					                                                 ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:201: error: cannot find symbol
+  					long inserted = capability.insert(ItemVariant.of(heldItem), heldItem.getCount(), t);
+  					                                                            ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+  					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+  					                     ^
+    symbol:   variable handIn
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+  					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+  					                                                                 ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+  					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+  					                                                                                  ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:205: error: cannot find symbol
+  					player.setItemInHand(handIn, ItemHandlerHelper.copyStackWithSize(heldItem, (int) (heldItem.getCount() - inserted)));
+  					                             ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/kinetics/crafter/MechanicalCrafterBlock.java:212: error: cannot find symbol
+  				.getItem(0);
+  				^
+    symbol:   method getItem(int)
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/transport/ItemHandlerBeltSegment.java:21: error: cannot find symbol
+  			int toInsert = Math.min((int) maxAmount, resource.getItem().getMaxStackSize());
+  			                                                           ^
+    symbol:   method getMaxStackSize()
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:115: error: cannot find symbol
+  		LandPathNodeTypesRegistry.register(this, BlockPathTypes.RAIL, null);
+  		                                         ^
+    symbol:   variable BlockPathTypes
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:275: error: cannot find symbol
+  				be -> be.applyColor(TagUtil.getColorFromStack(heldItem)) ? ItemInteractionResult.SUCCESS : ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
+  				                                              ^
+    symbol:   variable heldItem
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:330: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+  				.getSoundType(level, pos, player);
+  				^
+    required: no arguments
+
+  src/main/java/com/simibubi/create/content/kinetics/belt/BeltBlock.java:342: error: method getSoundType in class BlockStateBase cannot be applied to given types;
+  				.getSoundType(level, pos, player);
+  				^
+    required: no arguments
+
+  src/main/java/com/simibubi/create/content/kinetics/base/RotationIndicatorParticleData.java:42: error: cannot find symbol
+  	public static final StreamCodec<RegistryFriendlyByteBuf, RotationIndicatorParticleData> STREAM_CODEC = StreamCodec.composite(
+  	                                                                                                       ^
+    symbol:   variable StreamCodec
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:66: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/zapper/ZapperItem.java:191: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:36: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/zapper/terrainzapper/WorldshaperItem.java:39: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetRenderHandler.java:72: error: package RenderHandCallback does not exist
+  		RenderHandCallback.EVENT.register(this::onRenderPlayerHand);
+  		                  ^
+  src/main/java/com/simibubi/create/content/equipment/zapper/ShootableGadgetItemMethods.java:55: error: method getUseDuration in class ItemStack cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:37: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/wrench/WrenchItem.java:40: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:114: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:127: error: method isItemValid in class ItemStackHandler cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:142: error: cannot find symbol
+  			if (ctx != null) TransactionSuccessCallback.register(ctx, blockEntity::notifyUpdate);
+  			                 ^
+    symbol:   variable TransactionSuccessCallback
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:193: error: cannot find symbol
+  		return ItemHandlerHelper.copyStackWithSize(stack, toInsert - inserted);
+  		       ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxInventory.java:204: error: incompatible types: SingleSlotStorage<ItemVariant> cannot be converted to ItemStackHandlerSlot
+  			ItemStackHandlerSlot handlerSlot = getSlot(slot);
+  			                                          ^
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlockEntity.java:103: error: package Capabilities does not exist
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxHandlerClient.java:188: error: cannot find symbol
+  		int x = window.getGuiScaledWidth() / 2 - 90;
+  		        ^
+    symbol:   variable window
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxHandlerClient.java:189: error: cannot find symbol
+  		int y = window.getGuiScaledHeight() - 23;
+  		        ^
+    symbol:   variable window
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:63: error: cannot find symbol
+  				ItemStack remainder = ItemHandlerHelper.insertItemStacked(inventory, playerStack, false);
+  				                      ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:65: error: cannot find symbol
+  					remainder = ItemHandlerHelper.insertItemStacked(new ItemReturnInvWrapper(player.getInventory()),
+  					                                                    ^
+    symbol:   class ItemReturnInvWrapper
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:65: error: cannot find symbol
+  					remainder = ItemHandlerHelper.insertItemStacked(new ItemReturnInvWrapper(player.getInventory()),
+  					            ^
+    symbol:   variable ItemHandlerHelper
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:72: error: cannot find symbol
+  		CompoundTag compound = player.getPersistentData()
+  		                             ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxEquipPacket.java:81: error: cannot find symbol
+  		player.getPersistentData()
+  		      ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxDisposeAllPacket.java:47: error: cannot find symbol
+  		CompoundTag compound = player.getPersistentData()
+  		                             ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/ToolboxBlock.java:164: error: method openMenu in class Player cannot be applied to given types;
+  			toolbox -> player.openMenu(toolbox, toolbox::sendToMenu));
+  			                 ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/equipment/toolbox/RadialToolboxMenu.java:278: error: cannot find symbol
+  		Window window = getMinecraft().getWindow();
+  		                ^
+    symbol:   method getMinecraft()
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:41: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:47: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:48: error: incompatible types: missing return value
+  			return;
+  			^
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:49: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:49: error: package PlayerInteractEvent.LeftClickBlock does not exist
+  		if (event.getAction() != PlayerInteractEvent.LeftClickBlock.Action.START)
+  		                                                           ^
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:50: error: incompatible types: missing return value
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:51: error: cannot find symbol
+  		if (event.getSide() == LogicalSide.CLIENT)
+  		    ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:51: error: cannot find symbol
+  		if (event.getSide() == LogicalSide.CLIENT)
+  		                       ^
+    symbol:   variable LogicalSide
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:52: error: cannot find symbol
+  			AllSoundEvents.CARDBOARD_SWORD.playAt(event.getLevel(), event.getPos(), 0.5f, 1.85f, false);
+  			                                      ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:52: error: cannot find symbol
+  			AllSoundEvents.CARDBOARD_SWORD.playAt(event.getLevel(), event.getPos(), 0.5f, 1.85f, false);
+  			                                                        ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/tool/CardboardSwordItem.java:60: error: cannot find symbol
+  		Entity attacker = event.getSource()
+  		^
+    symbol:   class Entity
+
+  src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:243: error: cannot find symbol
+  				boolean placeInterrupted = EventHooks.onBlockPlace(player, blocksnapshot, Direction.UP);
+  				                                                           ^
+    symbol:   variable blocksnapshot
+
+  src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:243: error: cannot find symbol
+  				boolean placeInterrupted = EventHooks.onBlockPlace(player, blocksnapshot, Direction.UP);
+  				                           ^
+    symbol:   variable EventHooks
+
+  src/main/java/com/simibubi/create/content/equipment/symmetryWand/SymmetryWandItem.java:264: error: variable ogBlock is already defined in method remove(Level,ItemStack,Player,BlockPos,BlockState)
+  		BlockState ogBlock = world.getBlockState(pos);
+  		           ^
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:78: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:336: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoProjectileEntity.java:343: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:61: error: PotatoCannonItem is not abstract and does not override abstract method onEntitySwing(ItemStack,LivingEntity) in EntitySwingListenerItem
+  public class PotatoCannonItem extends ProjectileWeaponItem implements CustomArmPoseItem, EntitySwingListenerItem, ReequipAnimationItem, CustomEnchantingBehaviorItem {
+         ^
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:191: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:192: error: cannot find symbol
+  		int punch = stack.getEnchantmentLevel(lookup.getOrThrow(Enchantments.PUNCH));
+  		                 ^
+    symbol:   method getEnchantmentLevel(Reference<Enchantment>)
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:249: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:261: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/PotatoCannonItem.java:283: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/potatoCannon/AllPotatoProjectileBlockHitActions.java:61: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripRenderHandler.java:115: error: cannot find symbol
+  				ClientHooks.handleCameraTransforms(ms, mc.getItemRenderer()
+  				^
+    symbol:   variable ClientHooks
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:88: error: cannot find symbol
+  		CompoundTag persistentData = player.getPersistentData();
+  		                                   ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:128: error: cannot find symbol
+  		CompoundTag persistentData = player.getPersistentData();
+  		                                   ^
+    symbol:   method getPersistentData()
+
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:308: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/extendoGrip/ExtendoGripItem.java:311: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:154: error: cannot find symbol
+  			if (event instanceof ICancellableEvent cancellableEvent) {
+  			    ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:154: error: cannot find symbol
+  			if (event instanceof ICancellableEvent cancellableEvent) {
+  			                     ^
+    symbol:   class ICancellableEvent
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:157: error: cannot find symbol
+  				switch (event) {
+  				        ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:158: error: cannot find symbol
+  					case EntityInteractSpecific e -> e.setCancellationResult(InteractionResult.SUCCESS);
+  					     ^
+    symbol:   class EntityInteractSpecific
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:159: error: cannot find symbol
+  					case EntityInteract e -> e.setCancellationResult(InteractionResult.SUCCESS);
+  					     ^
+    symbol:   class EntityInteract
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:160: error: cannot find symbol
+  					case RightClickBlock e -> e.setCancellationResult(InteractionResult.SUCCESS);
+  					     ^
+    symbol:   class RightClickBlock
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:161: error: cannot find symbol
+  					case RightClickItem e -> e.setCancellationResult(InteractionResult.SUCCESS);
+  					     ^
+    symbol:   class RightClickItem
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:225: error: cannot find symbol
+  					cc.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(), world.isClientSide());
+  					                                                                                    ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:229: error: cannot find symbol
+  			boolean success = cc.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+  			                                                                           ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:239: error: cannot find symbol
+  				anySuccess |= ccbe.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(),
+  				                                                                                                    ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:243: error: cannot find symbol
+  				boolean success = ccbe.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+  				                                                                             ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:251: error: incompatible types: missing return value
+  			return;
+  			^
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:253: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:253: error: cannot find symbol
+  		((ICancellableEvent) event).setCanceled(true);
+  		                     ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:254: error: cannot find symbol
+  		if (event instanceof RightClickBlock rightClickBlock)
+  		    ^
+    symbol:   variable event
+
+  src/main/java/com/simibubi/create/content/equipment/clipboard/ClipboardValueSettingsHandler.java:254: error: cannot find symbol
+  		if (event instanceof RightClickBlock rightClickBlock)
+  		                     ^
+    symbol:   class RightClickBlock
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:207: error: recalculateBoundingBox() in BlueprintEntity cannot override recalculateBoundingBox() in HangingEntity
+  	protected void recalculateBoundingBox() {
+  	               ^
+    overridden method is final
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:333: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:338: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:341: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:344: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:363: error: cannot find symbol
+  			CommonHooks.setCraftingPlayer(player);
+  			^
+    symbol:   variable CommonHooks
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:396: error: no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,CraftingContainer,Level)
+  									.getRecipeFor(RecipeType.CRAFTING, craftingInventory, level());
+  									^
+      method RecipeManager.<I#1,T#1>getRecipeFor(RecipeType<T#1>,I#1,Level) is not applicable
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:397: error: cannot find symbol
+  						ItemStack result = recipe.filter(r -> r.matches(craftingInventory, level()))
+  						                                       ^
+    symbol:   method matches(CraftingContainer,Level)
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:398: error: cannot find symbol
+  								.map(r -> r.assemble(craftingInventory, level().registryAccess()))
+  								           ^
+    symbol:   method assemble(CraftingContainer,RegistryAccess)
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:399: error: incompatible types: Object cannot be converted to ItemStack
+  								.orElse(ItemStack.EMPTY);
+  								       ^
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:410: error: method getRemainingItemsFor in class RecipeManager cannot be applied to given types;
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintEntity.java:437: error: method openMenu in class Player cannot be applied to given types;
+  			player.openMenu(section, buf -> {
+  			      ^
+    required: MenuProvider
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:270: error: no suitable method found for getRecipeFor(RecipeType<CraftingRecipe>,CraftingContainer,ClientLevel)
+  								.getRecipeFor(RecipeType.CRAFTING, craftingInventory, mc.level);
+  								^
+      method RecipeManager.<I#1,T#1>getRecipeFor(RecipeType<T#1>,I#1,Level) is not applicable
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:271: error: cannot find symbol
+  					ItemStack resultFromRecipe = recipe.filter(r -> r.matches(craftingInventory, mc.level))
+  					                                                 ^
+    symbol:   method matches(CraftingContainer,ClientLevel)
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:272: error: incompatible types: CraftingContainer cannot be converted to CraftingInput
+  							.map(r -> r.value().assemble(craftingInventory, mc.level.registryAccess()))
+  							                             ^
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:273: error: incompatible types: Object cannot be converted to ItemStack
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintOverlayRenderer.java:350: error: method renderTooltipBackground in class TooltipRenderUtil cannot be applied to given types;
+  			TooltipRenderUtil.renderTooltipBackground(guiGraphics, x - 2, y + 1, w + 4, 19, 0, 0x55_000000, 0x55_000000, 0,
+  			                 ^
+    required: GuiGraphics,int,int,int,int,int
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:58: error: cannot find symbol
+  		CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
+  		                                  ^
+    symbol:   variable DataComponents
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:92: error: cannot find symbol
+  		boolean isCompoundIngredient = ingredient.getCustomIngredient() instanceof CompoundIngredient;
+  		                                                                           ^
+    symbol:   class CompoundIngredient
+
+  src/main/java/com/simibubi/create/content/equipment/blueprint/BlueprintItem.java:120: error: cannot find symbol
+  			ItemAttribute at = new InTagAttribute(ItemTags.create(tagValue.tag().location()));
+  			                                              ^
+    symbol:   method create(ResourceLocation)
+
+  src/main/java/com/simibubi/create/content/equipment/armor/NetheriteDivingHandler.java:19: error: cannot find symbol
+  		if (slot.getType() != EquipmentSlot.Type.ARMOR) {
+  		                                        ^
+    symbol:   variable ARMOR
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:37: error: DivingHelmetItem is not abstract and does not override abstract method modifyEnchantmentLevel(ItemStack,Enchantment,int) in CustomEnchantmentLevelItem
+  public class DivingHelmetItem extends BaseArmorItem implements CustomEnchantingBehaviorItem, CustomEnchantmentLevelItem, CustomEnchantmentsItem {
+         ^
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:45: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:49: error: cannot find symbol
+  		return super.supportsEnchantment(stack, enchantment);
+  		            ^
+    symbol: method supportsEnchantment(ItemStack,Holder<Enchantment>)
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:52: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:56: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:59: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:61: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:95: error: cannot find symbol
+  		if (!helmet.has(DataComponents.FIRE_RESISTANT) && lavaDiving)
+  		                ^
+    symbol:   variable DataComponents
+
+  src/main/java/com/simibubi/create/content/equipment/armor/DivingHelmetItem.java:110: error: cannot find symbol
+  				.noneMatch(backtank -> backtank.has(DataComponents.FIRE_RESISTANT)))
+  				                                    ^
+    symbol:   variable DataComponents
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:109: error: cannot find symbol
+  		ItemEnchantments enchants = backtank.getTagEnchantments();
+  		^
+    symbol:   class ItemEnchantments
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:109: error: cannot find symbol
+  		ItemEnchantments enchants = backtank.getTagEnchantments();
+  		                                    ^
+    symbol:   method getTagEnchantments()
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:146: error: cannot find symbol
+  		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+  		                ^
+    symbol:   variable EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:158: error: cannot find symbol
+  		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+  		                ^
+    symbol:   variable EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankUtil.java:184: error: cannot find symbol
+  		Player player = EnvExecutor.callWhenOn(EnvType.CLIENT, () -> () -> Minecraft.getInstance().player);
+  		                ^
+    symbol:   variable EnvExecutor
+
+  src/main/java/com/simibubi/create/content/equipment/armor/BacktankBlock.java:114: error: cannot find symbol
+  			be.setCapacityEnchantLevel(stack.getEnchantmentLevel(worldIn.holderOrThrow(AllEnchantments.CAPACITY)));
+  			                                                            ^
+    symbol:   method holderOrThrow(ResourceKey<Enchantment>)
+
+  src/main/java/com/simibubi/create/content/equipment/armor/AllArmorMaterials.java:25: error: cannot find symbol
+  	private static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(Registries.ARMOR_MATERIAL, Create.ID);
+  	                                                                       ^
+    symbol:   variable DeferredRegister
+
+  src/main/java/com/simibubi/create/content/decoration/palettes/AllPaletteBlocks.java:46: error: package net.neoforged.neoforge.common.Tags does not exist
+  		.recipe((c, p) -> p.stonecutting(DataIngredient.tag(net.neoforged.neoforge.common.Tags.Items.GLASS_BLOCKS_COLORLESS), RecipeCategory.BUILDING_BLOCKS, c))
+  		                                                                                      ^
+  src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:17: error: cannot find symbol
+
+  src/main/java/com/simibubi/create/content/decoration/girder/GirderBlockStateGenerator.java:48: error: cannot find symbol
+  		MultiPartBlockStateBuilder builder = p.getMultipartBuilder(c.get());
+  		^
+    symbol:   class MultiPartBlockStateBuilder
+
+  src/main/java/com/simibubi/create/content/decoration/copycat/SpecialCopycatPanelBlockState.java:41: error: cannot find symbol
+  		BlockModelProvider models = prov.models();
+  		^
+    symbol:   class BlockModelProvider

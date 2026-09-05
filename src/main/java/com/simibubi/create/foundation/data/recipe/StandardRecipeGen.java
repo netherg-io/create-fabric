@@ -25,9 +25,9 @@ import com.mojang.serialization.MapCodec;
 
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -98,8 +98,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
 
@@ -1516,7 +1516,7 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 		private String suffix;
 		private Supplier<? extends ItemLike> result;
 		private ResourceLocation compatDatagenOutput;
-		List<ConditionJsonProvider> recipeConditions;
+		List<ResourceCondition> recipeConditions;
 
 		private Supplier<ItemPredicate> unlockedBy;
 		private int amount;
@@ -1558,14 +1558,14 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 		}
 
 		GeneratedRecipeBuilder whenModLoaded(String modid) {
-			return withCondition(DefaultResourceConditions.allModsLoaded(modid));
+			return withCondition(ResourceConditions.allModsLoaded(modid));
 		}
 
 		GeneratedRecipeBuilder whenModMissing(String modid) {
-			return withCondition(DefaultResourceConditions.not(DefaultResourceConditions.allModsLoaded(modid)));
+			return withCondition(ResourceConditions.not(ResourceConditions.allModsLoaded(modid)));
 		}
 
-		GeneratedRecipeBuilder withCondition(ConditionJsonProvider condition) {
+		GeneratedRecipeBuilder withCondition(ResourceCondition condition) {
 			recipeConditions.add(condition);
 			return this;
 		}
@@ -1593,7 +1593,8 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 				if (unlockedBy != null)
 					b.unlockedBy("has_item", inventoryTrigger(unlockedBy.get()));
 
-				RecipeOutput conditionalOutput = recipeOutput.withConditions(recipeConditions.toArray(new ICondition[0]));
+				RecipeOutput conditionalOutput =
+					StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
 
 				b.save(recipeOutput, createLocation("crafting"));
 			});
@@ -1697,7 +1698,8 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 					if (unlockedBy != null)
 						b.unlockedBy("has_item", inventoryTrigger(unlockedBy.get()));
 
-					RecipeOutput conditionalOutput = recipeOutput.withConditions(recipeConditions.toArray(new ICondition[0]));
+					RecipeOutput conditionalOutput =
+					StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
 
 					b.save(
 						isOtherMod ? new ModdedCookingRecipeOutput(conditionalOutput, compatDatagenOutput) : conditionalOutput,
@@ -1713,7 +1715,7 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 		return "Create's Standard Recipes";
 	}
 
-	public StandardRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public StandardRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 
@@ -1827,8 +1829,8 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 		}
 
 		@Override
-		public void accept(ResourceLocation id, Recipe<?> recipe, @Nullable AdvancementHolder advancement, ICondition... conditions) {
-			wrapped.accept(id, new ModdedCookingRecipeOutputShim(recipe, outputOverride), advancement, conditions);
+		public void accept(ResourceLocation id, Recipe<?> recipe, @Nullable AdvancementHolder advancement) {
+			wrapped.accept(id, new ModdedCookingRecipeOutputShim(recipe, outputOverride), advancement);
 		}
 	}
 }

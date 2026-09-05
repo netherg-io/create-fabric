@@ -1,5 +1,7 @@
 package com.simibubi.create.content.trains.station;
 
+import io.github.fabricators_of_create.porting_lib.block.CustomRenderBoundingBoxBlockEntity;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,12 +59,10 @@ import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 
-import dan200.computercraft.api.peripheral.PeripheralCapability;
 import net.createmod.catnip.platform.CatnipServices;
 import com.simibubi.create.foundation.utility.CreateLang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 
-import dan200.computercraft.api.peripheral.PeripheralCapability;
 import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.nbt.NBTHelper;
 import net.createmod.catnip.math.VecHelper;
@@ -133,22 +133,6 @@ public class StationBlockEntity extends SmartBlockEntity implements Transformabl
 		failedCarriageIndex = -1;
 		flag = LerpedFloat.linear()
 			.startWithValue(0);
-	}
-
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.TRACK_STATION.get(),
-				(be, context) -> be.depotBehaviour.itemHandler
-		);
-
-		if (Mods.COMPUTERCRAFT.isLoaded()) {
-			event.registerBlockEntity(
-					PeripheralCapability.get(),
-					AllBlockEntityTypes.TRACK_STATION.get(),
-					(be, context) -> be.computerBehaviour.getPeripheralCapability()
-			);
-		}
 	}
 
 	@Override
@@ -904,7 +888,7 @@ public class StationBlockEntity extends SmartBlockEntity implements Transformabl
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
 		if (isAssembling())
-			return AABB.INFINITE;
+			return CustomRenderBoundingBoxBlockEntity.INFINITE_EXTENT_AABB;
 		return super.getRenderBoundingBox();
 	}
 

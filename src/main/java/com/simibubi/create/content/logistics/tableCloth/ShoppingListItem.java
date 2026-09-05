@@ -1,5 +1,9 @@
 package com.simibubi.create.content.logistics.tableCloth;
 
+import net.minecraft.client.Minecraft;
+
+import io.github.fabricators_of_create.porting_lib.common.util.EnvExecutor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -133,7 +137,9 @@ public class ShoppingListItem extends Item {
 		ShoppingList list = getList(stack);
 
 		if (list != null) {
-			Couple<InventorySummary> lists = list.bakeEntries(context.level(), null);
+			// fabric: TooltipContext carries no level, and tooltips are only built client-side
+			Level tooltipLevel = EnvExecutor.unsafeRunForDist(() -> () -> Minecraft.getInstance().level, () -> () -> null);
+			Couple<InventorySummary> lists = tooltipLevel == null ? null : list.bakeEntries(tooltipLevel, null);
 
 			if (lists != null) {
 				for (InventorySummary items : lists) {

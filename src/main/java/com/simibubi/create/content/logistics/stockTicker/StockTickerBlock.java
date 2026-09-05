@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.stockTicker;
 
+import com.simibubi.create.foundation.fabric.MenuUtil;
+
 import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.AllPartialModels;
@@ -47,7 +49,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
-import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
 
 public class StockTickerBlock extends HorizontalDirectionalBlock implements IBE<StockTickerBlockEntity>, IWrenchable {
 
@@ -80,25 +81,25 @@ public class StockTickerBlock extends HorizontalDirectionalBlock implements IBE<
 			if (!stbe.behaviour.mayInteractMessage(player))
 				return ItemInteractionResult.SUCCESS;
 
-			if (!pLevel.isClientSide() && !stbe.receivedPayments.isEmpty()) {
+			if (!level.isClientSide() && !stbe.receivedPayments.isEmpty()) {
 				try (Transaction t = Transaction.openOuter()) {
 					for (StorageView<ItemVariant> view : stbe.receivedPayments.nonEmptyViews()) {
 						ItemVariant resource = view.getResource();
 						long extracted = view.extract(resource, view.getAmount(), t);
 						if (extracted > 0) {
-							ItemStack stack = resource.toStack(TransferUtil.truncateLong(extracted));
-							pPlayer.getInventory().placeItemBackInInventory(stack);
+							ItemStack payment = resource.toStack(TransferUtil.truncateLong(extracted));
+							player.getInventory().placeItemBackInInventory(payment);
 						}
 					}
 					t.commit();
 				}
-				AllSoundEvents.playItemPickup(pPlayer);
+				AllSoundEvents.playItemPickup(player);
 				return ItemInteractionResult.SUCCESS;
 			}
 
 			if (player instanceof ServerPlayer sp) {
 				if (stbe.isKeeperPresent())
-					sp.openMenu(stbe.new CategoryMenuProvider(), stbe.getBlockPos());
+					MenuUtil.open(sp, stbe.new CategoryMenuProvider(), stbe.getBlockPos());
 				else
 					CreateLang.translate("stock_ticker.keeper_missing")
 						.sendStatus(player);

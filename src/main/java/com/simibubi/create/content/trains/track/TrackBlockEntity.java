@@ -1,5 +1,7 @@
 package com.simibubi.create.content.trains.track;
 
+import io.github.fabricators_of_create.porting_lib.block.CustomRenderBoundingBoxBlockEntity;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -252,7 +254,7 @@ public class TrackBlockEntity extends SmartBlockEntity implements TransformableB
 	@Override
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
-		return AABB.INFINITE;
+		return CustomRenderBoundingBoxBlockEntity.INFINITE_EXTENT_AABB;
 	}
 
 	@Override

@@ -47,6 +47,7 @@ import net.minecraft.world.item.Item.TooltipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -264,11 +265,11 @@ public class BlueprintOverlayRenderer {
 				}
 
 				if (success) {
-					CraftingContainer craftingInventory = new BlueprintCraftingInventory(craftingGrid);
+					CraftingInput craftingInventory = new BlueprintCraftingInventory(craftingGrid).asCraftInput();
 					if (!recipe.isPresent())
 						recipe = mc.level.getRecipeManager()
 								.getRecipeFor(RecipeType.CRAFTING, craftingInventory, mc.level);
-					ItemStack resultFromRecipe = recipe.filter(r -> r.matches(craftingInventory, mc.level))
+					ItemStack resultFromRecipe = recipe.filter(r -> r.value().matches(craftingInventory, mc.level))
 							.map(r -> r.value().assemble(craftingInventory, mc.level.registryAccess()))
 							.orElse(ItemStack.EMPTY);
 
@@ -347,8 +348,8 @@ public class BlueprintOverlayRenderer {
 		int y = guiGraphics.guiHeight() - 100;
 
 		if (shopContext != null) {
-			TooltipRenderUtil.renderTooltipBackground(guiGraphics, x - 2, y + 1, w + 4, 19, 0, 0x55_000000, 0x55_000000, 0,
-				0);
+			// fabric: vanilla's background helper has no per-corner colour parameters
+			TooltipRenderUtil.renderTooltipBackground(guiGraphics, x - 2, y + 1, w + 4, 19, 0);
 
 			AllGuiTextures.TRADE_OVERLAY.render(guiGraphics, guiGraphics.guiWidth() / 2 - 48, y - 19);
 			if (shopContext.purchases() > 0) {

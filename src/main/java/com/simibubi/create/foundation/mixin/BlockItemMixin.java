@@ -6,10 +6,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.simibubi.create.content.kinetics.deployer.DeployerFakePlayer;
+import com.simibubi.create.foundation.fabric.BlockPlacedCallback;
 import com.simibubi.create.foundation.mixin.accessor.UseOnContextAccessor;
 
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -21,5 +23,13 @@ public class BlockItemMixin {
 		if (!state.canBeReplaced() && pContext.getPlayer() instanceof DeployerFakePlayer) {
 			cir.setReturnValue(InteractionResult.PASS);
 		}
+	}
+
+	@Inject(method = "place", at = @At("RETURN"))
+	private void create$firePlacedCallback(BlockPlaceContext pContext, CallbackInfoReturnable<InteractionResult> cir) {
+		if (!cir.getReturnValue().consumesAction())
+			return;
+		BlockPos pos = pContext.getClickedPos();
+		BlockPlacedCallback.EVENT.invoker().onBlockPlaced(pContext, pos, pContext.getLevel().getBlockState(pos));
 	}
 }

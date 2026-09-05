@@ -140,7 +140,7 @@ public class BasinRecipe extends ProcessingRecipe<RecipeInput> {
 				});
 			}
 
-			CraftingInput remainderInput = new DummyCraftingContainer(availableItems, extractedItemsFromSlot)
+			CraftingInput remainderInput = new DummyCraftingContainer(consumedItems)
 					.asCraftInput();
 
 			if (recipe instanceof BasinRecipe basinRecipe) {

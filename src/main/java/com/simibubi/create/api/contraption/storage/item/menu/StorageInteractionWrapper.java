@@ -7,7 +7,6 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 
 import com.simibubi.create.infrastructure.fabric.transfer.item.SlottedStackStorage;
 
@@ -77,7 +76,7 @@ public class StorageInteractionWrapper implements Container {
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		return this.storage.isItemValid(index, ItemVariant.of(stack), stack.getCount());
+		return this.storage.isItemValid(index, stack);
 	}
 
 	@Override

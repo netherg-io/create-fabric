@@ -12,8 +12,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
 public class SmartChuteBlockEntity extends ChuteBlockEntity {
 
@@ -21,14 +19,6 @@ public class SmartChuteBlockEntity extends ChuteBlockEntity {
 
 	public SmartChuteBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
-	}
-
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.SMART_CHUTE.get(),
-				(be, context) -> be.itemHandler
-		);
 	}
 
 	@Override

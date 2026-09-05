@@ -13,6 +13,7 @@ import com.simibubi.create.content.schematics.requirement.ItemRequirement.ItemUs
 import com.simibubi.create.foundation.block.IBE;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.component.DataComponentPatch;
@@ -27,6 +28,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -111,7 +113,9 @@ public class BacktankBlock extends HorizontalKineticBlock implements IBE<Backtan
 		if (stack == null)
 			return;
 		withBlockEntityDo(worldIn, pos, be -> {
-			be.setCapacityEnchantLevel(stack.getEnchantmentLevel(worldIn.holderOrThrow(AllEnchantments.CAPACITY)));
+			be.setCapacityEnchantLevel(EnchantmentHelper.getItemEnchantmentLevel(worldIn.registryAccess()
+				.lookupOrThrow(Registries.ENCHANTMENT)
+				.getOrThrow(AllEnchantments.CAPACITY), stack));
 			be.setAirLevel(stack.getOrDefault(AllDataComponents.BACKTANK_AIR, 0));
 			if (stack.has(DataComponents.CUSTOM_NAME))
 				be.setCustomName(stack.getHoverName());

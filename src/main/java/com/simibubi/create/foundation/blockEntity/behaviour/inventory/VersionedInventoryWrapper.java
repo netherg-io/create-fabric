@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import com.simibubi.create.infrastructure.fabric.ProcessingIterator;
+import com.simibubi.create.infrastructure.fabric.transfer.ChangeListeningViewWrapper;
 import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
 
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
@@ -66,46 +67,25 @@ public class VersionedInventoryWrapper implements Storage<ItemVariant> {
 		return inventory.insert(resource, maxAmount, transaction);
 	}
 
-	@SuppressWarnings("removal")
-	@Override
-	public long simulateInsert(ItemVariant resource, long maxAmount, @Nullable TransactionContext transaction) {
-		this.listen(transaction);
-		return inventory.simulateInsert(resource, maxAmount, transaction);
-	}
-
 	@Override
 	public long extract(ItemVariant resource, long maxAmount, TransactionContext transaction) {
 		this.listen(transaction);
 		return inventory.extract(resource, maxAmount, transaction);
 	}
 
-	@SuppressWarnings("removal")
-	@Override
-	public long simulateExtract(ItemVariant resource, long maxAmount, @Nullable TransactionContext transaction) {
-		this.listen(transaction);
-		return inventory.simulateExtract(resource, maxAmount, transaction);
-	}
-
 	@Override
 	@NotNull
 	public Iterator<StorageView<ItemVariant>> iterator() {
-		return new ProcessingIterator<>(inventory.iterator(), view -> new ListeningStorageView<>(view, this::incrementVersion));
+		return new ProcessingIterator<>(inventory.iterator(), view -> new ChangeListeningViewWrapper<>(view, this::incrementVersion));
 	}
 
 	@Override
 	public Iterator<StorageView<ItemVariant>> nonEmptyIterator() {
-		return new ProcessingIterator<>(inventory.nonEmptyIterator(), view -> new ListeningStorageView<>(view, this::incrementVersion));
+		return new ProcessingIterator<>(inventory.nonEmptyIterator(), view -> new ChangeListeningViewWrapper<>(view, this::incrementVersion));
 	}
 
 	@Override
 	public Iterable<StorageView<ItemVariant>> nonEmptyViews() {
 		return this::nonEmptyIterator;
-	}
-
-	@SuppressWarnings("removal")
-	@Override
-	@Nullable
-	public StorageView<ItemVariant> exactView(ItemVariant resource) {
-		return new ListeningStorageView<>(Storage.super.exactView(resource), this::incrementVersion);
 	}
 }

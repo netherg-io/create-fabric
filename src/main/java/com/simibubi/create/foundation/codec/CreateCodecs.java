@@ -6,7 +6,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.simibubi.create.foundation.item.ItemSlots;
 
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 
 public class CreateCodecs {
 	public static final Codec<Long> NON_NEGATIVE_LONG = Codec.LONG.validate(

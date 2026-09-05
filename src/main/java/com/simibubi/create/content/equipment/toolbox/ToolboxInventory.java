@@ -31,10 +31,9 @@ import net.minecraft.world.item.ItemStack;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 
-import io.github.fabricators_of_create.porting_lib.transfer.callbacks.TransactionCallback;
-import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
-import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerSlot;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleSlotStorage;
+
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
 
 public class ToolboxInventory extends ItemStackHandler {
 	public static final Codec<ToolboxInventory> CODEC = RecordCodecBuilder.create(instance -> instance.group(
@@ -112,8 +111,7 @@ public class ToolboxInventory extends ItemStackHandler {
 	}
 
 	@Override
-	public boolean isItemValid(int slot, ItemVariant var, int count) {
-		ItemStack stack = var.toStack();
+	public boolean isItemValid(int slot, ItemStack stack) {
 		if (!stack.getItem().canFitInsideContainerItems())
 			return false;
 
@@ -124,7 +122,7 @@ public class ToolboxInventory extends ItemStackHandler {
 		if (limitedMode && filter.isEmpty())
 			return false;
 		if (filter.isEmpty() || ToolboxInventory.canItemsShareCompartment(filter, stack))
-			return super.isItemValid(slot, var, count);
+			return super.isItemValid(slot, stack);
 		return false;
 	}
 
@@ -185,12 +183,12 @@ public class ToolboxInventory extends ItemStackHandler {
 		ItemVariant variant = ItemVariant.of(stack);
 		for (int i = STACKS_PER_COMPARTMENT - 1; i >= 0; i--) {
 			int slot = compartment * STACKS_PER_COMPARTMENT + i;
-			inserted += getSlot(slot).insert(variant, toInsert - inserted, ctx);
+			inserted += (int) getSlot(slot).insert(variant, toInsert - inserted, ctx);
 			if (inserted >= toInsert)
 				break;
 		}
 
-		return ItemHandlerHelper.copyStackWithSize(stack, toInsert - inserted);
+		return stack.copyWithCount(toInsert - inserted);
 	}
 
 	public ItemStack takeFromCompartment(int amount, int compartment, TransactionContext ctx) {
@@ -201,12 +199,12 @@ public class ToolboxInventory extends ItemStackHandler {
 		int extracted = 0;
 		for (int i = STACKS_PER_COMPARTMENT - 1; i >= 0; i--) {
 			int slot = compartment * STACKS_PER_COMPARTMENT + i;
-			ItemStackHandlerSlot handlerSlot = getSlot(slot);
+			SingleSlotStorage<ItemVariant> handlerSlot = getSlot(slot);
 			if (handlerSlot.isResourceBlank())
 				continue;
 			if (toExtract == null)
 				toExtract = handlerSlot.getResource();
-			extracted += handlerSlot.extract(toExtract, amount - extracted, ctx);
+			extracted += (int) handlerSlot.extract(toExtract, amount - extracted, ctx);
 			if (extracted >= amount)
 				break;
 		}

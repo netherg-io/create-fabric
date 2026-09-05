@@ -71,18 +71,6 @@ public class SpoutBlockEntity extends SmartBlockEntity implements IHaveGoggleInf
 		processingTicks = -1;
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.FluidHandler.BLOCK,
-				AllBlockEntityTypes.SPOUT.get(),
-				(be, context) -> {
-					if (context != Direction.DOWN)
-						return be.tank.getCapability();
-					return null;
-				}
-		);
-	}
-
 	@Override
 	protected AABB createRenderBoundingBox() {
 		return super.createRenderBoundingBox().expandTowards(0, -2, 0);

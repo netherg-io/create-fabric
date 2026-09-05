@@ -15,7 +15,6 @@ import com.simibubi.create.content.logistics.packagePort.PackagePortTarget;
 import com.simibubi.create.content.logistics.packagePort.PackagePortTargetSelectionHandler;
 import com.simibubi.create.foundation.utility.RaycastHelper;
 import com.simibubi.create.foundation.utility.TickBasedCache;
-import com.simibubi.create.foundation.utility.fabric.ReachUtil;
 
 import net.createmod.catnip.data.WorldAttached;
 import net.createmod.catnip.platform.CatnipServices;

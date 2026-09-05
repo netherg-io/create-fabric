@@ -6,7 +6,6 @@ import java.util.Set;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.api.contraption.BlockMovementChecks;
 import com.simibubi.create.foundation.utility.AdventureUtil;
-import com.simibubi.create.foundation.utility.fabric.ReachUtil;
 
 import net.createmod.catnip.platform.CatnipServices;
 import net.createmod.catnip.data.Iterate;
@@ -16,6 +15,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -65,7 +65,7 @@ public class SuperGlueHandler {
 		if (placedAgainst == IPlacementHelper.ID)
 			return;
 
-		double distance = ReachUtil.reach(placer);
+		double distance = reachAttribute.getValue();
 		Vec3 start = placer.getEyePosition(1);
 		Vec3 look = placer.getViewVector(1);
 		Vec3 end = start.add(look.x * distance, look.y * distance, look.z * distance);
@@ -100,8 +100,8 @@ public class SuperGlueHandler {
 				CatnipServices.NETWORK.sendToClientsTrackingEntity(entity,
 					new GlueEffectPacket(gluePos, face, true));
 			}
-			if (placer.level() instanceof ServerLevel serverLevel)
-				itemstack.hurtAndBreak(1, serverLevel, placer, $ -> SuperGlueItem.onBroken(placer));
+			if (placer.level() instanceof ServerLevel serverLevel && placer instanceof ServerPlayer serverPlayer)
+				itemstack.hurtAndBreak(1, serverLevel, serverPlayer, $ -> SuperGlueItem.onBroken(placer));
 		}
 	}
 

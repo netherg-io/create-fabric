@@ -91,7 +91,7 @@ public class MechanicalCraftingRecipe extends ShapedRecipe {
 	public static class Serializer implements RecipeSerializer<MechanicalCraftingRecipe> {
 		public static final MapCodec<MechanicalCraftingRecipe> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
 			RecipeSerializer.SHAPED_RECIPE.codec().forGetter(t -> t),
-			Codec.BOOL.fieldOf("accept_mirrored").forGetter(MechanicalCraftingRecipe::acceptsMirrored)
+			Codec.BOOL.optionalFieldOf("acceptMirrored", false).forGetter(MechanicalCraftingRecipe::acceptsMirrored)
 		).apply(instance, MechanicalCraftingRecipe::fromShaped));
 
 		public static final StreamCodec<RegistryFriendlyByteBuf, MechanicalCraftingRecipe> STREAM_CODEC = StreamCodec.composite(

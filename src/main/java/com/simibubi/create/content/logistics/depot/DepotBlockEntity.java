@@ -28,14 +28,6 @@ public class DepotBlockEntity extends SmartBlockEntity implements SidedStorageBl
 		super(type, pos, state);
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.DEPOT.get(),
-				(be, context) -> be.depotBehaviour.itemHandler
-		);
-	}
-
 	@Override
 	public void addBehaviours(List<BlockEntityBehaviour> behaviours) {
 		behaviours.add(depotBehaviour = new DepotBehaviour(this));

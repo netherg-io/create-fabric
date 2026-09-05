@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.redstoneRequester;
 
+import com.simibubi.create.foundation.fabric.MenuUtil;
+
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.content.logistics.BigItemStack;
 import com.simibubi.create.content.logistics.packager.InventorySummary;
@@ -27,7 +29,6 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.fabric.api.entity.FakePlayer;
 
-import io.github.fabricators_of_create.porting_lib.util.NetworkHooks;
 
 public class RedstoneRequesterBlockEntity extends StockCheckingBlockEntity implements MenuProvider {
 
@@ -128,7 +129,7 @@ public class RedstoneRequesterBlockEntity extends StockCheckingBlockEntity imple
 		if (!behaviour.mayInteractMessage(player))
 			return InteractionResult.SUCCESS;
 
-		player.openMenu(this, worldPosition);
+		MenuUtil.open(player, this, worldPosition);
 		return InteractionResult.SUCCESS;
 	}
 

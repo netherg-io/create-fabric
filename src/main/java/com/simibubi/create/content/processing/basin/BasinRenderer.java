@@ -60,7 +60,7 @@ public class BasinRenderer extends SmartBlockEntityRenderer<BasinBlockEntity> {
 		Storage<ItemVariant> inv = basin.itemCapability;
 		if (inv != null) {
 			int itemCount = 0;
-			List<ItemStack> stacks = TransferUtil.getAllItems(inv);
+			List<ItemStack> stacks = TransferUtil.extractAllAsStacks(inv);
 			itemCount = stacks.size();
 
 			if (itemCount == 1)

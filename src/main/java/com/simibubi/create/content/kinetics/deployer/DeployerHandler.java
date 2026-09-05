@@ -36,6 +36,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -116,7 +117,7 @@ public class DeployerHandler {
 				return false;
 
 		if (held.getItem() instanceof BucketItem bucketItem) {
-			Fluid fluid = bucketItem.content;
+			Fluid fluid = ((BucketItemAccessor) bucketItem).port_lib$getContent();
 			if (fluid != Fluids.EMPTY && world.getFluidState(targetPos)
 				.getType() == fluid)
 				return false;
@@ -132,9 +133,7 @@ public class DeployerHandler {
 	static void activate(DeployerFakePlayer player, Vec3 vec, BlockPos clickedPos, Vec3 extensionVector, Mode mode) {
 		HashMultimap<Holder<Attribute>, AttributeModifier> attributeModifiers = HashMultimap.create();
 		player.getMainHandItem()
-			.getAttributeModifiers()
-			.modifiers()
-			.forEach(e -> attributeModifiers.put(e.attribute(), e.modifier()));
+			.forEachModifier(EquipmentSlot.MAINHAND, attributeModifiers::put);
 
 		player.getAttributes()
 			.addTransientAttributeModifiers(attributeModifiers);
@@ -187,7 +186,7 @@ public class DeployerHandler {
 				}
 				if (!success && entity instanceof Player playerEntity) {
 					if (stack.has(DataComponents.FOOD)) {
-						FoodProperties foodProperties = item.getFoodProperties(stack, player);
+						FoodProperties foodProperties = stack.get(DataComponents.FOOD);
 						if (foodProperties != null && playerEntity.canEat(foodProperties.canAlwaysEat())) {
 							ItemStack copy = stack.copy();
 							player.setItemInHand(hand, stack.finishUsingItem(world, playerEntity));

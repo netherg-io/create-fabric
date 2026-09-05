@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
 
@@ -41,15 +42,15 @@ public class ItemApplicationRecipeGen extends ProcessingRecipeGen {
 
 	protected GeneratedRecipe woodCasingIngredient(String type, Supplier<Ingredient> ingredient,
 		Supplier<ItemLike> output) {
-		create(type + "_casing_from_log", b -> b.require(Tags.Items.STRIPPED_LOGS)
+		create(type + "_casing_from_log", b -> b.require(ConventionalItemTags.STRIPPED_LOGS)
 			.require(ingredient.get())
 			.output(output.get()));
-		return create(type + "_casing_from_wood", b -> b.require(Tags.Items.STRIPPED_WOODS)
+		return create(type + "_casing_from_wood", b -> b.require(ConventionalItemTags.STRIPPED_WOODS)
 			.require(ingredient.get())
 			.output(output.get()));
 	}
 
-	public ItemApplicationRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public ItemApplicationRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

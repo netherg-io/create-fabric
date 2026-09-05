@@ -117,9 +117,11 @@ public class PackagerBlock extends WrenchableDirectionalBlock implements IBE<Pac
 				if (PackageItem.isPackage(stack)) {
 					if (level.isClientSide())
 						return ItemInteractionResult.SUCCESS;
-					if (!be.unwrapBox(stack.copy(), true))
-						return ItemInteractionResult.SUCCESS;
-					be.unwrapBox(stack.copy(), false);
+					try (Transaction t = Transaction.openOuter()) {
+						if (!be.unwrapBox(stack.copy(), t))
+							return ItemInteractionResult.SUCCESS;
+						t.commit();
+					}
 					be.triggerStockCheck();
 					stack.shrink(1);
 					AllSoundEvents.DEPOT_PLOP.playOnServer(level, pos);

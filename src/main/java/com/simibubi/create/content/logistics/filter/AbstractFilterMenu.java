@@ -1,5 +1,8 @@
 package com.simibubi.create.content.logistics.filter;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+
 import com.simibubi.create.AllDataComponents;
 import com.simibubi.create.foundation.gui.menu.GhostItemMenu;
 import com.simibubi.create.foundation.item.ItemHelper;
@@ -53,7 +56,7 @@ public abstract class AbstractFilterMenu extends GhostItemMenu<ItemStack> {
 
 	@Override
 	protected void saveData(ItemStack contentHolder) {
-		for (int i = 0; i < ghostInventory.getSlots(); i++) {
+		for (int i = 0; i < ghostInventory.getSlotCount(); i++) {
 			if (!ghostInventory.getStackInSlot(i).isEmpty()) {
 				contentHolder.set(AllDataComponents.FILTER_ITEMS, ItemHelper.containerContentsFromHandler(ghostInventory));
 				return;

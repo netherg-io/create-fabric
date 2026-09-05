@@ -130,7 +130,7 @@ public class InvManipulationBehaviour extends CapManipulationBehaviourBase<ItemV
 		@Nullable
 		@Override
 		public Storage<ItemVariant> get() {
-			return TransferUtil.getItemStorage(level, pos);
+			return ItemStorage.SIDED.find(level, pos, null);
 		}
 	}
 }

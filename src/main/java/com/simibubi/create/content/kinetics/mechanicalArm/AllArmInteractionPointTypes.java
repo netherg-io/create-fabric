@@ -64,6 +64,8 @@ import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 
 import io.github.fabricators_of_create.porting_lib.transfer.callbacks.TransactionCallback;
 
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
+
 public class AllArmInteractionPointTypes {
 	static {
 		register("basin", new BasinType());
@@ -617,7 +619,7 @@ public class AllArmInteractionPointTypes {
 				return ItemStack.EMPTY;
 			if (!(level.getBlockEntity(pos) instanceof JukeboxBlockEntity jukeboxBE))
 				return ItemStack.EMPTY;
-			ItemStack record = jukeboxBE.getFirstItem();
+			ItemStack record = jukeboxBE.getTheItem();
 			if (record.isEmpty())
 				return ItemStack.EMPTY;
 			level.updateSnapshots(ctx);

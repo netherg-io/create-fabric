@@ -13,6 +13,11 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.entity.Entity;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+
+import com.simibubi.create.foundation.fabric.CustomDataHolder;
+
 public interface ISyncPersistentData {
 
 	void onPersistentDataUpdated();
@@ -29,14 +34,14 @@ public interface ISyncPersistentData {
 		);
 
 		public PersistentDataPacket(Entity entity) {
-			this(entity.getId(), entity.getPersistentData());
+			this(entity.getId(), CustomDataHolder.of(entity));
 		}
 
 		@Override
 		@Environment(EnvType.CLIENT)
 		public void handle(LocalPlayer player) {
 			Entity entityByID = player.clientLevel.getEntity(entityId);
-			CompoundTag data = entityByID.getPersistentData();
+			CompoundTag data = CustomDataHolder.of(entityByID);
 			new HashSet<>(data.getAllKeys()).forEach(data::remove);
 			data.merge(readData);
 			if (!(entityByID instanceof ISyncPersistentData))

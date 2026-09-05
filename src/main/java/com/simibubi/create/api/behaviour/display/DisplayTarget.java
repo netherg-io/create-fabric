@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
 
+import com.simibubi.create.foundation.fabric.CustomDataHolder;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllDisplayTargets;
 import com.simibubi.create.Create;
@@ -56,7 +57,7 @@ public abstract class DisplayTarget {
 		if (line == 0)
 			return;
 
-		CompoundTag tag = target.getCustomData();
+		CompoundTag tag = CustomDataHolder.of(target);
 		CompoundTag compound = tag.getCompound("DisplayLink");
 		compound.putLong("Line" + line, context.blockEntity()
 			.getBlockPos()
@@ -65,7 +66,7 @@ public abstract class DisplayTarget {
 	}
 
 	public boolean isReserved(int line, BlockEntity target, DisplayLinkContext context) {
-		CompoundTag tag = target.getCustomData();
+		CompoundTag tag = CustomDataHolder.of(target);
 		CompoundTag compound = tag.getCompound("DisplayLink");
 
 		if (!compound.contains("Line" + line))

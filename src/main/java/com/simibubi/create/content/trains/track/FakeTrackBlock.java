@@ -1,5 +1,7 @@
 package com.simibubi.create.content.trains.track;
 
+import net.minecraft.world.level.pathfinder.PathType;
+
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 
@@ -36,7 +38,7 @@ public class FakeTrackBlock extends Block implements EntityBlock, ProperWaterlog
 			.noCollission()
 			.noOcclusion());
 		registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
-		LandPathNodeTypesRegistry.register(this, BlockPathTypes.DAMAGE_OTHER, null);
+		LandPathNodeTypesRegistry.register(this, PathType.DAMAGE_OTHER, null);
 	}
 
 	@Override

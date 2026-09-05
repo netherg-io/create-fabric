@@ -11,7 +11,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import io.github.fabricators_of_create.porting_lib.event.common.TagsUpdatedCallback;
+import io.github.fabricators_of_create.porting_lib.event.common.TagsUpdatedEvent;
 
 public class TagProviderImpl<K, V> implements SimpleRegistry.Provider<K, V> {
 	private final TagKey<K> tag;
@@ -33,7 +33,7 @@ public class TagProviderImpl<K, V> implements SimpleRegistry.Provider<K, V> {
 
 	@Override
 	public void onRegister(Runnable invalidate) {
-		TagsUpdatedCallback.EVENT.register(registries -> invalidate.run());
+		TagsUpdatedEvent.EVENT.register(event -> invalidate.run());
 	}
 
 	// eye of the beholder? check the nametag, buddy

@@ -1,0 +1,119 @@
+src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:39: error: cannot find symbol
+import io.github.fabricators_of_create.porting_lib.item.CustomMaxCountItem;
+                                                       ^
+  symbol:   class CustomMaxCountItem
+
+src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:43: error: cannot find symbol
+public class ChromaticCompoundItem extends Item implements CustomMaxCountItem, EntityTickListenerItem {
+                                                           ^
+  symbol: class CustomMaxCountItem
+
+src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:69: error: method does not override or implement a method from a supertype
+	@Override
+	^
+src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:163: error: method does not override or implement a method from a supertype
+
+src/main/java/com/simibubi/create/CreateClient.java:139: error: method render in class RemainingAirOverlay cannot be applied to given types;
+			RemainingAirOverlay.render(graphics, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Remaining Air
+			                   ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:140: error: method renderOverlay in class TrainHUD cannot be applied to given types;
+			TrainHUD.renderOverlay(graphics, partialTicks, window); // Create's Train Driver HUD
+			        ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:141: error: method renderOverlay in class GoggleOverlayRenderer cannot be applied to given types;
+			GoggleOverlayRenderer.renderOverlay(graphics, partialTicks, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Goggle Information
+			                     ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:142: error: method renderOverlay in class BlueprintOverlayRenderer cannot be applied to given types;
+			BlueprintOverlayRenderer.renderOverlay(gui, graphics, partialTicks, window); // Create's Blueprints
+			                        ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:143: error: method renderOverlay in class LinkedControllerClientHandler cannot be applied to given types;
+			LinkedControllerClientHandler.renderOverlay(graphics, partialTicks, window); // Create's Linked Controller
+			                             ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:144: error: cannot find symbol
+			SCHEMATIC_HANDLER.renderOverlay(graphics, partialTicks, window); // Create's Schematics
+			                 ^
+  symbol:   method renderOverlay(GuiGraphics,DeltaTracker,Window)
+
+src/main/java/com/simibubi/create/CreateClient.java:145: error: method renderOverlay in class ToolboxHandlerClient cannot be applied to given types;
+			ToolboxHandlerClient.renderOverlay(graphics, partialTicks, window); // Create's Toolboxes
+			                    ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:146: error: method render in class ValueSettingsClient cannot be applied to given types;
+			VALUE_SETTINGS_HANDLER.render(graphics, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Value Settings
+			                      ^
+  required: GuiGraphics,DeltaTracker
+
+src/main/java/com/simibubi/create/CreateClient.java:147: error: cannot find symbol
+			TrackPlacementOverlay.renderOverlay(gui, graphics); // Create's Track Placement
+			                     ^
+  symbol:   method renderOverlay(Gui,GuiGraphics)
+
+  src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:39: error: cannot find symbol
+  import io.github.fabricators_of_create.porting_lib.item.CustomMaxCountItem;
+                                                         ^
+    symbol:   class CustomMaxCountItem
+
+  src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:43: error: cannot find symbol
+  public class ChromaticCompoundItem extends Item implements CustomMaxCountItem, EntityTickListenerItem {
+                                                             ^
+    symbol: class CustomMaxCountItem
+
+  src/main/java/com/simibubi/create/content/legacy/ChromaticCompoundItem.java:69: error: method does not override or implement a method from a supertype
+  	@Override
+  	^
+  src/main/java/com/simibubi/create/content/kinetics/waterwheel/WaterWheelStructuralBlock.java:163: error: method does not override or implement a method from a supertype
+
+  src/main/java/com/simibubi/create/CreateClient.java:139: error: method render in class RemainingAirOverlay cannot be applied to given types;
+  			RemainingAirOverlay.render(graphics, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Remaining Air
+  			                   ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:140: error: method renderOverlay in class TrainHUD cannot be applied to given types;
+  			TrainHUD.renderOverlay(graphics, partialTicks, window); // Create's Train Driver HUD
+  			        ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:141: error: method renderOverlay in class GoggleOverlayRenderer cannot be applied to given types;
+  			GoggleOverlayRenderer.renderOverlay(graphics, partialTicks, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Goggle Information
+  			                     ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:142: error: method renderOverlay in class BlueprintOverlayRenderer cannot be applied to given types;
+  			BlueprintOverlayRenderer.renderOverlay(gui, graphics, partialTicks, window); // Create's Blueprints
+  			                        ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:143: error: method renderOverlay in class LinkedControllerClientHandler cannot be applied to given types;
+  			LinkedControllerClientHandler.renderOverlay(graphics, partialTicks, window); // Create's Linked Controller
+  			                             ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:144: error: cannot find symbol
+  			SCHEMATIC_HANDLER.renderOverlay(graphics, partialTicks, window); // Create's Schematics
+  			                 ^
+    symbol:   method renderOverlay(GuiGraphics,DeltaTracker,Window)
+
+  src/main/java/com/simibubi/create/CreateClient.java:145: error: method renderOverlay in class ToolboxHandlerClient cannot be applied to given types;
+  			ToolboxHandlerClient.renderOverlay(graphics, partialTicks, window); // Create's Toolboxes
+  			                    ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:146: error: method render in class ValueSettingsClient cannot be applied to given types;
+  			VALUE_SETTINGS_HANDLER.render(graphics, window.getGuiScaledWidth(), window.getGuiScaledHeight()); // Create's Value Settings
+  			                      ^
+    required: GuiGraphics,DeltaTracker
+
+  src/main/java/com/simibubi/create/CreateClient.java:147: error: cannot find symbol
+  			TrackPlacementOverlay.renderOverlay(gui, graphics); // Create's Track Placement
+  			                     ^
+    symbol:   method renderOverlay(Gui,GuiGraphics)

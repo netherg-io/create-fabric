@@ -18,7 +18,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 
 import io.github.fabricators_of_create.porting_lib.tags.Tags;
 
@@ -728,7 +728,7 @@ public class MillingRecipeGen extends ProcessingRecipeGen {
 
 	protected GeneratedRecipe metalOre(String name, ItemEntry<? extends Item> crushed, int duration) {
 		return create(name + "_ore", b -> b.duration(duration)
-			.withCondition(new NotCondition(new TagEmptyCondition("c", "ores/" + name)))
+			.withCondition(ResourceConditions.tagsPopulated(AllTags.commonItemTag("ores/" + name)))
 			.require(AllTags.commonItemTag("ores/" + name))
 			.output(crushed.get()));
 	}
@@ -851,7 +851,7 @@ public class MillingRecipeGen extends ProcessingRecipeGen {
 		}
 	}
 
-	public MillingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public MillingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

@@ -69,7 +69,7 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 			super(1, blockEntity, 1, false);
 			this.blockEntity = blockEntity;
 			forbidExtraction();
-			whenContentsChanged(() -> {
+			whenContentsChanged(slot -> {
 				if (getStackInSlot(0).isEmpty()) // fabric: only has one slot, this is safe
 					return;
 				if (blockEntity.phase == Phase.IDLE)
@@ -85,7 +85,7 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 				return 0;
 			long inserted = super.insert(resource, maxAmount, transaction);
 			if (inserted != 0)
-				TransactionSuccessCallback.register(transaction, () -> blockEntity.getLevel()
+				TransactionCallback.onSuccess(transaction, () -> blockEntity.getLevel()
 						.playSound(null, blockEntity.getBlockPos(), SoundEvents.ITEM_FRAME_ADD_ITEM, SoundSource.BLOCKS, .25f,
 								.5f));
 			return inserted;
@@ -119,20 +119,7 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 		wasPoweredBefore = true;
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.MECHANICAL_CRAFTER.get(),
-				(be, context) -> be.getInvCapability()
-		);
-	}
 
-	protected IItemHandler getInvCapability() {
-		if (invCap == null) {
-			invCap = input.getItemHandler(getLevel(), getBlockPos());
-		}
-		return invCap;
-	}
 
 	@Override
 	public void addBehaviours(List<BlockEntityBehaviour> behaviours) {
@@ -470,9 +457,9 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 		Vec3 ejectPos = VecHelper.getCenterOf(worldPosition)
 			.add(vec);
 		groupedItems.grid.forEach((pair, stack) -> dropItem(ejectPos, stack));
-		if (!inventory.getItem(0)
+		if (!inventory.getStackInSlot(0)
 			.isEmpty())
-			dropItem(ejectPos, inventory.getItem(0));
+			dropItem(ejectPos, inventory.getStackInSlot(0));
 		phase = Phase.IDLE;
 		groupedItems = new GroupedItems();
 		inventory.setStackInSlot(0, ItemStack.EMPTY);
@@ -497,12 +484,12 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 	}
 
 	public boolean craftingItemPresent() {
-		return !inventory.getItem(0)
+		return !inventory.getStackInSlot(0)
 			.isEmpty();
 	}
 
 	public boolean craftingItemOrCoverPresent() {
-		return !inventory.getItem(0)
+		return !inventory.getStackInSlot(0)
 			.isEmpty() || covered;
 	}
 
@@ -522,7 +509,7 @@ public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements 
 
 	protected void begin() {
 		phase = Phase.ACCEPTING;
-		groupedItems = new GroupedItems(inventory.getItem(0));
+		groupedItems = new GroupedItems(inventory.getStackInSlot(0));
 		inventory.setStackInSlot(0, ItemStack.EMPTY);
 		if (RecipeGridHandler.getPrecedingCrafters(this)
 			.isEmpty()) {

@@ -31,3 +31,15 @@ accessible field net/minecraft/world/entity/Mob targetSelector Lnet/minecraft/wo
 accessible field net/minecraft/client/particle/Particle stoppedByCollision Z
 accessible field net/minecraft/server/network/ServerGamePacketListenerImpl aboveGroundTickCount I
 accessible field net/minecraft/server/network/ServerGamePacketListenerImpl aboveGroundVehicleTickCount I
+
+# create datafixer mixin needs the package-private ItemStackData
+accessible class net/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData
+
+# Create: MechanicalCraftingInput subclasses CraftingInput to mark mechanical-only recipes
+accessible method net/minecraft/world/item/crafting/CraftingInput <init> (IILjava/util/List;)V
+
+# Create: BlueprintEntity needs its own hitbox
+extendable method net/minecraft/world/entity/decoration/HangingEntity recalculateBoundingBox ()V
+
+# Create: BlockHelper drops experience for blocks it breaks
+accessible method net/minecraft/world/level/block/Block popExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;I)V

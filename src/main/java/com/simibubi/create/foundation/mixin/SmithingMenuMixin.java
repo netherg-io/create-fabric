@@ -13,6 +13,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.SmithingMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 
 @Mixin(SmithingMenu.class)
@@ -38,8 +39,8 @@ public class SmithingMenuMixin {
 	private ItemStack create$preventUnbreakingOnBacktanks(ItemStack original) {
 		if (AllItems.COPPER_BACKTANK.is(original) || AllItems.NETHERITE_BACKTANK.is(original)) {
 			ItemEnchantments.Mutable mutableEnchantments =
-				new ItemEnchantments.Mutable(original.getTagEnchantments());
-			mutableEnchantments.removeIf(enchant -> !original.supportsEnchantment(enchant));
+				new ItemEnchantments.Mutable(EnchantmentHelper.getEnchantmentsForCrafting(original));
+			mutableEnchantments.removeIf(enchant -> !enchant.value().canEnchant(original));
 			original.set(DataComponents.ENCHANTMENTS, mutableEnchantments.toImmutable());
 		}
 

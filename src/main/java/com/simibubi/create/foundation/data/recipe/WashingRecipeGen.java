@@ -164,7 +164,7 @@ public class WashingRecipeGen extends ProcessingRecipeGen {
 				.output(mod, output).whenModLoaded(mod.getId()));
 	}
 
-	public WashingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public WashingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

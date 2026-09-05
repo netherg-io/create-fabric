@@ -6,6 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+import com.simibubi.create.foundation.fabric.CustomDataHolder;
 import com.simibubi.create.infrastructure.gametest.CreateTestFunction;
 
 import net.minecraft.core.BlockPos;
@@ -31,7 +32,7 @@ public class TestCommandMixin {
 	private static TestFunction create$getCorrectTestFunction(String testName,
 															  ServerLevel level, BlockPos pos, @Nullable MultipleTestTracker tracker) {
 		StructureBlockEntity be = (StructureBlockEntity) level.getBlockEntity(pos);
-		CompoundTag data = be.getCustomData();
+		CompoundTag data = CustomDataHolder.of(be);
 		if (!data.contains("CreateTestFunction", Tag.TAG_STRING))
 			return GameTestRegistry.getTestFunction(testName);
 		String name = data.getString("CreateTestFunction");

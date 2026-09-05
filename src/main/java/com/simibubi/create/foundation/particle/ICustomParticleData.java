@@ -6,6 +6,10 @@ import net.minecraft.client.particle.ParticleEngine;
 import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+
+import org.jetbrains.annotations.NotNull;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

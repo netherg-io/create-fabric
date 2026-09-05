@@ -1,11 +1,12 @@
 package com.simibubi.create.content.fluids;
 
+import com.simibubi.create.infrastructure.fabric.transfer.TransactionSuccessCallback;
+
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.WATERLOGGED;
 
 import com.simibubi.create.AllFluids;
 import com.simibubi.create.api.effect.OpenPipeEffectHandler;
 import com.simibubi.create.content.fluids.pipes.VanillaFluidTargets;
-import com.simibubi.create.foundation.ICapabilityProvider;
 import com.simibubi.create.foundation.advancement.AdvancementBehaviour;
 import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.fluid.FluidHelper;
@@ -53,7 +54,6 @@ public class OpenEndedPipe extends FlowSource {
 	private BlockPos outputPos;
 	private boolean wasPulling;
 
-	private final ICapabilityProvider<IFluidHandler> fluidHandlerProvider = ICapabilityProvider.of(() -> fluidHandler);
 
 	public OpenEndedPipe(BlockFace face) {
 		super(face);
@@ -252,7 +252,7 @@ public class OpenEndedPipe extends FlowSource {
 			FluidStack containedFluidStack = getFluid();
 			boolean hasBlockState = FluidHelper.hasBlockState(containedFluidStack.getFluid());
 
-			if (!containedFluidStack.isEmpty() && !FluidStack.isSameFluidSameComponents(containedFluidStack, resource))
+			if (!containedFluidStack.isEmpty() && !containedFluidStack.getVariant().equals(resource))
 				setFluid(FluidStack.EMPTY);
 			if (wasPulling)
 				wasPulling = false;
@@ -299,7 +299,7 @@ public class OpenEndedPipe extends FlowSource {
 			FluidStack drainedFromWorld = removeFluidFromSpace(transaction);
 			if (drainedFromWorld.isEmpty())
 				return 0;
-			if (!FluidStack.isSameFluidSameComponents(drainedFromWorld, filter))
+			if (!drainedFromWorld.getVariant().equals(extractedVariant))
 				return 0;
 
 			long remainder = drainedFromWorld.getAmount() - maxAmount;

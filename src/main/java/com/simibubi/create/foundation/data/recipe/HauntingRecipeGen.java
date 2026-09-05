@@ -80,7 +80,7 @@ public class HauntingRecipeGen extends ProcessingRecipeGen {
 				.whenModLoaded(mod.getId()));
 	}
 
-	public HauntingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public HauntingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

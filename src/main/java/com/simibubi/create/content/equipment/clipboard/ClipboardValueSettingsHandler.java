@@ -151,18 +151,6 @@ public class ClipboardValueSettingsHandler {
 			return InteractionResult.PASS;
 
 		if (smartBE instanceof ClipboardBlockEntity cbe) {
-			if (event instanceof ICancellableEvent cancellableEvent) {
-				cancellableEvent.setCanceled(true);
-
-				switch (event) {
-					case EntityInteractSpecific e -> e.setCancellationResult(InteractionResult.SUCCESS);
-					case EntityInteract e -> e.setCancellationResult(InteractionResult.SUCCESS);
-					case RightClickBlock e -> e.setCancellationResult(InteractionResult.SUCCESS);
-					case RightClickItem e -> e.setCancellationResult(InteractionResult.SUCCESS);
-					default -> {}
-				}
-			}
-
 			if (!world.isClientSide()) {
 				List<List<ClipboardEntry>> listTo = ClipboardEntry.readAll(itemStack);
 				List<List<ClipboardEntry>> listFrom = ClipboardEntry.readAll(cbe.dataContainer);
@@ -222,11 +210,11 @@ public class ClipboardValueSettingsHandler {
 			String clipboardKey = cc.getClipboardKey();
 			if (paste) {
 				anySuccess |=
-					cc.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(), world.isClientSide());
+					cc.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, face, world.isClientSide());
 				continue;
 			}
 			CompoundTag compoundTag = new CompoundTag();
-			boolean success = cc.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+			boolean success = cc.writeToClipboard(world.registryAccess(), compoundTag, face);
 			anySuccess |= success;
 			if (success)
 				tag.put(clipboardKey, compoundTag);
@@ -236,11 +224,11 @@ public class ClipboardValueSettingsHandler {
 			anyValid = true;
 			String clipboardKey = ccbe.getClipboardKey();
 			if (paste) {
-				anySuccess |= ccbe.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, event.getFace(),
+				anySuccess |= ccbe.readFromClipboard(world.registryAccess(), tag.getCompound(clipboardKey), player, face,
 					world.isClientSide());
 			} else {
 				CompoundTag compoundTag = new CompoundTag();
-				boolean success = ccbe.writeToClipboard(world.registryAccess(), compoundTag, event.getFace());
+				boolean success = ccbe.writeToClipboard(world.registryAccess(), compoundTag, face);
 				anySuccess |= success;
 				if (success)
 					tag.put(clipboardKey, compoundTag);
@@ -248,11 +236,7 @@ public class ClipboardValueSettingsHandler {
 		}
 
 		if (!anyValid)
-			return;
-
-		((ICancellableEvent) event).setCanceled(true);
-		if (event instanceof RightClickBlock rightClickBlock)
-			rightClickBlock.setCancellationResult(InteractionResult.SUCCESS);
+			return InteractionResult.PASS;
 
 		if (world.isClientSide())
 			return InteractionResult.SUCCESS;

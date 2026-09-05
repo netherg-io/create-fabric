@@ -1,5 +1,7 @@
 package com.simibubi.create.content.logistics.packagePort;
 
+import com.simibubi.create.foundation.fabric.MenuUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -151,7 +153,7 @@ public abstract class PackagePortBlockEntity extends SmartBlockEntity implements
 			return ItemInteractionResult.SUCCESS;
 		}
 
-		player.openMenu(this, worldPosition);
+		MenuUtil.open(player, this, worldPosition);
 		return ItemInteractionResult.SUCCESS;
 	}
 

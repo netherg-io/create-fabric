@@ -75,7 +75,8 @@ import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
 import net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity;
 import net.fabricmc.fabric.api.transfer.v1.transaction.base.SnapshotParticipant;
 
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
+import com.simibubi.create.foundation.blockEntity.LegacyRecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 
 
 public class DeployerBlockEntity extends KineticBlockEntity implements SidedStorageBlockEntity {
@@ -135,17 +136,6 @@ public class DeployerBlockEntity extends KineticBlockEntity implements SidedStor
 			.startWithValue(0);
 	}
 
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(
-				Capabilities.ItemHandler.BLOCK,
-				AllBlockEntityTypes.DEPLOYER.get(),
-				(be, context) ->  {
-					if (be.invHandler == null)
-						be.initHandler();
-					return be.invHandler;
-				}
-		);
-	}
 
 	@Override
 	public void addBehaviours(List<BlockEntityBehaviour> behaviours) {
@@ -586,7 +576,7 @@ public class DeployerBlockEntity extends KineticBlockEntity implements SidedStor
 		animatedOffset.setValue(offset);
 	}
 
-	ItemStackHandlerContainer recipeInv = new ItemStackHandlerContainer(2);
+	LegacyRecipeWrapper recipeInv = new LegacyRecipeWrapper(new ItemStackHandler(2));
 
 	@Nullable
 	public RecipeHolder<? extends Recipe<? extends RecipeInput>> getRecipe(ItemStack stack) {
@@ -601,8 +591,8 @@ public class DeployerBlockEntity extends KineticBlockEntity implements SidedStor
 			}
 		}
 
-		recipeInv.setStackInSlot(0, stack);
-		recipeInv.setStackInSlot(1, heldItemMainhand);
+		recipeInv.setItem(0, stack);
+		recipeInv.setItem(1, heldItemMainhand);
 
 		DeployerRecipeSearchEvent event = new DeployerRecipeSearchEvent(this, recipeInv);
 

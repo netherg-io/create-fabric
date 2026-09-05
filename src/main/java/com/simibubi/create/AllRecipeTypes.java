@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.simibubi.create.compat.rei.ConversionRecipe;
+import com.simibubi.create.compat.jei.ConversionRecipe;
 import com.simibubi.create.content.equipment.sandPaper.SandPaperPolishingRecipe;
 import com.simibubi.create.content.equipment.toolbox.ToolboxDyeingRecipe;
 import com.simibubi.create.content.fluids.transfer.EmptyingRecipe;
@@ -114,8 +114,8 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 
 	@Internal
 	public static void register() {
-		ShapedRecipeUtil.setCraftingSize(9, 9);
-		// fabric: just load the class
+		// fabric: just load the class. Porting Lib's ShapedRecipePattern$DataMixin already lifts vanilla's
+		// 3x3 pattern cap, so mechanical crafting recipes larger than 3x3 parse without extra work here.
 	}
 
 	@Override

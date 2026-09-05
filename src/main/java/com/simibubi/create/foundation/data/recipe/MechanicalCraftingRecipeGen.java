@@ -69,7 +69,7 @@ public class MechanicalCraftingRecipeGen extends CreateRecipeProvider {
 
 	;
 
-	public MechanicalCraftingRecipeGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+	public MechanicalCraftingRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registries) {
 		super(output, registries);
 	}
 

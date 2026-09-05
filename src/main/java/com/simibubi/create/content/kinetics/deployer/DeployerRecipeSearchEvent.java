@@ -5,22 +5,17 @@ import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
-
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 
 import net.minecraft.world.item.crafting.Recipe;
-
-import net.fabricmc.fabric.api.event.Event;
-import net.fabricmc.fabric.api.event.EventFactory;
-
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeInput;
 
 public class DeployerRecipeSearchEvent {
 	private boolean canceled = false;
 	private final DeployerBlockEntity blockEntity;
-	private final ItemStackHandlerContainer inventory;
+	private final RecipeInput inventory;
 	@Nullable
 	RecipeHolder<? extends Recipe<? extends RecipeInput>> recipe = null;
 	private int maxPriority = 0;
@@ -36,7 +31,7 @@ public class DeployerRecipeSearchEvent {
 		void handle(DeployerRecipeSearchEvent event);
 	}
 
-	public DeployerRecipeSearchEvent(DeployerBlockEntity blockEntity, ItemStackHandlerContainer inventory) {
+	public DeployerRecipeSearchEvent(DeployerBlockEntity blockEntity, RecipeInput inventory) {
 		this.blockEntity = blockEntity;
 		this.inventory = inventory;
 	}
@@ -45,8 +40,16 @@ public class DeployerRecipeSearchEvent {
 		return blockEntity;
 	}
 
-	public ItemStackHandlerContainer getInventory() {
+	public RecipeInput getInventory() {
 		return inventory;
+	}
+
+	public boolean isCanceled() {
+		return canceled;
+	}
+
+	public void setCanceled(boolean canceled) {
+		this.canceled = canceled;
 	}
 
 	// lazyness to not scan for recipes that aren't selected

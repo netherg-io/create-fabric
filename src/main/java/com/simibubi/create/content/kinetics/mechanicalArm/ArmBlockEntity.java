@@ -187,7 +187,7 @@ public class ArmBlockEntity extends KineticBlockEntity implements TransformableB
 	private boolean checkForMusicAmong(List<ArmInteractionPoint> list) {
 		for (ArmInteractionPoint armInteractionPoint : list) {
 			if (!(armInteractionPoint instanceof AllArmInteractionPointTypes.JukeboxPoint))
-				continue;
+					continue;
 			BlockState state = level.getBlockState(armInteractionPoint.getPos());
 			if (state.getOptionalValue(JukeboxBlock.HAS_RECORD)
 					.orElse(false))
@@ -269,10 +269,10 @@ public class ArmBlockEntity extends KineticBlockEntity implements TransformableB
 		for (int i = startIndex; i < scanRange; i++) {
 			ArmInteractionPoint armInteractionPoint = inputs.get(i);
 			if (!armInteractionPoint.isValid())
-				continue;
+					continue;
 
 			if (getDistributableAmount(armInteractionPoint) == 0)
-				continue;
+					continue;
 
 			selectIndex(true, i);
 			foundInput = true;
@@ -309,9 +309,9 @@ public class ArmBlockEntity extends KineticBlockEntity implements TransformableB
 				if (!armInteractionPoint.isValid())
 					continue;
 
-			ItemStack remainder = armInteractionPoint.insert(held, true);
-			if (ItemStack.matches(remainder, heldItem))
-				continue;
+				ItemStack remainder = armInteractionPoint.insert(held, t);
+				if (ItemStack.matches(remainder, heldItem))
+					continue;
 
 				selectIndex(false, i);
 				foundOutput = true;
@@ -493,7 +493,7 @@ public class ArmBlockEntity extends KineticBlockEntity implements TransformableB
 		for (Tag tag : interactionPointTag) {
 			ArmInteractionPoint point = ArmInteractionPoint.deserialize((CompoundTag) tag, level, worldPosition);
 			if (point == null)
-				continue;
+					continue;
 			if (point.getMode() == Mode.DEPOSIT)
 				outputs.add(point);
 			else if (point.getMode() == Mode.TAKE)
