@@ -7,10 +7,10 @@ val loaderVersion = "0.16.10"
 val fapiVersion = "0.115.1+1.21.1"
 
 // in-house dependencies
-val flywheelVersion = "1.0.1-11"
-val ponderVersion = "1.0.44"
+val flywheelVersion = "1.0.6-44"
+val ponderVersion = "1.0.69"
 val registrateVersion = "1.3.77-MC1.21.1"
-val milkLibVersion = "1.2.60"
+val milkLibVersion = "1.1.0"
 
 // external dependencies
 val configApiVersion = "21.1.3"
@@ -107,7 +107,8 @@ dependencies {
     modApi(include("com.electronwill.night-config:toml:$nightConfigVersion")!!)
     modApi(include("fuzs.forgeconfigapiport:forgeconfigapiport-fabric:$configApiVersion")!!)
     modApi(include("dev.engine-room.flywheel:flywheel-fabric-$minecraftVersion:$flywheelVersion")!!)
-    modApi(include("io.github.tropheusj:milk-lib:$milkLibVersion")!!)
+    // Milk Lib с maven Create заканчивается 1.18; сборка под 1.21.1 живёт на Modrinth (Tu5LjQoE), лежит в libs/
+    modApi(files("libs/milk-lib-1.1.0-patch+1.21.1.jar"))  // в пак едет отдельным модом с Modrinth
     api(include("com.google.code.findbugs:jsr305:$jsr305Version")!!)
 
     if (ponder.exists()) {
@@ -269,34 +270,34 @@ publishing {
 }
 
 dependencies {
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:blocks:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:blocks:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:accessors:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:entity:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:items:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:client_events:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:level_events:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:attributes:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:entity:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:items:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:client_events:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:level_events:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:attributes:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:extensions:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:brewing:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:config:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:chunk_loading:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:obj_loader:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:mixin_extensions:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:loot:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:item_abilities:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:gui_utils:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:render_types:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:base:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:recipe_book_categories:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:common:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:brewing:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:config:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:chunk_loading:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:obj_loader:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:mixin_extensions:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:loot:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:item_abilities:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:gui_utils:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:render_types:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:base:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:recipe_book_categories:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:common:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:conditions:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:core:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:data:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:fluids:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:gametest:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:core:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:data:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:fluids:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:gametest:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:lazy_registration:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:model_loader:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:models:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:tags:3.1.0-beta.54+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:transfer:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:model_loader:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:models:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:tags:3.1.0-beta.90+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:transfer:3.1.0-beta.90+1.21.1")
 }

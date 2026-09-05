@@ -12,6 +12,8 @@ import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class CreateNBTProcessors {
@@ -19,7 +21,7 @@ public class CreateNBTProcessors {
 
 		NBTProcessors.addProcessor(BlockEntityType.SIGN, data -> {
 			for (int i = 0; i < 4; ++i) {
-				if (NBTProcessors.textComponentHasClickEvent(data.getString("Text" + (i + 1))))
+				if (hasClickEvent(data.getString("Text" + (i + 1))))
 					return null;
 			}
 			return data;
@@ -44,7 +46,7 @@ public class CreateNBTProcessors {
 			ListTag pages = tag.getList("pages", Tag.TAG_STRING);
 
 			for (Tag inbt : pages) {
-				if (NBTProcessors.textComponentHasClickEvent(inbt.getAsString()))
+				if (hasClickEvent(inbt.getAsString()))
 					return null;
 			}
 			return data;
@@ -69,9 +71,21 @@ public class CreateNBTProcessors {
 			pageTag -> NBTHelper.readCompoundList(pageTag.getList("Entries", Tag.TAG_COMPOUND),
 				tag -> tag.getString("Text")))) {
 			for (String entry : entries)
-				if (NBTProcessors.textComponentHasClickEvent(entry))
+				if (hasClickEvent(entry))
 					return null;
 		}
 		return data;
+	}
+
+	/** Catnip 0.8 принимает Component; строки из NBT — JSON-компоненты. Нечитаемый JSON считаем безопасным. */
+	private static boolean hasClickEvent(String json) {
+		if (json == null || json.isEmpty())
+			return false;
+		try {
+			Component component = Component.Serializer.fromJson(json, RegistryAccess.EMPTY);
+			return component != null && NBTProcessors.textComponentHasClickEvent(component);
+		} catch (Exception e) {
+			return false;
+		}
 	}
 }

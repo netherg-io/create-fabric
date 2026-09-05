@@ -49,7 +49,6 @@ import com.simibubi.create.infrastructure.worldgen.AllBiomeModifiers;
 import com.simibubi.create.infrastructure.worldgen.AllFeatures;
 import com.simibubi.create.infrastructure.worldgen.AllPlacementModifiers;
 
-import io.github.tropheusj.milk.Milk;
 import net.createmod.catnip.lang.FontHelper;
 import net.createmod.catnip.lang.LangBuilder;
 import net.minecraft.resources.ResourceKey;
@@ -144,7 +143,7 @@ public class Create implements ModInitializer {
 
 		ComputerCraftProxy.register();
 
-		Milk.enableMilkFluid();
+		// milk-lib 1.1.0 регистрирует молоко сам в onInitialize
 		CopperRegistries.inject();
 
 		Create.init();
