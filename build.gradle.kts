@@ -135,9 +135,9 @@ dependencies {
 
     // FIXME - Use gradle.properties for these versions, make change to concealed for this
     modCompileOnly("dev.architectury:architectury-fabric:9.1.12")
-    modCompileOnly("dev.ftb.mods:ftb-chunks-fabric:2001.3.1")
-    modCompileOnly("dev.ftb.mods:ftb-teams-fabric:2001.3.0")
-    modCompileOnly("dev.ftb.mods:ftb-library-fabric:2001.2.4")
+//    modCompileOnly("dev.ftb.mods:ftb-chunks-fabric:2001.3.1")
+//    modCompileOnly("dev.ftb.mods:ftb-teams-fabric:2001.3.0")
+//    modCompileOnly("dev.ftb.mods:ftb-library-fabric:2001.2.4")
 
     modCompileOnly("maven.modrinth:journeymap:$jmVersion")
     modCompileOnly("info.journeymap:journeymap-api:$jmApiVersion")
@@ -266,4 +266,37 @@ publishing {
             credentials(PasswordCredentials::class)
         }
     }
+}
+
+dependencies {
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:blocks:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:accessors:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:entity:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:items:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:client_events:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:level_events:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:attributes:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:extensions:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:brewing:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:config:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:chunk_loading:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:obj_loader:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:mixin_extensions:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:loot:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:item_abilities:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:gui_utils:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:render_types:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:base:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:recipe_book_categories:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:common:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:conditions:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:core:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:data:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:fluids:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:gametest:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:lazy_registration:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:model_loader:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:models:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:tags:3.1.0-beta.54+1.21.1")
+    modImplementation("io.github.fabricators_of_create.Porting-Lib:transfer:3.1.0-beta.54+1.21.1")
 }
