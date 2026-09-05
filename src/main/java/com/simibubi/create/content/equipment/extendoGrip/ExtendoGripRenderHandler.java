@@ -23,7 +23,7 @@ import net.minecraft.world.item.ItemStack;
 
 import io.github.fabricators_of_create.porting_lib.client_events.event.client.RenderHandEvent;
 import io.github.fabricators_of_create.porting_lib.models.TransformTypeDependentItemBakedModel;
-import io.github.fabricators_of_create.porting_lib.util.FirstPersonRendererHelper;
+import io.github.fabricators_of_create.porting_lib.mixin.accessors.client.accessor.ItemInHandRendererAccessor;
 
 public class ExtendoGripRenderHandler {
 
@@ -146,11 +146,11 @@ public class ExtendoGripRenderHandler {
 	}
 
 	private static ItemStack getRenderedMainHandStack() {
-		return FirstPersonRendererHelper.getStackInMainHand(Minecraft.getInstance().getEntityRenderDispatcher().getItemInHandRenderer());
+		return ((ItemInHandRendererAccessor) Minecraft.getInstance().getEntityRenderDispatcher().getItemInHandRenderer()).port_lib$getMainHandItem();
 	}
 
 	private static ItemStack getRenderedOffHandStack() {
-		return FirstPersonRendererHelper.getStackInOffHand(Minecraft.getInstance().getEntityRenderDispatcher().getItemInHandRenderer());
+		return ((ItemInHandRendererAccessor) Minecraft.getInstance().getEntityRenderDispatcher().getItemInHandRenderer()).port_lib$getOffHandItem();
 	}
 
 }

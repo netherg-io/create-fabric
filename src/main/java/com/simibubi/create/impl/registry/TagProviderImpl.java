@@ -11,7 +11,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import io.github.fabricators_of_create.porting_lib.event.common.TagsUpdatedEvent;
+import io.github.fabricators_of_create.porting_lib.resources.events.TagsUpdatedEvent;
 
 public class TagProviderImpl<K, V> implements SimpleRegistry.Provider<K, V> {
 	private final TagKey<K> tag;

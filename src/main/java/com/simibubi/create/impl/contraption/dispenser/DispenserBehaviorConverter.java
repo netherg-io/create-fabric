@@ -30,7 +30,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
 
 import io.github.fabricators_of_create.porting_lib.core.util.ServerLifecycleHooks;
-import io.github.fabricators_of_create.porting_lib.event.common.TagsUpdatedEvent;
+import io.github.fabricators_of_create.porting_lib.resources.events.TagsUpdatedEvent;
 
 public enum DispenserBehaviorConverter implements SimpleRegistry.Provider<Item, MountedDispenseBehavior> {
 	INSTANCE;

@@ -37,8 +37,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 
-import io.github.fabricators_of_create.porting_lib.conditions.ConditionalOps;
-import io.github.fabricators_of_create.porting_lib.conditions.WithConditions;
+import io.github.fabricators_of_create.porting_lib.resources.conditions.ConditionalOps;
+import io.github.fabricators_of_create.porting_lib.resources.conditions.WithConditions;
 
 @ApiStatus.Internal
 public class RuntimeDataGenerator {

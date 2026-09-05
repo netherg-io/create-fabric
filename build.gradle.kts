@@ -101,7 +101,13 @@ dependencies {
     // dependencies
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fapiVersion")
 
-    modApi(include("com.tterrag.registrate_fabric:Registrate:$registrateVersion")!!)
+    // Registrate тянет porting_lib common beta.39, и loom подмешивает её injected interfaces
+    // (IPlantable, LanguageManagerExt) в jar Minecraft поверх beta.90 — компиляция падает.
+    // common объявлен ниже явно в beta.90; остальные модули beta.39 оставлены, иначе modApi
+    // теряет апгрейд fabric-api 0.104 -> 0.105.
+    modApi(include("com.tterrag.registrate_fabric:Registrate:$registrateVersion") {
+        exclude(group = "io.github.fabricators_of_create.Porting-Lib", module = "common")
+    })
 
     modApi(include("com.electronwill.night-config:core:$nightConfigVersion")!!)
     modApi(include("com.electronwill.night-config:toml:$nightConfigVersion")!!)
@@ -117,7 +123,7 @@ dependencies {
     } else {
         modRuntimeOnly(include("net.createmod.ponder:Ponder-Fabric-$minecraftVersion:$ponderVersion")!!)
         modCompileOnly("net.createmod.ponder:Ponder-Fabric-$minecraftVersion:$ponderVersion") {
-            exclude(group = "io.github.fabricators_of_create.Porting-Lib")
+            exclude(group = "io.github.fabricators_of_create.Porting-Lib", module = "common")
         }
     }
 
@@ -277,7 +283,6 @@ dependencies {
     modImplementation("io.github.fabricators_of_create.Porting-Lib:client_events:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:level_events:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:attributes:3.1.0-beta.90+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:extensions:3.1.0-beta.54+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:brewing:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:config:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:chunk_loading:3.1.0-beta.90+1.21.1")
@@ -290,7 +295,6 @@ dependencies {
     modImplementation("io.github.fabricators_of_create.Porting-Lib:base:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:recipe_book_categories:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:common:3.1.0-beta.90+1.21.1")
-    modImplementation("io.github.fabricators_of_create.Porting-Lib:conditions:3.1.0-beta.54+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:core:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:data:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:fluids:3.1.0-beta.90+1.21.1")

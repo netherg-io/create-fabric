@@ -29,7 +29,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import io.github.fabricators_of_create.porting_lib.util.FontRenderUtil;
+import io.github.fabricators_of_create.porting_lib.mixin.accessors.client.accessor.FontAccessor;
 
 public class NixieTubeRenderer extends SafeBlockEntityRenderer<NixieTubeBlockEntity> {
 
@@ -117,7 +117,7 @@ public class NixieTubeRenderer extends SafeBlockEntityRenderer<NixieTubeBlockEnt
 		fontRenderer.drawInBatch(c, 0, 0, color, false, ms.last()
 			.pose(), buffer, Font.DisplayMode.NORMAL, 0, LightTexture.FULL_BRIGHT);
 		if (buffer instanceof BufferSource) {
-			BakedGlyph texturedglyph = FontRenderUtil.getFontStorage(fontRenderer, Style.DEFAULT_FONT)
+			BakedGlyph texturedglyph = ((FontAccessor) fontRenderer).port_lib$getFontSet(Style.DEFAULT_FONT)
 				.whiteGlyph();
 			((BufferSource) buffer).endBatch(texturedglyph.renderType(Font.DisplayMode.NORMAL));
 		}

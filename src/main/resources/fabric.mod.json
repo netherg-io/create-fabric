@@ -49,8 +49,11 @@
 
     "porting_lib_accessors": "*",
     "porting_lib_base": "*",
+    "porting_lib_blocks": "*",
+    "porting_lib_items": "*",
+    "porting_lib_level_events": "*",
+    "porting_lib_resources": "*",
     "porting_lib_entity": "*",
-    "porting_lib_extensions": "*",
     "porting_lib_lazy_registration": "*",
     "porting_lib_obj_loader": "*",
     "porting_lib_tags": "*",

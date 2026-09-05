@@ -48,7 +48,7 @@ import net.fabricmc.api.Environment;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingAttackEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingKnockBackEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.player.AttackEntityEvent;
-import io.github.fabricators_of_create.porting_lib.entity.events.player.PlayerEvent;
+import io.github.fabricators_of_create.porting_lib.entity.events.player.PlayerEvents;
 import io.github.fabricators_of_create.porting_lib.entity.events.player.PlayerInteractEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.tick.EntityTickEvent;
 
@@ -119,7 +119,7 @@ public class ExtendoGripItem extends Item {
 
 	}
 
-	public static void addReachToJoiningPlayersHoldingExtendo(PlayerEvent.PlayerLoggedInEvent event) {
+	public static void addReachToJoiningPlayersHoldingExtendo(PlayerEvents.PlayerLoggedInEvent event) {
 		Player player = event.getEntity();
 		CompoundTag persistentData = player.getCustomData();
 

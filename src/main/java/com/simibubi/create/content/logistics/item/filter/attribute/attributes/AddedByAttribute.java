@@ -1,5 +1,6 @@
 package com.simibubi.create.content.logistics.item.filter.attribute.attributes;
 
+import io.github.fabricators_of_create.porting_lib.item.ItemHooks;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,8 +33,7 @@ public record AddedByAttribute(String modId) implements ItemAttribute {
 
 	@Override
 	public boolean appliesTo(ItemStack stack, Level world) {
-		return modId.equals(stack.getItem()
-			.getCreatorModId(stack));
+		return modId.equals(ItemHooks.getDefaultCreatorModId(stack));
 	}
 
 	@Override
@@ -61,8 +61,7 @@ public record AddedByAttribute(String modId) implements ItemAttribute {
 
 		@Override
 		public List<ItemAttribute> getAllAttributes(ItemStack stack, Level level) {
-			String id = stack.getItem()
-				.getCreatorModId(stack);
+			String id = ItemHooks.getDefaultCreatorModId(stack);
 			return id == null ? Collections.emptyList() : List.of(new AddedByAttribute(id));
 		}
 

@@ -4,12 +4,12 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
-import io.github.fabricators_of_create.porting_lib.entity.ext.EntityExt;
+import io.github.fabricators_of_create.porting_lib.entity.injects.EntityInjection;
 
 /**
  * Fabric replacement for NeoForge's {@code BlockEntity#getCustomData()} / {@code getPersistentData()}.
  * Implemented on every {@link BlockEntity} by {@code foundation.mixin.fabric.BlockEntityCustomDataMixin};
- * for entities porting lib already provides {@link EntityExt#getCustomData()}.
+ * for entities porting lib already provides {@link EntityInjection#getCustomData()}.
  */
 public interface CustomDataHolder {
 
@@ -20,6 +20,6 @@ public interface CustomDataHolder {
 	}
 
 	static CompoundTag of(Entity entity) {
-		return ((EntityExt) entity).getCustomData();
+		return ((EntityInjection) entity).getCustomData();
 	}
 }

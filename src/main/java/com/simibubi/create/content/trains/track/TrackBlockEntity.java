@@ -1,6 +1,6 @@
 package com.simibubi.create.content.trains.track;
 
-import io.github.fabricators_of_create.porting_lib.block.CustomRenderBoundingBoxBlockEntity;
+import io.github.fabricators_of_create.porting_lib.blocks.extensions.CustomRenderBoundingBoxBlockEntity;
 
 import java.util.HashMap;
 import java.util.HashSet;

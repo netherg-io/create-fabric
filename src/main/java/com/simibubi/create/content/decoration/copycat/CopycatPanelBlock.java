@@ -1,5 +1,6 @@
 package com.simibubi.create.content.decoration.copycat;
 
+import io.github.fabricators_of_create.porting_lib.blocks.extensions.FaceHidingBlock;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -39,7 +40,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CopycatPanelBlock extends WaterloggedCopycatBlock {
+public class CopycatPanelBlock extends WaterloggedCopycatBlock implements FaceHidingBlock {
 
 	public static final DirectionProperty FACING = BlockStateProperties.FACING;
 

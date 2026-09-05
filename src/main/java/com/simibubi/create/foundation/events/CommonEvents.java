@@ -131,19 +131,19 @@ import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 
-import io.github.fabricators_of_create.porting_lib.entity.events.EntityEvent;
+import io.github.fabricators_of_create.porting_lib.entity.events.EntityEvents;
 import io.github.fabricators_of_create.porting_lib.entity.events.EntityMountEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.ProjectileImpactEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingChangeTargetEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingDropsEvent;
-import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingEvent;
+import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingEvents;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingExperienceDropEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingAttackEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.living.LivingKnockBackEvent;
-import io.github.fabricators_of_create.porting_lib.entity.events.player.PlayerEvent;
+import io.github.fabricators_of_create.porting_lib.entity.events.player.PlayerEvents;
 import io.github.fabricators_of_create.porting_lib.entity.events.tick.EntityTickEvent;
 import io.github.fabricators_of_create.porting_lib.entity.events.tick.PlayerTickEvent;
-import io.github.fabricators_of_create.porting_lib.event.common.AddPackFindersEvent;
+import io.github.fabricators_of_create.porting_lib.resources.events.AddPackFindersEvent;
 import io.github.fabricators_of_create.porting_lib.level.events.BlockEvent;
 
 import com.simibubi.create.foundation.fabric.BlockPlacedCallback;
@@ -285,7 +285,7 @@ public class CommonEvents {
 		AttackEntityCallback.EVENT.register(CommonEvents::onEntityAttackedByPlayer);
 		CommandRegistrationCallback.EVENT.register(CommonEvents::registerCommands);
 		EntityTrackingEvents.START_TRACKING.register(CommonEvents::startTracking);
-		EntityEvent.EnteringSection.EVENT.register(
+		EntityEvents.EnteringSection.EVENT.register(
 			e -> onEntityEnterSection(e.getEntity(), e.getPackedOldPos(), e.getPackedNewPos()));
 		EntityTickEvent.Pre.EVENT.register(CommonEvents::onEntityTick);
 		ServerPlayConnectionEvents.JOIN.register(CommonEvents::playerLoggedIn);
@@ -348,16 +348,16 @@ public class CommonEvents {
 		});
 		ServerEntityEvents.EQUIPMENT_CHANGE.register(NetheriteDivingHandler::onLivingEquipmentChange);
 		LivingChangeTargetEvent.EVENT.register(DeployerFakePlayer::entitiesDontRetaliate);
-		EntityEvent.Size.EVENT.register(DeployerFakePlayer::deployerHasEyesOnHisFeet);
+		EntityEvents.Size.EVENT.register(DeployerFakePlayer::deployerHasEyesOnHisFeet);
 		BlockPlacedCallback.EVENT.register(SymmetryHandler::onBlockPlaced);
 		BlockPlacedCallback.EVENT.register(SuperGlueHandler::glueListensForBlockPlacement);
 		ProjectileImpactEvent.EVENT.register(BlazeBurnerHandler::onThrowableImpact);
-		PlayerEvent.PlayerLoggedInEvent.EVENT.register(ExtendoGripItem::addReachToJoiningPlayersHoldingExtendo);
+		PlayerEvents.PlayerLoggedInEvent.EVENT.register(ExtendoGripItem::addReachToJoiningPlayersHoldingExtendo);
 		PlayerBlockBreakEvents.BEFORE.register(SymmetryHandler::onBlockDestroyed);
 		PlayerBlockBreakEvents.AFTER.register(ExtendoGripItem::consumeDurabilityOnBlockBreak);
 		BlockPlacedCallback.EVENT.register(ExtendoGripItem::consumeDurabilityOnPlace);
-		EntityEvent.Size.EVENT.register(CardboardArmorHandler::playerHitboxChangesWhenHidingAsBox);
-		LivingEvent.LivingVisibilityEvent.EVENT.register(CardboardArmorHandler::playersStealthWhenWearingCardboard);
+		EntityEvents.Size.EVENT.register(CardboardArmorHandler::playerHitboxChangesWhenHidingAsBox);
+		LivingEvents.LivingVisibilityEvent.EVENT.register(CardboardArmorHandler::playersStealthWhenWearingCardboard);
 		EntityTickEvent.Pre.EVENT.register(e -> {
 			if (e.getEntity() instanceof LivingEntity living)
 				CardboardArmorHandler.mobsMayLoseTargetWhenItIsWearingCardboard(living);

@@ -50,7 +50,7 @@ import net.fabricmc.fabric.api.transfer.v1.fluid.base.EmptyItemFluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.base.FullItemFluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 
-import io.github.fabricators_of_create.porting_lib.event.common.FluidPlaceBlockCallback;
+import io.github.fabricators_of_create.porting_lib.level.events.BlockEvent;
 
 @SuppressWarnings("UnstableApiUsage")
 public class AllFluids {
@@ -146,7 +146,11 @@ public class AllFluids {
 
 	public static void registerFluidInteractions() {
 		// fabric: no fluid interaction API, use legacy method
-		FluidPlaceBlockCallback.EVENT.register(AllFluids::whenFluidsMeet);
+		BlockEvent.FluidPlaceBlockEvent.EVENT.register(event -> {
+			BlockState result = whenFluidsMeet(event.getLevel(), event.getPos(), event.getState());
+			if (result != null)
+				event.setNewState(result);
+		});
 	}
 
 	public static BlockState whenFluidsMeet(LevelAccessor world, BlockPos pos, BlockState blockState) {

@@ -1,6 +1,6 @@
 package com.simibubi.create.content.trains.station;
 
-import io.github.fabricators_of_create.porting_lib.block.CustomRenderBoundingBoxBlockEntity;
+import io.github.fabricators_of_create.porting_lib.blocks.extensions.CustomRenderBoundingBoxBlockEntity;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
