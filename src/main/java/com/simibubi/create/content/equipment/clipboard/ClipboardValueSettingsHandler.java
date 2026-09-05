@@ -58,10 +58,12 @@ public class ClipboardValueSettingsHandler {
 			return false;
 		if (!(mc.level.getBlockEntity(pos) instanceof SmartBlockEntity smartBE))
 			return false;
+		Level level = mc.level; // fabric: лямбды ниже не должны захватывать клиентские типы
+		Player player = mc.player;
 		if (!(smartBE instanceof ClipboardBlockEntity) && !smartBE.getAllBehaviours()
 			.stream()
 			.anyMatch(b -> b instanceof ClipboardCloneable cc
-				&& cc.writeToClipboard(mc.level.registryAccess(), new CompoundTag(), target.getDirection()))
+				&& cc.writeToClipboard(level.registryAccess(), new CompoundTag(), target.getDirection()))
 			&& !(smartBE instanceof ClipboardCloneable))
 			return false;
 
@@ -88,6 +90,7 @@ public class ClipboardValueSettingsHandler {
 		if (!(mc.hitResult instanceof BlockHitResult target))
 			return;
 		Player player = mc.player; // fabric: keep LocalPlayer out of lambdas
+		Level level = mc.level;
 		if (!AllBlocks.CLIPBOARD.isIn(player.getMainHandItem()))
 			return;
 		BlockPos pos = target.getBlockPos();
@@ -107,16 +110,16 @@ public class ClipboardValueSettingsHandler {
 		boolean canCopy = smartBE.getAllBehaviours()
 			.stream()
 			.anyMatch(b -> b instanceof ClipboardCloneable cc
-				&& cc.writeToClipboard(mc.level.registryAccess(), new CompoundTag(), target.getDirection()))
+				&& cc.writeToClipboard(level.registryAccess(), new CompoundTag(), target.getDirection()))
 			|| smartBE instanceof ClipboardCloneable ccbe
-				&& ccbe.writeToClipboard(mc.level.registryAccess(), new CompoundTag(), target.getDirection());
+				&& ccbe.writeToClipboard(level.registryAccess(), new CompoundTag(), target.getDirection());
 
 		boolean canPaste = tagElement != null && (smartBE.getAllBehaviours()
 			.stream()
-			.anyMatch(b -> b instanceof ClipboardCloneable cc && cc.readFromClipboard(mc.level.registryAccess(),
-				tagElement.getCompound(cc.getClipboardKey()), mc.player, target.getDirection(), true))
-			|| smartBE instanceof ClipboardCloneable ccbe && ccbe.readFromClipboard(mc.level.registryAccess(),
-				tagElement.getCompound(ccbe.getClipboardKey()), mc.player, target.getDirection(), true));
+			.anyMatch(b -> b instanceof ClipboardCloneable cc && cc.readFromClipboard(level.registryAccess(),
+				tagElement.getCompound(cc.getClipboardKey()), player, target.getDirection(), true))
+			|| smartBE instanceof ClipboardCloneable ccbe && ccbe.readFromClipboard(level.registryAccess(),
+				tagElement.getCompound(ccbe.getClipboardKey()), player, target.getDirection(), true));
 
 		if (!canCopy && !canPaste)
 			return;

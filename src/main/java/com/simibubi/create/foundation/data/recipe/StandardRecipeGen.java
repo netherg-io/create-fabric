@@ -1593,10 +1593,10 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 				if (unlockedBy != null)
 					b.unlockedBy("has_item", inventoryTrigger(unlockedBy.get()));
 
-				RecipeOutput conditionalOutput =
-					StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
+				RecipeOutput conditionalOutput = recipeConditions.isEmpty() ? recipeOutput
+					: StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
 
-				b.save(recipeOutput, createLocation("crafting"));
+				b.save(conditionalOutput, createLocation("crafting"));
 			});
 		}
 
@@ -1698,8 +1698,8 @@ public class StandardRecipeGen extends CreateRecipeProvider {
 					if (unlockedBy != null)
 						b.unlockedBy("has_item", inventoryTrigger(unlockedBy.get()));
 
-					RecipeOutput conditionalOutput =
-					StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
+					RecipeOutput conditionalOutput = recipeConditions.isEmpty() ? recipeOutput
+					: StandardRecipeGen.this.withConditions(recipeOutput, recipeConditions.toArray(new ResourceCondition[0]));
 
 					b.save(
 						isOtherMod ? new ModdedCookingRecipeOutput(conditionalOutput, compatDatagenOutput) : conditionalOutput,

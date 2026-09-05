@@ -7,11 +7,15 @@
   ],
   "results": [
     {
-      "item": "minecraft:glass_bottle"
+      "item": {
+        "id": "minecraft:glass_bottle"
+      }
     },
     {
       "amount": 20250,
-      "fluid": "create:honey"
+      "fluid": {
+        "fluid": "create:honey"
+      }
     }
   ]
 }

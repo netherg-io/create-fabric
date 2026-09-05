@@ -1,5 +1,11 @@
 package com.simibubi.create.infrastructure.data;
 
+import java.util.List;
+
+import com.simibubi.create.foundation.mixin.accessor.LootTableProviderSubProvidersAccessor;
+
+import com.tterrag.registrate.providers.RegistrateDataProvider;
+
 import java.util.Map.Entry;
 import java.util.function.BiConsumer;
 
@@ -8,12 +14,24 @@ import com.google.gson.JsonObject;
 import com.simibubi.create.AllKeys;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
-import com.simibubi.create.compat.archEx.ArchExCompat;
 import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.data.DamageTypeTagGen;
 import com.simibubi.create.foundation.data.TagLangGen;
 import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeGen;
 import com.simibubi.create.foundation.data.recipe.SequencedAssemblyRecipeGen;
+import com.simibubi.create.foundation.data.recipe.CompactingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.CrushingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.CuttingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.DeployingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.EmptyingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.FillingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.HauntingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.ItemApplicationRecipeGen;
+import com.simibubi.create.foundation.data.recipe.MillingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.MixingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.PolishingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.PressingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.WashingRecipeGen;
 import com.simibubi.create.foundation.data.recipe.StandardRecipeGen;
 import com.simibubi.create.foundation.ponder.CreatePonderPlugin;
 import com.simibubi.create.foundation.utility.FilesHelper;
@@ -31,18 +49,26 @@ public class CreateDatagen implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator generator) {
 		ExistingFileHelper helper = ExistingFileHelper.withResourcesFromArg();
+		// Registrate запрещает addDataGenerator после setupDatagen — дополнительные генераторы раньше
+		addExtraRegistrateData();
+		TagLangGen.datagen(); // тоже addDataGenerator
 		FabricDataGenerator.Pack pack = generator.createPack();
-		Create.registrate().setupDatagen(pack, helper);
+		// Вместо registrate().setupDatagen: у Registrate-Fabric 1.3.77 лут-провайдер сломан — в LootTableProvider
+		// попадают ванильные сабпровайдеры, а RegistrateBlockLootTables не переопределяет getKnownBlocks, так что
+		// валидация требует таблиц для всего реестра. ponytail: лут-таблицы не регенерируем (лежат в src/generated),
+		// вернуть, когда Registrate-Fabric починит getKnownBlocks.
+		pack.addProvider((output, future) -> {
+			RegistrateDataProvider provider = new RegistrateDataProvider(Create.registrate(), Create.ID, helper, output, future);
+			Create.registrate().setDataProvider(provider);
+			provider.getSubProvider(ProviderType.LOOT)
+				.ifPresent(loot -> ((LootTableProviderSubProvidersAccessor) loot).create$setSubProviders(List.of()));
+			return provider;
+		});
 		gatherData(pack, helper);
 	}
 
 	public static void gatherData(FabricDataGenerator.Pack pack, ExistingFileHelper existingFileHelper) {
-		addExtraRegistrateData();
 
-		// fabric: tag lang
-		TagLangGen.datagen();
-		// fabric: archex compat
-		ArchExCompat.init(pack);
 
 		// fabric: pretty much redone, make sure all providers make it through merges
 
@@ -55,6 +81,20 @@ public class CreateDatagen implements DataGeneratorEntrypoint {
 		pack.addProvider(StandardRecipeGen::new);
 		pack.addProvider(MechanicalCraftingRecipeGen::new);
 		pack.addProvider(SequencedAssemblyRecipeGen::new);
+		// процессинговые рецепты (аналог ProcessingRecipeGen.registerAll апстрима)
+		pack.addProvider(CompactingRecipeGen::new);
+		pack.addProvider(CrushingRecipeGen::new);
+		pack.addProvider(CuttingRecipeGen::new);
+		pack.addProvider(DeployingRecipeGen::new);
+		pack.addProvider(EmptyingRecipeGen::new);
+		pack.addProvider(FillingRecipeGen::new);
+		pack.addProvider(HauntingRecipeGen::new);
+		pack.addProvider(ItemApplicationRecipeGen::new);
+		pack.addProvider(MillingRecipeGen::new);
+		pack.addProvider(MixingRecipeGen::new);
+		pack.addProvider(PolishingRecipeGen::new);
+		pack.addProvider(PressingRecipeGen::new);
+		pack.addProvider(WashingRecipeGen::new);
 		pack.addProvider(GeneratedEntriesProvider::new);
 		pack.addProvider(VanillaHatOffsetGenerator::new);
 

@@ -78,7 +78,8 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 			.endsWith("_manual_only");
 
 	private final ResourceLocation id;
-	private final RecipeSerializer<?> serializerObject;
+	private final Supplier<RecipeSerializer<?>> serializerSupplier;
+	private RecipeSerializer<?> serializerObject;
 	@Nullable
 	private final RecipeType<?> typeObject;
 
@@ -89,7 +90,7 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 	AllRecipeTypes(Supplier<RecipeSerializer<?>> serializerSupplier, Supplier<RecipeType<?>> typeSupplier, boolean registerType) {
 		String name = Lang.asId(name());
 		id = Create.asResource(name);
-		serializerObject = Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, id, serializerSupplier.get());
+		this.serializerSupplier = serializerSupplier;
 		if (registerType) {
 			typeObject = typeSupplier.get();
 			Registry.register(BuiltInRegistries.RECIPE_TYPE, id, typeObject);
@@ -102,7 +103,7 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 	AllRecipeTypes(Supplier<RecipeSerializer<?>> serializerSupplier) {
 		String name = Lang.asId(name());
 		id = Create.asResource(name);
-		serializerObject = Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, id, serializerSupplier.get());
+		this.serializerSupplier = serializerSupplier;
 		typeObject = Registry.register(BuiltInRegistries.RECIPE_TYPE, id, createType(id));
 		isProcessingRecipe = false;
 	}
@@ -114,8 +115,13 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 
 	@Internal
 	public static void register() {
-		// fabric: just load the class. Porting Lib's ShapedRecipePattern$DataMixin already lifts vanilla's
-		// 3x3 pattern cap, so mechanical crafting recipes larger than 3x3 parse without extra work here.
+		// Сериализаторы создаются здесь, а не в конструкторе enum: ProcessingRecipeSerializer читает CODEC,
+		// который инициализируется после констант. Porting Lib's ShapedRecipePattern$DataMixin already lifts
+		// vanilla's 3x3 pattern cap, so mechanical crafting recipes larger than 3x3 parse without extra work here.
+		for (AllRecipeTypes type : values()) {
+			if (type.serializerObject == null)
+				type.serializerObject = Registry.register(BuiltInRegistries.RECIPE_SERIALIZER, type.id, type.serializerSupplier.get());
+		}
 	}
 
 	@Override

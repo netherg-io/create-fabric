@@ -1,5 +1,9 @@
 package com.simibubi.create;
 
+import com.simibubi.create.infrastructure.fabric.HelmetOverlay;
+
+import com.simibubi.create.content.equipment.armor.CardboardArmorStealthOverlay;
+
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.simibubi.create.compat.Mods;
@@ -99,6 +103,8 @@ public class CreateClient implements ClientModInitializer {
 		SuperByteBufferCache.getInstance().registerCompartment(ContraptionRenderInfo.CONTRAPTION, 20);
 
 		AllKeys.register();
+		// Оверлей шлема — клиентский класс, регистрируем здесь, а не в AllItems (сервер его не грузит)
+		HelmetOverlay.REGISTRY.register(AllItems.CARDBOARD_HELMET.get(), new CardboardArmorStealthOverlay());
 		AllPartialModels.init();
 
 

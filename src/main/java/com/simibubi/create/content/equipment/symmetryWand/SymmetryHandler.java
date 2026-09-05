@@ -174,6 +174,7 @@ public class SymmetryHandler {
 
 	}
 
+	@Environment(EnvType.CLIENT)
 	public static void drawEffect(BlockPos from, BlockPos to) {
 		double density = 0.8f;
 		Vec3 start = Vec3.atLowerCornerOf(from)

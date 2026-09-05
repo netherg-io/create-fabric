@@ -10,6 +10,7 @@
     }
   ],
   "result": {
-    "item": "create:fluid_valve"
+    "count": 1,
+    "id": "create:fluid_valve"
   }
 }

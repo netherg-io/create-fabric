@@ -15,7 +15,7 @@
     "CCC"
   ],
   "result": {
-    "item": "create:flywheel"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "create:flywheel"
+  }
 }

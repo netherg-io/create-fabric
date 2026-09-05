@@ -11,6 +11,8 @@ import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.math.VecHelper;
 import net.createmod.catnip.outliner.Outliner;
 import net.minecraft.ChatFormatting;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
@@ -40,6 +42,7 @@ public class ChainConveyorConnectionHandler {
 	private static BlockPos firstPos;
 	private static ResourceKey<Level> firstDim;
 
+	@Environment(EnvType.CLIENT)
 	public static boolean onRightClick() {
 		Minecraft mc = Minecraft.getInstance();
 		if (!isChain(mc.player.getMainHandItem()))
@@ -108,6 +111,7 @@ public class ChainConveyorConnectionHandler {
 		return itemStack.is(Items.CHAIN); // Replace with tag? generic renderer?
 	}
 
+	@Environment(EnvType.CLIENT)
 	public static void clientTick() {
 		if (firstPos == null)
 			return;
@@ -192,6 +196,7 @@ public class ChainConveyorConnectionHandler {
 
 	}
 
+	@Environment(EnvType.CLIENT)
 	private static void highlightConveyor(BlockPos pos, int color, String key) {
 		for (int y : Iterate.zeroAndOne) {
 			Vec3 prevV = VecHelper.rotate(new Vec3(0, .125 + y * .75, 1.25), -22.5, Axis.Y)
@@ -218,29 +223,29 @@ public class ChainConveyorConnectionHandler {
 		if (pos.equals(firstPos))
 			return false;
 		if (!pos.closerThan(firstPos, AllConfigs.server().kinetics.maxChainConveyorLength.get()))
-			return fail("chain_conveyor.too_far");
+			return fail(player, "chain_conveyor.too_far");
 		if (pos.closerThan(firstPos, 2.5))
-			return fail("chain_conveyor.too_close");
+			return fail(player, "chain_conveyor.too_close");
 
 		Vec3 diff = Vec3.atLowerCornerOf(pos.subtract(firstPos));
 		double horizontalDistance = diff.multiply(1, 0, 1)
 			.length() - 1.5;
 
 		if (horizontalDistance <= 0)
-			return fail("chain_conveyor.cannot_connect_vertically");
+			return fail(player, "chain_conveyor.cannot_connect_vertically");
 		if (Math.abs(diff.y) / horizontalDistance > 1)
-			return fail("chain_conveyor.too_steep");
+			return fail(player, "chain_conveyor.too_steep");
 
 		ChainConveyorBlock chainConveyorBlock = AllBlocks.CHAIN_CONVEYOR.get();
 		ChainConveyorBlockEntity sourceLift = chainConveyorBlock.getBlockEntity(level, firstPos);
 		ChainConveyorBlockEntity targetLift = chainConveyorBlock.getBlockEntity(level, pos);
 
 		if (targetLift.connections.size() >= AllConfigs.server().kinetics.maxChainConveyorConnections.get())
-			return fail("chain_conveyor.cannot_add_more_connections");
+			return fail(player, "chain_conveyor.cannot_add_more_connections");
 		if (targetLift.connections.contains(firstPos.subtract(pos)))
-			return fail("chain_conveyor.already_connected");
+			return fail(player, "chain_conveyor.already_connected");
 		if (sourceLift == null || targetLift == null)
-			return fail("chain_conveyor.blocks_invalid");
+			return fail(player, "chain_conveyor.blocks_invalid");
 
 		if (!player.isCreative()) {
 			int chainCost = ChainConveyorBlockEntity.getChainCost(pos.subtract(firstPos));
@@ -248,7 +253,7 @@ public class ChainConveyorConnectionHandler {
 			if (simulate)
 				BlueprintOverlayRenderer.displayChainRequirements(chain.getItem(), chainCost, hasEnough);
 			if (!hasEnough)
-				return fail("chain_conveyor.not_enough_chains");
+				return fail(player, "chain_conveyor.not_enough_chains");
 		}
 
 		if (simulate)
@@ -263,10 +268,10 @@ public class ChainConveyorConnectionHandler {
 		return true;
 	}
 
-	private static boolean fail(String message) {
+	private static boolean fail(Player player, String message) {
 		CreateLang.translate(message)
 			.style(ChatFormatting.RED)
-			.sendStatus(Minecraft.getInstance().player);
+			.sendStatus(player);
 		return false;
 	}
 

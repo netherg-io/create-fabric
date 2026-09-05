@@ -3,7 +3,7 @@
 val parchmentVersion = "2024.11.17"
 // https://fabricmc.net/develop/
 val minecraftVersion = "1.21.1"
-val loaderVersion = "0.16.10"
+val loaderVersion = "0.19.3"
 val fapiVersion = "0.115.1+1.21.1"
 
 // in-house dependencies
@@ -106,13 +106,15 @@ dependencies {
     // common объявлен ниже явно в beta.90; остальные модули beta.39 оставлены, иначе modApi
     // теряет апгрейд fabric-api 0.104 -> 0.105.
     modApi(include("com.tterrag.registrate_fabric:Registrate:$registrateVersion") {
-        exclude(group = "io.github.fabricators_of_create.Porting-Lib", module = "common")
+        exclude(group = "io.github.fabricators_of_create.Porting-Lib")
     })
 
     modApi(include("com.electronwill.night-config:core:$nightConfigVersion")!!)
     modApi(include("com.electronwill.night-config:toml:$nightConfigVersion")!!)
     modApi(include("fuzs.forgeconfigapiport:forgeconfigapiport-fabric:$configApiVersion")!!)
     modApi(include("dev.engine-room.flywheel:flywheel-fabric-$minecraftVersion:$flywheelVersion")!!)
+    // impl Flywheel клиентский, API нужен и серверу (визуалы регистрируются в AllBlocks)
+    modApi(include("dev.engine-room.flywheel:flywheel-fabric-api-$minecraftVersion:$flywheelVersion")!!)
     // Milk Lib с maven Create заканчивается 1.18; сборка под 1.21.1 живёт на Modrinth (Tu5LjQoE), лежит в libs/
     modApi(files("libs/milk-lib-1.1.0-patch+1.21.1.jar"))  // в пак едет отдельным модом с Modrinth
     api(include("com.google.code.findbugs:jsr305:$jsr305Version")!!)
@@ -123,7 +125,7 @@ dependencies {
     } else {
         modRuntimeOnly(include("net.createmod.ponder:Ponder-Fabric-$minecraftVersion:$ponderVersion")!!)
         modCompileOnly("net.createmod.ponder:Ponder-Fabric-$minecraftVersion:$ponderVersion") {
-            exclude(group = "io.github.fabricators_of_create.Porting-Lib", module = "common")
+            exclude(group = "io.github.fabricators_of_create.Porting-Lib")
         }
     }
 
@@ -194,6 +196,7 @@ loom {
             vmArg("-Dfabric-api.datagen")
             vmArg("-Dfabric-api.datagen.output-dir=${file("src/generated/resources")}")
             vmArg("-Dfabric-api.datagen.modid=create")
+            vmArg("-Dporting_lib.datagen.existing_resources=${file("src/main/resources")}")
         }
 
         register("gametestServer") {
@@ -304,4 +307,8 @@ dependencies {
     modImplementation("io.github.fabricators_of_create.Porting-Lib:models:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:tags:3.1.0-beta.90+1.21.1")
     modImplementation("io.github.fabricators_of_create.Porting-Lib:transfer:3.1.0-beta.90+1.21.1")
+
+    modRuntimeOnly("io.github.fabricators_of_create.Porting-Lib:registry:3.1.0-beta.90+1.21.1")
+    modRuntimeOnly("io.github.fabricators_of_create.Porting-Lib:resources:3.1.0-beta.90+1.21.1")
+    modRuntimeOnly("io.github.fabricators_of_create.Porting-Lib:model_data:3.1.0-beta.90+1.21.1")
 }

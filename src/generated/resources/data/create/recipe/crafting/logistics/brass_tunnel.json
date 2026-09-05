@@ -19,7 +19,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "create:brass_tunnel"
-  },
-  "show_notification": true
+    "id": "create:brass_tunnel"
+  }
 }
