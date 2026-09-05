@@ -326,9 +326,9 @@ public class CrushingWheelControllerBlockEntity extends SmartBlockEntity impleme
 	}
 
 	public Optional<RecipeHolder<ProcessingRecipe<RecipeInput>>> findRecipe() {
-		Optional<RecipeHolder<ProcessingRecipe<RecipeInput>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(inventory, level);
+		Optional<RecipeHolder<ProcessingRecipe<RecipeInput>>> crushingRecipe = AllRecipeTypes.CRUSHING.find(inventory.asRecipeInput(), level);
 		if (!crushingRecipe.isPresent())
-			crushingRecipe = AllRecipeTypes.MILLING.find(inventory, level);
+			crushingRecipe = AllRecipeTypes.MILLING.find(inventory.asRecipeInput(), level);
 		return crushingRecipe;
 	}
 

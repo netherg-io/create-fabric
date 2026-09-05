@@ -17,7 +17,6 @@ import com.simibubi.create.content.logistics.packager.InventorySummary;
 import com.simibubi.create.content.logistics.stockTicker.CraftableBigItemStack;
 import com.simibubi.create.content.logistics.stockTicker.StockKeeperRequestMenu;
 import com.simibubi.create.content.logistics.stockTicker.StockKeeperRequestScreen;
-import com.simibubi.create.foundation.blockEntity.LegacyRecipeWrapper;
 import com.simibubi.create.foundation.utility.CreateLang;
 
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
@@ -32,6 +31,7 @@ import mezz.jei.library.transfer.RecipeTransferErrorTooltip;
 import net.createmod.catnip.platform.CatnipServices;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
@@ -42,7 +42,6 @@ import net.minecraft.world.level.Level;
 
 import net.fabricmc.api.EnvType;
 
-import com.simibubi.create.infrastructure.fabric.transfer.item.ItemStackHandler;
 import io.github.fabricators_of_create.porting_lib.transfer.item.RecipeWrapper;
 
 @ParametersAreNonnullByDefault
@@ -98,13 +97,13 @@ public class StockKeeperTransferHandler implements IUniversalRecipeTransferHandl
 		if (summary == null)
 			return null;
 
-		Container outputDummy = new LegacyRecipeWrapper(new ItemStackHandler(9));
+		Container outputDummy = new SimpleContainer(9);
 		List<Slot> craftingSlots = new ArrayList<>();
 		for (int i = 0; i < outputDummy.getContainerSize(); i++)
 			craftingSlots.add(new Slot(outputDummy, i, 0, 0));
 
 		List<BigItemStack> stacksByCount = summary.getStacksByCount();
-		Container inputDummy = new LegacyRecipeWrapper(new ItemStackHandler(stacksByCount.size()));
+		Container inputDummy = new SimpleContainer(stacksByCount.size());
 		Map<Slot, ItemStack> availableItemStacks = new HashMap<>();
 		for (int j = 0; j < stacksByCount.size(); j++) {
 			BigItemStack bigItemStack = stacksByCount.get(j);

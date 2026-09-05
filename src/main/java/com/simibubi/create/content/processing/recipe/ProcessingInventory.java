@@ -21,17 +21,26 @@ import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 import io.github.fabricators_of_create.porting_lib.transfer.ViewOnlyWrappedIterator;
 import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandlerContainer;
 
-public class ProcessingInventory extends ItemStackHandlerContainer implements RecipeInput {
+public class ProcessingInventory extends ItemStackHandlerContainer {
 	public float remainingTime;
 	public float recipeDuration;
 	public boolean appliedRecipe;
 	public Consumer<ItemStack> callback;
 	private boolean limit;
 
-	/** fabric: {@link ItemStackHandlerContainer} only implements {@link net.minecraft.world.Container}. */
-	@Override
-	public int size() {
-		return getContainerSize();
+	/** Вид для рецептов: сам класс RecipeInput не реализует — вместе с Container это ломает ремап (isEmpty/getItem). */
+	public RecipeInput asRecipeInput() {
+		return new RecipeInput() {
+			@Override
+			public ItemStack getItem(int slot) {
+				return getStackInSlot(slot);
+			}
+
+			@Override
+			public int size() {
+				return getSlotCount();
+			}
+		};
 	}
 
 	public ProcessingInventory(Consumer<ItemStack> callback) {

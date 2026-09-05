@@ -2,13 +2,14 @@ package com.simibubi.create.foundation.blockEntity;
 
 import org.jetbrains.annotations.ApiStatus;
 
-import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeInput;
 import com.simibubi.create.infrastructure.fabric.transfer.item.SlottedStackStorage;
 
-public class LegacyRecipeWrapper implements Container, RecipeInput {
+/** Обёртка хранилища под RecipeInput. Container не реализует намеренно: у Container и RecipeInput
+ *  isEmpty/getItem маппятся в разные intermediary-имена, tiny-remapper на таком классе падает. */
+public class LegacyRecipeWrapper implements RecipeInput {
 
 	protected final SlottedStackStorage inv;
 
@@ -27,7 +28,6 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	/**
 	 * Returns the size of this inventory.
 	 */
-	@Override
 	public int getContainerSize()
 	{
 		return inv.getSlotCount();
@@ -45,7 +45,6 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	/**
 	 * Attempts to remove n items from the specified slot.  Returns the split stack that was removed.  Modifies the inventory.
 	 */
-	@Override
 	public ItemStack removeItem(int slot, int count)
 	{
 		ItemStack stack = inv.getStackInSlot(slot);
@@ -55,7 +54,6 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	/**
 	 * Sets the contents of this slot to the provided stack.
 	 */
-	@Override
 	public void setItem(int slot, ItemStack stack)
 	{
 		inv.setStackInSlot(slot, stack);
@@ -64,7 +62,6 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	/**
 	 * Removes the stack contained in this slot from the underlying handler, and returns it.
 	 */
-	@Override
 	public ItemStack removeItemNoUpdate(int index)
 	{
 		ItemStack s = getItem(index);
@@ -83,13 +80,11 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 		return true;
 	}
 
-	@Override
 	public boolean canPlaceItem(int slot, ItemStack stack)
 	{
 		return inv.isItemValid(slot, stack);
 	}
 
-	@Override
 	public void clearContent()
 	{
 		for(int i = 0; i < inv.getSlotCount(); i++)
@@ -99,19 +94,14 @@ public class LegacyRecipeWrapper implements Container, RecipeInput {
 	}
 
 	//The following methods are never used by vanilla in crafting.  They are defunct as mods need not override them.
-	@Override
 	public int getMaxStackSize() { return 0; }
 
-	@Override
 	public void setChanged() {}
 
-	@Override
 	public boolean stillValid(Player player) { return false; }
 
-	@Override
 	public void startOpen(Player player) {}
 
-	@Override
 	public void stopOpen(Player player) {}
 
 }
