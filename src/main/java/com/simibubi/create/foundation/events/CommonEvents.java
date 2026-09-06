@@ -267,6 +267,9 @@ public class CommonEvents {
 //		ResourceLocation packId = Create.asResource("legacy_copper");
 //		ResourceManagerHelper.registerBuiltinResourcePack(packId, create, "Create Legacy Copper", ResourcePackActivationType.NORMAL);
 
+		if (event.getPackType() != PackType.SERVER_DATA)
+			return;
+
 		DynamicPack dynamicPack = new DynamicPack("create:dynamic_data", PackType.SERVER_DATA);
 		RuntimeDataGenerator.insertIntoPack(dynamicPack);
 		event.addRepositorySource(new DynamicPackSource("create:dynamic_data", PackType.SERVER_DATA, Pack.Position.BOTTOM, dynamicPack));
