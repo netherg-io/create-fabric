@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.simibubi.create.infrastructure.fabric.HelmetOverlay;
 
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
@@ -24,13 +25,16 @@ public abstract class GuiMixin {
 	protected abstract void renderTextureOverlay(GuiGraphics guiGraphics, ResourceLocation shaderLocation, float alpha);
 
 	@ModifyExpressionValue(
-		method = "render",
+		method = "render(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V",
+		// ponytail: require = 0 -- накладка шлема косметическая, ронять клиент из-за неё нельзя; вернуть 1, когда инжект подтвердится
+		require = 0,
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/world/entity/player/Inventory;getArmor(I)Lnet/minecraft/world/item/ItemStack;"
 		)
 	)
-	private ItemStack renderCustomOverlay(ItemStack stack, GuiGraphics guiGraphics, float partialTick) {
+	private ItemStack renderCustomOverlay(ItemStack stack, GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+		float partialTick = deltaTracker.getGameTimeDeltaPartialTick(false);
 		HelmetOverlay overlay = HelmetOverlay.REGISTRY.get(stack.getItem());
 		if (overlay != null) {
 			float opacity = overlay.calculateOpacity(stack, this.minecraft.player, partialTick);
