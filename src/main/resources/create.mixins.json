@@ -55,7 +55,7 @@
     "fabric.TagAppenderAccessor",
     "fabric.infra.ServerPlayerGameModeMixin",
     "fabric.infra.block.SignalGetterMixin",
-    "accessor.LootTableProviderSubProvidersAccessor"
+    "accessor.LootTableProviderSubProvidersAccessor",
   ],
   "client": [
     "accessor.AgeableListModelAccessor",
