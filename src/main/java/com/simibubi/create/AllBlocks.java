@@ -2504,7 +2504,7 @@ public class AllBlocks {
 		})
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.tag(Tags.Blocks.ORES)
-		.transform(tagBlockAndItem("zinc_ores", "ores_in_ground/stone"))
+		.transform(tagBlockAndItem("ores/zinc", "zinc_ores", "ores_in_ground/stone"))
 		.tag(Tags.Items.ORES)
 		.build()
 		.register();
@@ -2525,7 +2525,7 @@ public class AllBlocks {
 		})
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.tag(Tags.Blocks.ORES)
-		.transform(tagBlockAndItem("zinc_ores", "ores_in_ground/deepslate"))
+		.transform(tagBlockAndItem("ores/zinc", "zinc_ores", "ores_in_ground/deepslate"))
 		.tag(Tags.Items.ORES)
 		.build()
 		.register();
@@ -2538,7 +2538,7 @@ public class AllBlocks {
 		.tag(Tags.Blocks.STORAGE_BLOCKS)
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.lang("Block of Raw Zinc")
-		.transform(tagBlockAndItem("raw_zinc_blocks"))
+		.transform(tagBlockAndItem("storage_blocks/raw_zinc", "raw_zinc_blocks"))
 		.tag(Tags.Items.STORAGE_BLOCKS)
 		.build()
 		.register();

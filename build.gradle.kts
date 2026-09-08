@@ -312,3 +312,9 @@ dependencies {
     modRuntimeOnly("io.github.fabricators_of_create.Porting-Lib:resources:3.1.0-beta.90+1.21.1")
     modRuntimeOnly("io.github.fabricators_of_create.Porting-Lib:model_data:3.1.0-beta.90+1.21.1")
 }
+
+tasks.register<JavaExec>("codecCheck") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass = "com.simibubi.create.content.processing.recipe.ProcessingOutputCodecCheck"
+    workingDir = layout.buildDirectory.get().asFile // Bootstrap пишет logs/ в рабочий каталог
+}

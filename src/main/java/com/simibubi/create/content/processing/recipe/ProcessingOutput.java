@@ -87,7 +87,7 @@ public class ProcessingOutput {
 		COMPAT_CODEC
 	);
 
-	public static final Codec<ProcessingOutput> CODEC = RecordCodecBuilder.create(i -> i.group(
+	private static final Codec<ProcessingOutput> ITEM_FIELD_CODEC = RecordCodecBuilder.create(i -> i.group(
 		ITEM_CODEC.fieldOf("item").forGetter(ProcessingOutput::getCodecStack),
 		Codec.INT.optionalFieldOf("count", 1).forGetter(s -> {
 			if (s.compatDatagenOutput != null)
@@ -96,6 +96,11 @@ public class ProcessingOutput {
 		}),
 		Codec.FLOAT.optionalFieldOf("chance", 1F).forGetter(s -> s.chance)
 	).apply(i, ProcessingOutput::fromCodec));
+
+	// Create 6 / NeoForge отдают результат голым ItemStack ({"id","count"}); в паке так делает Yuushya.
+	// Читаем обе формы, пишем всегда через "item".
+	public static final Codec<ProcessingOutput> CODEC =
+		Codec.withAlternative(ITEM_FIELD_CODEC, ItemStack.CODEC, stack -> new ProcessingOutput(stack, 1F));
 
 	public void write(RegistryFriendlyByteBuf buf) {
 		ItemStack.STREAM_CODEC.encode(buf, getStack());

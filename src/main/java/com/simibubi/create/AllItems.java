@@ -192,8 +192,10 @@ public class AllItems {
 		taggedIngredient("raw_zinc", commonItemTag("raw_materials/zinc"), commonItemTag("raw_materials"));
 
 	public static final ItemEntry<Item> ANDESITE_ALLOY = taggedIngredient("andesite_alloy", CREATE_INGOTS.tag),
-		ZINC_INGOT = taggedIngredient("zinc_ingot", commonItemTag("zinc_ingots"), CREATE_INGOTS.tag),
-		BRASS_INGOT = taggedIngredient("brass_ingot", commonItemTag("brass_ingots"), CREATE_INGOTS.tag);
+		ZINC_INGOT = taggedIngredient("zinc_ingot", commonItemTag("ingots/zinc"), commonItemTag("zinc_ingots"),
+			CREATE_INGOTS.tag),
+		BRASS_INGOT = taggedIngredient("brass_ingot", commonItemTag("ingots/brass"), commonItemTag("brass_ingots"),
+			CREATE_INGOTS.tag);
 
 	public static final ItemEntry<ChromaticCompoundItem> CHROMATIC_COMPOUND =
 		REGISTRATE.item("chromatic_compound", ChromaticCompoundItem::new)
@@ -213,7 +215,8 @@ public class AllItems {
 
 	public static final ItemEntry<Item>
 		COPPER_NUGGET = taggedIngredient("copper_nugget", commonItemTag("copper_nuggets"), Tags.Items.NUGGETS),
-		ZINC_NUGGET = taggedIngredient("zinc_nugget", commonItemTag("zinc_nuggets"), Tags.Items.NUGGETS),
+		ZINC_NUGGET = taggedIngredient("zinc_nugget", commonItemTag("nuggets/zinc"), commonItemTag("zinc_nuggets"),
+			Tags.Items.NUGGETS),
 		BRASS_NUGGET = taggedIngredient("brass_nugget", commonItemTag("brass_nuggets"), Tags.Items.NUGGETS);
 
 	public static final ItemEntry<ExperienceNuggetItem> EXP_NUGGET =
