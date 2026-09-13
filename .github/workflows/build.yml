@@ -3,12 +3,6 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-    inputs:
-      release:
-        description: Is this a release build?
-        type: boolean
-        required: true
-        default: false
 
 jobs:
   build:
@@ -21,38 +15,16 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
-          java-version: 17
+          java-version: 21
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
-        with:
-          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
 
       - name: Validate Gradle Wrapper Integrity
         uses: gradle/actions/wrapper-validation@v3
 
       - name: Build
         run: ./gradlew build
-
-      # TODO: Enable when gametests work
-      # - name: Run Gametests
-      #   run: ./gradlew runGametestServer
-
-      - name: Publish to Maven [Releases]
-        if: ${{ github.event.inputs.release }}
-        run: >-
-          ./gradlew publishAllPublicationsToDevOsReleasesRepository
-          -PdevOsReleasesUsername="${{ secrets.MAVEN_USER }}"
-          -PdevOsReleasesPassword="${{ secrets.MAVEN_PASS }}"
-
-      - name: Publish to Maven [Snapshots]
-        if: ${{ !github.event.inputs.release }}
-        run: >-
-          ./gradlew publishAllPublicationsToDevOsSnapshotsRepository
-          -PdevOsSnapshotsUsername="${{ secrets.MAVEN_USER }}"
-          -PdevOsSnapshotsPassword="${{ secrets.MAVEN_PASS }}"
-
-      # TODO: add back CF and MR publishing at some point
 
       - name: Capture Build Artifacts
         uses: actions/upload-artifact@v4
