@@ -527,13 +527,14 @@ public class BezierConnection implements Iterable<BezierConnection.Segment> {
 		bakedSegments = new SegmentAngles[segmentCount + 1];
 		Couple<Vec3> previousOffsets = null;
 
+		float railOffsetScale = (trackMaterial != null && trackMaterial.trackType.isWideGauge()) ? 1.465f : .965f;
 		for (BezierConnection.Segment segment : this) {
 			int i = segment.index;
 			boolean end = i == 0 || i == segmentCount;
 
 			SegmentAngles angles = bakedSegments[i] = new SegmentAngles();
-			Couple<Vec3> railOffsets = Couple.create(segment.position.add(segment.normal.scale(.965f)),
-				segment.position.subtract(segment.normal.scale(.965f)));
+			Couple<Vec3> railOffsets = Couple.create(segment.position.add(segment.normal.scale(railOffsetScale)),
+				segment.position.subtract(segment.normal.scale(railOffsetScale)));
 			Vec3 railMiddle = railOffsets.getFirst()
 				.add(railOffsets.getSecond())
 				.scale(.5);
@@ -594,20 +595,22 @@ public class BezierConnection implements Iterable<BezierConnection.Segment> {
 		bakedGirders = new GirderAngles[segmentCount + 1];
 		Couple<Couple<Vec3>> previousOffsets = null;
 
+		float girderRailOffset = (trackMaterial != null && trackMaterial.trackType.isWideGauge()) ? 1.465f : .965f;
+		float girderScale = (trackMaterial != null && trackMaterial.trackType.isWideGauge()) ? 1.5f : 1f;
 		for (BezierConnection.Segment segment : this) {
 			int i = segment.index;
 			boolean end = i == 0 || i == segmentCount;
 			GirderAngles angles = bakedGirders[i] = new GirderAngles();
 
-			Vec3 leftGirder = segment.position.add(segment.normal.scale(.965f));
-			Vec3 rightGirder = segment.position.subtract(segment.normal.scale(.965f));
+			Vec3 leftGirder = segment.position.add(segment.normal.scale(girderRailOffset));
+			Vec3 rightGirder = segment.position.subtract(segment.normal.scale(girderRailOffset));
 			Vec3 upNormal = segment.derivative.normalize()
 				.cross(segment.normal);
 			Vec3 firstGirderOffset = upNormal.scale(-8 / 16f);
 			Vec3 secondGirderOffset = upNormal.scale(-10 / 16f);
-			Vec3 leftTop = segment.position.add(segment.normal.scale(1))
+			Vec3 leftTop = segment.position.add(segment.normal.scale(girderScale))
 				.add(firstGirderOffset);
-			Vec3 rightTop = segment.position.subtract(segment.normal.scale(1))
+			Vec3 rightTop = segment.position.subtract(segment.normal.scale(girderScale))
 				.add(firstGirderOffset);
 			Vec3 leftBottom = leftTop.add(secondGirderOffset);
 			Vec3 rightBottom = rightTop.add(secondGirderOffset);

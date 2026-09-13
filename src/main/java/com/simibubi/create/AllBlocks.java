@@ -326,8 +326,11 @@ import io.github.fabricators_of_create.porting_lib.tags.Tags;
 public class AllBlocks {
 	private static final CreateRegistrate REGISTRATE = Create.registrate();
 
+	public static final CreateRegistrate RAILWAYS_REGISTRATE = CreateRegistrate.create("railways");
+
 	static {
 		REGISTRATE.setCreativeTab(AllCreativeModeTabs.BASE_CREATIVE_TAB.key());
+		RAILWAYS_REGISTRATE.setCreativeTab(AllCreativeModeTabs.BASE_CREATIVE_TAB.key());
 	}
 
 	// Schematics
@@ -1642,6 +1645,48 @@ public class AllBlocks {
 		.blockstate((c, p) -> p.simpleBlock(c.get(), p.models()
 			.withExistingParent(c.getName(), p.mcLoc("block/air"))))
 		.lang("Track Marker for Maps")
+		.register();
+
+	public static final BlockEntry<TrackBlock> TRACK_CREATE_ANDESITE_WIDE = RAILWAYS_REGISTRATE
+		.block("track_create_andesite_wide", TrackMaterial.WIDE_GAUGE_ANDESITE::createBlock)
+		.initialProperties(SharedProperties::stone)
+		.properties(p -> p.mapColor(MapColor.METAL)
+			.strength(0.8F)
+			.sound(SoundType.METAL)
+			.noOcclusion()
+			.forceSolidOn())
+		.addLayer(() -> RenderType::cutoutMipped)
+		.transform(pickaxeOnly())
+		.tag(AllBlockTags.HAS_REDUCED_DESTROY_EFFECTS.tag)
+		.onRegister(CreateRegistrate.blockModel(() -> TrackModel::new))
+		.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+		.tag(AllBlockTags.TRACKS.tag)
+		.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+		.lang("Wide Andesite Train Track")
+		.item(TrackBlockItem::new)
+		.tag(AllItemTags.TRACKS.tag)
+		.build()
+		.register();
+
+	public static final BlockEntry<TrackBlock> TRACK_DARK_OAK_WIDE = RAILWAYS_REGISTRATE
+		.block("track_dark_oak_wide", TrackMaterial.WIDE_GAUGE_DARK_OAK::createBlock)
+		.initialProperties(SharedProperties::stone)
+		.properties(p -> p.mapColor(MapColor.WOOD)
+			.strength(0.8F)
+			.sound(SoundType.WOOD)
+			.noOcclusion()
+			.forceSolidOn())
+		.addLayer(() -> RenderType::cutoutMipped)
+		.transform(pickaxeOnly())
+		.tag(AllBlockTags.HAS_REDUCED_DESTROY_EFFECTS.tag)
+		.onRegister(CreateRegistrate.blockModel(() -> TrackModel::new))
+		.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+		.tag(AllBlockTags.TRACKS.tag)
+		.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+		.lang("Wide Dark Oak Train Track")
+		.item(TrackBlockItem::new)
+		.tag(AllItemTags.TRACKS.tag)
+		.build()
 		.register();
 
 	public static final BlockEntry<CasingBlock> RAILWAY_CASING = REGISTRATE.block("railway_casing", CasingBlock::new)

@@ -117,6 +117,7 @@ public class Create implements ModInitializer {
 		AllRecipeTypes.register();
 
 		// fabric exclusive, squeeze this in here to register before stuff is used
+		AllBlocks.RAILWAYS_REGISTRATE.register();
 		REGISTRATE.register();
 
 		AllParticleTypes.register();

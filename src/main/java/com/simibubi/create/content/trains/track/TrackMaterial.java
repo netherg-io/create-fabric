@@ -40,6 +40,22 @@ public class TrackMaterial {
 			.defaultModels()
 			.build();
 
+	public static final TrackMaterial WIDE_GAUGE_ANDESITE = make(ResourceLocation.fromNamespaceAndPath("railways", "create_andesite_wide"))
+			.lang("Wide Andesite")
+			.trackType(TrackType.WIDE_GAUGE)
+			.block(NonNullSupplier.lazy(() -> AllBlocks.TRACK_CREATE_ANDESITE_WIDE))
+			.particle(Create.asResource("block/palettes/stone_types/polished/andesite_cut_polished"))
+			.standardModels()
+			.build();
+
+	public static final TrackMaterial WIDE_GAUGE_DARK_OAK = make(ResourceLocation.fromNamespaceAndPath("railways", "dark_oak_wide"))
+			.lang("Wide Dark Oak")
+			.trackType(TrackType.WIDE_GAUGE)
+			.block(NonNullSupplier.lazy(() -> AllBlocks.TRACK_DARK_OAK_WIDE))
+			.particle(ResourceLocation.fromNamespaceAndPath("minecraft", "block/dark_oak_planks"))
+			.standardModels()
+			.build();
+
 	public final ResourceLocation id;
 	public final String langName;
 	public final NonNullSupplier<NonNullSupplier<? extends TrackBlock>> trackBlock;
@@ -139,6 +155,12 @@ public class TrackMaterial {
 		if (ALL.containsKey(id))
 			return ALL.get(id);
 
+		if (id != null && "blockfield".equals(id.getNamespace())) {
+			ResourceLocation railwaysId = ResourceLocation.fromNamespaceAndPath("railways", id.getPath().replace("track_", ""));
+			if (ALL.containsKey(railwaysId))
+				return ALL.get(railwaysId);
+		}
+
 		Create.LOGGER.error("Failed to locate serialized track material: " + serializedName);
 		return ANDESITE;
 	}
@@ -150,6 +172,7 @@ public class TrackMaterial {
 		}
 
 		public static final TrackType STANDARD = new TrackType(Create.asResource("standard"), TrackBlock::new);
+		public static final TrackType WIDE_GAUGE = new TrackType(ResourceLocation.fromNamespaceAndPath("railways", "wide_gauge"), TrackBlock::new);
 
 		public final ResourceLocation id;
 		protected final TrackBlockFactory factory;
@@ -157,6 +180,10 @@ public class TrackMaterial {
 		public TrackType(ResourceLocation id, TrackBlockFactory factory) {
 			this.id = id;
 			this.factory = factory;
+		}
+
+		public boolean isWideGauge() {
+			return this == WIDE_GAUGE || (id != null && "wide_gauge".equals(id.getPath()));
 		}
 	}
 
