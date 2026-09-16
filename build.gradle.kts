@@ -54,13 +54,7 @@ plugins {
     id("maven-publish")
 }
 
-val buildNum = providers.environmentVariable("GITHUB_RUN_NUMBER")
-    .filter(String::isNotEmpty)
-    .map { "-build.$it" }
-    .orElse("-local")
-    .getOrElse("")
-
-version = "6.0.0.0+mc$minecraftVersion$buildNum"
+version = "6.0.0.0+mc$minecraftVersion"
 
 group = "com.simibubi.create"
 base.archivesName = "create-fabric"
