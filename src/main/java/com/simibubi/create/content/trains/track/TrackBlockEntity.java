@@ -375,6 +375,20 @@ public class TrackBlockEntity extends SmartBlockEntity implements TransformableB
 	}
 
 	public void manageFakeTracksAlong(BezierConnection bc, boolean remove) {
+		if (!bc.isPrimary()) bc = bc.secondary();
+		String source = bc.bePositions.getFirst().asLong() + ":" + bc.bePositions.getSecond().asLong();
+		for (var entry : TrackCollision.curve(bc).entrySet()) {
+			BlockPos pos = entry.getKey();
+			BlockState state = level.getBlockState(pos);
+			if (!remove && !AllBlocks.FAKE_TRACK.has(state) && state.canBeReplaced()
+				&& (state.getFluidState().isEmpty() || state.getFluidState().isSourceOfType(Fluids.WATER)))
+				level.setBlock(pos, ProperWaterloggedBlock.withWater(level, AllBlocks.FAKE_TRACK.getDefaultState(), pos), 3);
+			if (level.getBlockEntity(pos) instanceof FakeTrackBlockEntity be) {
+				be.setCollision(source, remove ? null : entry.getValue());
+				if (remove && be.collisionShape().isEmpty()) level.removeBlock(pos, false);
+				else be.keepAlive();
+			}
+		}
 		Map<Pair<Integer, Integer>, Double> yLevels = bc.rasterise();
 
 		for (Entry<Pair<Integer, Integer>, Double> entry : yLevels.entrySet()) {
@@ -391,7 +405,7 @@ public class TrackBlockEntity extends SmartBlockEntity implements TransformableB
 			boolean present = AllBlocks.FAKE_TRACK.has(stateAtPos);
 
 			if (remove) {
-				if (present)
+				if (present && level.getBlockEntity(targetPos) instanceof FakeTrackBlockEntity be && be.collisionShape().isEmpty())
 					level.removeBlock(targetPos, false);
 				continue;
 			}

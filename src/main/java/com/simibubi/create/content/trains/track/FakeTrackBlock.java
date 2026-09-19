@@ -35,7 +35,7 @@ public class FakeTrackBlock extends Block implements EntityBlock, ProperWaterlog
 
 	public FakeTrackBlock(Properties p_49795_) {
 		super(p_49795_.randomTicks()
-			.noCollission()
+			.dynamicShape()
 			.noOcclusion());
 		registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
 		LandPathNodeTypesRegistry.register(this, PathType.DAMAGE_OTHER, null);
@@ -44,6 +44,11 @@ public class FakeTrackBlock extends Block implements EntityBlock, ProperWaterlog
 	@Override
 	public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+		return level.getBlockEntity(pos) instanceof FakeTrackBlockEntity be ? be.collisionShape() : Shapes.empty();
 	}
 
 	@Override

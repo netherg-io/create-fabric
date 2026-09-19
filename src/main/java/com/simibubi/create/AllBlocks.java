@@ -1639,7 +1639,6 @@ public class AllBlocks {
 
 	public static final BlockEntry<FakeTrackBlock> FAKE_TRACK = REGISTRATE.block("fake_track", FakeTrackBlock::new)
 		.properties(p -> p.mapColor(MapColor.METAL)
-			.noCollission()
 			.noOcclusion()
 			.replaceable())
 		.blockstate((c, p) -> p.simpleBlock(c.get(), p.models()

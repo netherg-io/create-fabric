@@ -515,12 +515,7 @@ public class TrackBlock extends Block implements IBE<TrackBlockEntity>, IWrencha
 	@Override
 	public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos,
 		CollisionContext pContext) {
-		switch (pState.getValue(SHAPE)) {
-		case AE, AW, AN, AS:
-			return Shapes.empty();
-		default:
-			return AllShapes.TRACK_COLLISION;
-		}
+		return getFullShape(pState);
 	}
 
 	@Override

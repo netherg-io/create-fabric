@@ -312,3 +312,9 @@ tasks.register<JavaExec>("codecCheck") {
     mainClass = "com.simibubi.create.content.processing.recipe.ProcessingOutputCodecCheck"
     workingDir = layout.buildDirectory.get().asFile // Bootstrap пишет logs/ в рабочий каталог
 }
+
+tasks.register<JavaExec>("trackCollisionCheck") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass = "com.simibubi.create.content.trains.track.TrackCollisionCheck"
+    maxHeapSize = "256m"
+}
